@@ -1,8 +1,189 @@
+@import "./variables.scss";
 @import "~bootstrap/scss/bootstrap.scss";
 
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 
-h1 {
-	color: red;
+body {
+	margin-top: 56px;
+}
+
+#main-nav {
+	padding: 2px 16px 0 16px;
+	border-bottom: 3px solid $fond-sombre;
+	.navbar-brand {
+		padding: 0;
+	}
+	#main-nav-pills {
+		.nav-link {
+			padding: 4px 8px;
+			&::hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	#main-nav-social {
+		.nav-link {
+			padding: 0 8px;
+			&:hover {
+				color: $primaire;
+			}
+		}
+	}
+}
+
+#carousel {
+	background: black;
+	height: 70vmin;
+	.carousel-control-prev, .carousel-control-next {
+		background: $black;
+		//background: rgba(0,0,0,0.5);
+	}
+	.carousel-item {
+		height: 100%;
+		overflow: hidden;
+	}
+	.carousel-button {
+		z-index: 1030;
+		position: absolute;
+		left: 16%;
+		bottom: 10%;
+	}
+	img {
+		width: 100%;
+		position: relative;
+		top: 35vmin;
+		transform: translateY(-50%);
+	}
+}
+
+img.darker {
+	filter: alpha(0.8);
+}
+
+img.darkest {
+	filter: alpha(0.5);
+}
+
+.row.no-gutters{
+	margin:0 -15px;
+}
+
+#map, #pres-video {
+  iframe{
+    width: 100%;
+  }
+}
+#map iframe{
+	height:100%;
+	@media (max-width: 1200px) {
+		min-height: 80vmin;
+	}
+}
+#pres-video {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	iframe {
+		height: 28.125vw;
+		@media (max-width: 992px) {
+			height: 56.25vw;
+		}
+	}
+	
+}
+
+#evt {
+	.img-wrap {
+		background: black;
+		border-radius: 10px;
+		margin: auto;
+		width: 200px;
+		height: 120px;
+		overflow: hidden;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+#acti {
+	i {
+		font-size: 6rem;
+	}
+}
+
+#citations {
+	img {
+		height: 8rem;
+	}
+}
+
+#partenaires-img {
+	height: 32vmin;
+	margin-top: -30px;
+	div{
+		height: 100%
+	}
+	img {
+		max-width: 70%;
+		max-height: 100%;
+		position: relative;
+		top: 16vmin;
+		transform: translateY(-50%);
+	}
+}
+
+#tarifs {
+	background: $white;
+}
+
+.jumbotron {
+	margin: 0;
+}
+
+#horaires {
+	b {
+		font-weight: 900;
+	}
+}
+
+footer {
+	padding: 1vh 0 5vh 0;
+	border-top: 3px solid $fond-sombre;
+	a {
+		color: $black;
+	}
+	a:hover {
+		color: $fond-alerte
+	}
+}
+
+
+.balloon {
+	display: table;
+	align-text: center;
+	font-size: 1.2rem;
+	margin: auto;
+	padding: 20px;
+    width: 250px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.balloon .tip {
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 120px;
+    bottom: -20px;
+    border: solid 10px;
+    border-color: #fff transparent transparent transparent;
 }

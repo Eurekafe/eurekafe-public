@@ -1,0 +1,49 @@
+//color-scheme
+
+$black:#000;
+$white:#fff;
+$primaire:#ffd44b;
+$secondaire: $primaire;
+$alerte:#0026ff;
+$fond-claire:#ffffc9;
+$fond-sombre: #fffa88;
+$fond-alerte: #001bb2;
+
+
+//bootstrap overwrite
+
+//color
+$primary: $primaire;
+$secondary: $secondaire;
+$warning: $alerte;
+$danger: $alerte;
+$dark: $fond-sombre;
+$light: $fond-claire;
+
+$component-active-color: $black;
+$link-color: $black;
+
+$navbar-dark-color: rgba($fond-claire,.5);
+$navbar-dark-hover-color: rgba($fond-claire,.75);
+$navbar-dark-active-color: $fond-claire;
+$navbar-dark-disabled-color: rgba($fond-claire,.25);
+$navbar-dark-toggler-border-color:  rgba($fond-claire,.1);
+
+$navbar-light-color: rgba($black,.5);
+$navbar-light-hover-color: rgba($black,.7);
+$navbar-light-active-color: rgba($black,.9);
+$navbar-light-disabled-color: rgba($black,.3);
+$navbar-light-toggler-border-color: rgba($black,.1);
+
+//font
+
+$font-size-base: 1.5rem !default;
+
+//carousel
+$carousel-control-width: 8%; //default 15%
+$carousel-control-icon-width: 38px; //default 20px
+$carousel-control-opacity: 0.4; //default 0.5
+$carousel-transition: transform 0.6s ease;  //default transform .6s ease
+
+//jumbotron
+$jumbotron-padding: 1rem; //default 2rem

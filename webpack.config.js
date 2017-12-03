@@ -19,7 +19,7 @@ module.exports = {
       options: {name: "font/[name].[ext]"}
     },
     {
-      test: /\.(png|svg|jpg|gif|ico)$/,
+      test: /\.(png|svg|jpg|gif|ico|jpeg)$/,
       loader: "file-loader",
       options: {name: "img/[name].[ext]"}
     },

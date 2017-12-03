@@ -6,5 +6,227 @@ html
     link(rel="icon" type="image/x-icon" href=require("./img/favicon.ico"))
     title Eurêkafé
 
-  body
-    h1 bonjour
+  body(data-spy="scroll" data-target="#main-nav" data-offset="60")
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.d-flex.flex-row.justify-content-between.fixed-top#main-nav
+      a.navbar-brand(href="#main-wrapper")
+        img.d-inline-block.align-top.mx-3(src=require("./img/logo.png") height="40px" width="40px")
+        | L'Eurêkafé
+      ul.nav.nav-pills#main-nav-pills(style="flex:1;")
+        li.navbar-item.mx-3: a.nav-link(href="#concept") Le concept
+        li.navbar-item.mx-3: a.nav-link(href="#evenements") Evenements
+        li.navbar-item.mx-3: a.nav-link(href="#partenaires") Nos partenaires
+        li.navbar-item.mx-3: a.nav-link(href="#info") Infos pratiques
+      ul.navbar-nav#main-nav-social
+        a.nav-link(href=""): i.fa.fa-2x.fa-facebook-official(aria-hidden="true")
+        a.nav-link(href=""): i.fa.fa-2x.fa-twitter-square(aria-hidden="true")
+        a.nav-link(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
+        a.nav-link(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
+
+    div.container-fluid#main-wrapper
+      
+      section.row.carousel.slide#carousel(data-ride="carousel")
+        ol.carousel-indicators
+          li(data-target="#carouselExampleIndicators" data-slide-to="0" class="active")
+          li(data-target="#carouselExampleIndicators" data-slide-to="1")
+          li(data-target="#carouselExampleIndicators" data-slide-to="2")
+          li(data-target="#carouselExampleIndicators" data-slide-to="3")
+        div.carousel-inner
+          div.carousel-item.active
+            button.btn.btn-primary.carousel-button(type="button") Klikendish-kliken
+            img.vertical-align.darker(src=require("./img/nasa/37729733334_86a747017a_o.jpg"))
+          div.carousel-item
+            img.vertical-align.darkest(src=require("./img/nasa/assasn-14li_banner_0.jpg"))
+          div.carousel-item
+            img.vertical-align(src=require("./img/nasa/potw1742a.jpg"))
+          div.carousel-item
+            img.vertical-align(src=require("./img/nasa/potw1748a.jpeg"))
+        a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only Previous
+        a.carousel-control-next(href="#carousel" role="button" data-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only Next
+      
+      section.row.no-gutters#concept
+        h1.col-12.mb-0.pl-4.py-4.text-center.bg-dark Un café pas comme les autres
+        article.col-12.col-lg-6.bg-dark
+          h5.pl-5.my-3.text-center Servi avec un bonne dose de science
+          p.px-4.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        article.col-12.col-lg-6.bg-dark#pres-video
+          div.padding
+          iframe(src="https://www.youtube.com/embed/FavUpD_IjVY?rel=0" frameborder="0")
+          div.padding
+      section.row.pt-4.pb-4.text-center.bg-light#activite: h3.col-12 Tout ce que vous pouvez faire chez nous
+      section.row.pb-3.text-center.bg-light#acti
+        article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2.offset-lg-2
+          i.fa.fa-coffee
+          p bla
+        article.col-6.col-sm-4.col-md-3.col-lg-2
+          i.fa.fa-cutlery
+          p bla
+        article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2
+          i.fa.fa-wifi
+          p blou
+        article.col-6.col-sm-4.col-md-3.col-lg-2
+          i.fa.fa-users
+          p bla
+        article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2.offset-lg-2
+          i.fa.fa-ticket
+          p bli
+        article.col-6.col-sm-4.col-md-3.col-lg-2
+          i.fa.fa-paint-brush
+          p bla
+        article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2
+          i.fa.fa-wheelchair
+          p bla
+        article.col-6.col-sm-4.col-md-3.col-lg-2
+          i.fa.fa-plus-square
+          p bla
+
+      section.row.pt-4.pb-3.text-center#evenements
+        div.col: h3 Les Evenements
+      section.row.pb-4#evt
+        div.col-3.text-center
+          div.img-wrap: img(src=require("./img/famelab-evt.jpg"))
+          div 3 dec
+          div Rencontre avec les finaliste du concours FameLab - #[b 14h30]
+        div.col-3.text-center
+          div.img-wrap: img(src=require("./img/chimie-evt.jpg"))
+          div 15 dev
+          div Animation petit chimiste - #[b 16h30]
+        div.col-3.text-center
+          div.img-wrap: img(src=require("./img/drone-evt.jpg"))
+          div 20 dec
+          div Conférence: l'agriculture de demain - #[b 18h30]
+        div.col-3.text-center
+          div.img-wrap: img(src=require("./img/biolu-evt.jpg"))
+          div 35 dec
+          div Ã la découverte de la bioluminécence - #[b 20h00]
+
+
+      section.row.pt-4.text-center.bg-light#partenaires: h2.col-12 Ils nous accompagnent
+      div.row.pb-3.text-center.bg-light#partenaires-img
+        div.col-4: img.align-middle(src=require("./img/cite-de-espace.png"))
+        div.col-4: img.align-middle(src=require("./img/famelab.png"))
+        div.col-4: img.align-middle(src=require("./img/science-animation.png"))
+      section.row.pt-4.text-center.bg-dark.pb-4#citations
+        h3.col-12 Ce que nos clients disent de nous
+        div.col-4
+          div.balloon
+            span Relativement interessant...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/einstein.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star-half-full
+            i.fa.fa-lg.fa-star-o
+        div.col-4
+          div.balloon
+            span Un accueil radieux...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/marie-curie.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+        div.col-4
+          div.balloon
+            span Des pommes de premier choix...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/newton.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star-o
+
+      
+      
+      section.row#info
+        article.col.text-center.jumbotron#tarifs
+          h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
+          img(src=require("./img/Tarifs.png"))
+      section.row.bg-dark
+        article.col.text-center.jumbotron.bg-dark#horaires
+          h3.display-2.pb-4 Horaires d'ouverture:
+          p.display-4 Tout les jours de #[b 9h à 22h !]
+          p.display-5 Ouverture à #[b 11h pendant le weekend] (samedi et dimanche)
+      section.row.no-gutters
+        div.col-12.col-xl-6.card
+          div.card-body
+            h3.card-title.text-center: b Infos pratiques
+            ul.list-group.list-group-flush
+              li.list-group-item.d-flex.flex-row
+                div: b Adresse:&nbsp;
+                div
+                  div.pr-1 8 rue de la Lala
+                  div 361000
+                  div Lalaland
+              li.list-group-item #[b Tel: ] 00.22.88.99.66 (prix d'un appel matinale)
+              li.list-group-item #[b @: ] Zouglouglou@yopmail.com
+              li.list-group-item.container.justify-content-around
+                div.row
+                  div.col-12.col-md-6.mb-3.mb-md-0
+                    div: b Horaires d'ouverture:
+                    div.d-flex.flex-row
+                      div
+                        div Lundi: 
+                        div Mardi:
+                        div mercredi:
+                        div Jeudi:
+                        div Vendredi:
+                        div Samedi:
+                        div Dimanche:&nbsp;
+                      div
+                        div 9h - 22h
+                        div 9h - 22h
+                        div 9h - 22h
+                        div 9h - 22h
+                        div 9h - 22h
+                        div 11h - 22h
+                        div 11h - 22h
+                  div.col-12.col-md-6
+                    div: b Tarifs:
+                    div.d-flex.flex-row
+                      div
+                        div Une heure:&nbsp;
+                        div Jour complet:&nbsp;
+                        div Semaine:
+                        div Mois:
+                      div
+                        div 4€
+                        div 14€
+                        div 60€
+                        div 165€
+        div.col-12.col-xl-6#map
+          iframe(frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&center=43.602968,1.442261&zoom=16" allowfullscreen)
+
+    footer.container-fluid.bg-dark
+      div.row
+        div.col-12.col-lg-6.container
+          nav.col-12.p-2.nav.align-items-center.justify-content-center
+            a.nav-item.nav-link(href="/about") À propos
+            a.nav-item.nav-link(href="/faq") F.A.Q.
+            a.nav-item.nav-link(href="/press") Presse
+            a.nav-item.nav-link(href="/legal") Mention légales
+          nav.col-12.p-2.nav.align-items-center.justify-content-center
+            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-facebook-official(aria-hidden="true")
+            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-twitter-square(aria-hidden="true")
+            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
+            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
+        div.col-12.col-lg-6
+          form.container
+            div.row.text-center
+              h3.col.pt-3 S'abonner à la newsletter ?
+            div.row.col-10.offset-1.col-lg-8.offset-lg-2
+              div.input-group
+                input.form-control(type="text" placeholder="mon email")
+                span.input-group-btn
+                  input.btn.btn-success(type="submit" value="Oui, avec plaisir")
+
+          
