@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "postinstall": "npm run build",
+    "start": "node app.js",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
