@@ -13,6 +13,13 @@ body {
 	border-bottom: 3px solid $fond-sombre;
 	.navbar-brand {
 		padding: 0;
+		img {
+			height: 40px;
+			width: 40px;
+		}
+		@media (max-width: 992px) {
+			margin: auto;
+		}
 	}
 	#main-nav-pills {
 		.nav-link {
@@ -29,7 +36,33 @@ body {
 				color: $primaire;
 			}
 		}
+		@media (max-width: 992px) {
+			display: none;
+		}
 	}
+}
+
+#side-nav {
+	overflow: hidden;
+	white-space: nowrap;
+	display: none;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 80px;
+	z-index: 1029;
+	opacity: 0.9;
+	&.collapsing {
+	    -webkit-transition: none;
+	    transition: none;
+	    display: none;
+	}
+}
+
+
+#side-nav-content {
+	height: 100%;
 }
 
 #carousel {
@@ -90,7 +123,21 @@ img.darkest {
 			height: 56.25vw;
 		}
 	}
-	
+}
+
+
+#concept {
+	@media (max-width: 576px) {
+		h1 {
+			font-size: 2rem;
+		}
+		h5 {
+			font-size: 1.5rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 
 #evt {
@@ -107,6 +154,11 @@ img.darkest {
 		height: auto;
 	}
 }
+@media (max-width: 576px) {
+	#activite h3 {
+		font-size: 2rem;
+	}
+}
 
 #acti {
 	i {
@@ -118,10 +170,21 @@ img.darkest {
 	img {
 		height: 8rem;
 	}
+	@media (max-width: 576px) {
+		h3 {
+			font-size: 1.8rem;
+		}
+	}
 }
 
-#partenaires-img {
-	height: 32vmin;
+@media (max-width: 576px) {
+	#partenaires h2 {
+		font-size: 2rem;
+	}
+}
+
+.partenaires-img {
+	min-height: 32vmin;
 	margin-top: -30px;
 	div{
 		height: 100%
@@ -137,6 +200,19 @@ img.darkest {
 
 #tarifs {
 	background: $white;
+	img {
+		width: 80%;
+	}
+	@media (max-width: 768px) {
+		.display-4 {
+			font-size: 3rem;
+		}
+	}
+	@media (max-width: 576px) {
+		.display-4 {
+			font-size: 1.7rem;
+		}
+	}
 }
 
 .jumbotron {
@@ -146,6 +222,22 @@ img.darkest {
 #horaires {
 	b {
 		font-weight: 900;
+	}
+	@media (max-width: 768px) {
+		.display-2 {
+			font-size: 4rem;
+		}
+	}
+	@media (max-width: 576px) {
+		.display-2 {
+			font-size: 2.1rem;
+		}
+		.display-4 {
+			font-size: 1.7rem;
+		}
+		.display-5 {
+			font-size: 1.3rem;
+		}
 	}
 }
 
@@ -157,6 +249,33 @@ footer {
 	}
 	a:hover {
 		color: $fond-alerte
+	}
+	#news-form {
+		.no-group {
+			display: none;
+		}
+
+		@media (max-width: 1200px) {
+			.input-group {
+				display: none;
+			}
+			.no-group {
+				display: block;
+				&.input-group {
+					position: relative;
+					.btn {
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+			}
+		}
+		@media (max-width: 768px) {
+			h3 {
+				font-size: 1.8rem;
+			}
+		}
 	}
 }
 
@@ -186,4 +305,15 @@ span {
     bottom: -20px;
     border: solid 10px;
     border-color: #fff transparent transparent transparent;
+}
+
+@media (min-width: 576px) {
+	.md-hide {
+		display: none;
+	}
+}
+@media (max-width: 576px) {
+	.sm-hide {
+		display: none;
+	}
 }

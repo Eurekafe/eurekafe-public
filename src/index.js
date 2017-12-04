@@ -16,6 +16,15 @@ $(document).ready(function() {
   });
 
 
+  $("#navtog").click(function() {
+    let elmt = $("#side-nav");
+    if (elmt.css("display") != "block") {
+      elmt.show("fast");
+    } else {
+      elmt.hide("fast");
+    }
+  });
+
   /*
   //parallax
   $(".parallax-container").each(function() {
