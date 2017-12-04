@@ -5,7 +5,10 @@ $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 
 body {
-	margin-top: 56px;
+	min-height: 100vh;
+	padding-top: 56px;
+	display: flex;
+	flex-direction: column;
 }
 
 #main-nav {
@@ -69,6 +72,10 @@ body {
 	}
 }
 
+#main-wrapper {
+	width: 100%;
+	flex: 1;
+}
 
 #side-nav-content {
 	height: 100%;
