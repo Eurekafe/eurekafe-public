@@ -11,6 +11,15 @@ body {
 #main-nav {
 	padding: 2px 16px 0 16px;
 	border-bottom: 3px solid $fond-sombre;
+	.navbar-toggler {
+		text-align: center;
+		line-height: 0.75;
+		padding: 0.13rem 0.5rem 0.37rem 0.5rem;
+	}
+	.navbar-toggler-icon {
+		width: 1rem;
+		height: 1rem;
+	}
 	.navbar-brand {
 		padding: 0;
 		img {
@@ -175,6 +184,9 @@ img.darkest {
 			font-size: 1.8rem;
 		}
 	}
+	i {
+		color: $primaire;
+	}
 }
 
 @media (max-width: 576px) {
@@ -201,7 +213,7 @@ img.darkest {
 #tarifs {
 	background: $white;
 	img {
-		width: 80%;
+		max-width: 80%;
 	}
 	@media (max-width: 768px) {
 		.display-4 {
@@ -244,6 +256,9 @@ img.darkest {
 footer {
 	padding: 1vh 0 5vh 0;
 	border-top: 3px solid $fond-sombre;
+	#footer-text-link a{
+		text-decoration: underline;
+	}
 	a {
 		color: $black;
 	}
@@ -263,6 +278,7 @@ footer {
 				display: block;
 				&.input-group {
 					position: relative;
+					height: 10vh;
 					.btn {
 						position: absolute;
 						left: 50%;
