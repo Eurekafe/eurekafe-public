@@ -41,7 +41,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("[name].style.css"),
-    new HtmlWebpackPlugin({template: "./src/index.pug"}),
+    new HtmlWebpackPlugin({filename: "index.html", template: "./src/index.pug"}),
+    new HtmlWebpackPlugin({filename: "404.html", template: "./src/404.pug"}),
     new CleanWebpackPlugin(["dist"]),
     new webpack.ProvidePlugin({
       $: "jquery",
