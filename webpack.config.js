@@ -10,7 +10,7 @@ module.exports = {
   entry: {index: "./src/index.js"},
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist/")
   },
   module: {
     rules: [{
@@ -40,7 +40,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new ExtractTextPlugin("[name].style.css"),
+    new ExtractTextPlugin("/[name].style.css"),
     new HtmlWebpackPlugin({filename: "index.html", template: "./src/index.pug"}),
     new HtmlWebpackPlugin({filename: "404.html", template: "./src/404.pug"}),
     new HtmlWebpackPlugin({filename: "faq.html", template: "./src/faq.pug"}),

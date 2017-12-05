@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="icon" type="image/x-icon" href=require("./img/favicon.ico"))
+    link(rel="icon" type="image/x-icon" href="/" + require("./img/favicon.ico"))
     block title
       title Eurêkafé
 
@@ -12,7 +12,7 @@ html
       nav.navbar.navbar-expand-lg.navbar-light.bg-light.d-flex.flex-row.justify-content-between.fixed-top#main-nav
         button.navbar-toggler#navtog(type="button"): span.navbar-toggler-icon
         a.navbar-brand(href="#main-wrapper")
-          img.d-inline-block.align-top.mr-3.ml-lg-3(src=require("./img/logo.png"))
+          img.d-inline-block.align-top.mr-3.ml-lg-3(src="/" + require("./img/logo.png"))
           | L'Eurêkafé
         
 
