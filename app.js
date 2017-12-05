@@ -8,6 +8,8 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const app = express();
 
+const path = require("path");
+
 app.use(morgan("tiny"));
 
 app.set("view engine", "pug");
@@ -16,6 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static("dist"));
+
+app.use(function(req, res) {
+  res.status(404).sendFile(path.resolve(__dirname, "dist/404.html"));
+});
 
 const port = process.env.PORT||3000;
 
