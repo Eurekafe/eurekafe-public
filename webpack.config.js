@@ -47,6 +47,7 @@ module.exports = {
     new HtmlWebpackPlugin({filename: "press.html", template: "./src/press.pug"}),
     new HtmlWebpackPlugin({filename: "legal.html", template: "./src/legal.pug"}),
     new HtmlWebpackPlugin({filename: "about.html", template: "./src/about.pug"}),
+    new HtmlWebpackPlugin({filename: "newsletter.html", template: "./src/newsletter.pug"}),
     new CleanWebpackPlugin(["dist"]),
     new webpack.ProvidePlugin({
       $: "jquery",

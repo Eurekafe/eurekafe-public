@@ -47,12 +47,12 @@ html
             a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
             a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
         div.col-12.col-lg-6
-          form.container#news-form
+          form.container(action="/newsletter" method="post")#news-form
             div.row.text-center
               h3.col.pt-3 S'abonner à la newsletter ?
             div.row.col-10.offset-1.col-lg-8.offset-lg-2
               div.input-group
-                input.form-control(type="text" placeholder="mon email")
+                input.form-control(type="text" name="mail" placeholder="mon email")
                 span.input-group-btn
                   input.btn.btn-success(type="submit" value="Oui, avec plaisir")
               input.col-12.form-control.mb-3.no-group(type="text" placeholder="mon email")
