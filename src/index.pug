@@ -1,15 +1,15 @@
 extends templates/layout.pug
 block section
-  li.navbar-item.mx-3: a.nav-link(href="#concept") Le concept
-  li.navbar-item.mx-3: a.nav-link(href="#evenements") Evenements
-  li.navbar-item.mx-3: a.nav-link(href="#partenaires") Nos partenaires
-  li.navbar-item.mx-3: a.nav-link(href="#info") Infos pratiques
+  li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
+  li.navbar-item.mx-3: a.nav-link(href="#evenements") ÉVÉNEMENTS
+  li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
+  li.navbar-item.mx-3: a.nav-link(href="#info") INFO PRATIQUES
 
 block section-sm
-  li.navbar-item.mx-3: a.nav-link(href="#concept") Le concept
-  li.navbar-item.mx-3: a.nav-link(href="#evenements") Evenements
-  li.navbar-item.mx-3: a.nav-link(href="#partenaires") Nos partenaires
-  li.navbar-item.mx-3: a.nav-link(href="#info") Infos pratiques
+  li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
+  li.navbar-item.mx-3: a.nav-link(href="#evenements") ÉVÉNEMENTS
+  li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
+  li.navbar-item.mx-3: a.nav-link(href="#info") INFO PRATIQUES
 
 block body      
   section.row.carousel.slide#carousel(data-ride="carousel")
@@ -51,11 +51,11 @@ block body
 
   section.row#concept
     div.col.jumbotron.bg-dark
-      h1.display-1.text-center.my-4 Un lieu inconournable </br>d'éducation populaire.
+      h1.text-center.my-4 Un lieu inconournable </br>d'Éducation Populaire
 
   div.zigzag(style="background-image:url(" + require("./img/shapes/d-tri.svg") + ");")
 
-  section.row.pt-4
+  section.row.pt-4#concept-detail
     div.col-12.col-md-2.offset-md-3.text-center
       p Pour faire des rencontres étonnantes
       object(data=require("./img/icons/hands.svg") type="image/svg+xml" width="70px" height="70px") hands
@@ -69,13 +69,13 @@ block body
       object(data=require("./img/icons/bulb.svg") type="image/svg+xml" width="70px" height="70px") hands
   div.row.h-divider
   section.row
-    div.col.jumbotron.bg-white
-      h2.display-2.text-center Le Café des </br>Curiosités
-      p.display-4.text-center Venez éveiller votre curiosité !
+    div.col.bg-white
+      h2.text-center.pt-3 Le Café des </br>Curiosités
+      p.text-center Venez éveiller votre curiosité !
   div.row.h-divider
   section.row
     div.col
-      h5.display-5.text-center.py-4 OUVERT 7/7 de 9h à 22h
+      p.alt-font.text-center.py-4 OUVERT 7/7 de 9h à 22h
 
   div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
 
@@ -137,7 +137,7 @@ block body
     div.col
       div.h-divider
   section.row.bg-light
-    div.col-12.col-md-5.offset-md-2: h3.text-center.my-3 Besoin d'en profiter à plusieurs ?
+    div.col-12.col-md-5.offset-md-2: p.alt-font.text-center.my-3 Besoin d'en profiter à plusieurs ?
     div.col-12.col-md-3.d-flex.align-items-center: button.btn.btn-primary.ml-3.mx-auto Réserver une salle
   div.row.bg-light
     div.col
@@ -145,7 +145,7 @@ block body
   section.row.bg-light.pb-5
     div.container-fluid#tarifs
       article.col.text-center
-        h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
+        p.h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
         img(src=require("./img/Tarifs.png"))
 
   section.row#parallax-quote
@@ -158,7 +158,7 @@ block body
 
   div.row#evenements
     div.col.jumbotron.bg-dark
-        h1.display-1.text-center.m-4 Événements 
+        h1.text-center.m-4 Événements 
   section.row#evt
     div.container-fluid
       div.row
@@ -187,7 +187,7 @@ block body
 
   div.row#partenaires
     div.col.jumbotron.bg-dark
-        h1.display-1.text-center.m-4 Partenaires 
+        h1.text-center.m-4 Partenaires 
   section.row.bg-dark.pb-5
     div.container-fluid#part-list
       div.row

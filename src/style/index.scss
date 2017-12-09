@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, .nav-brand {
 	font-family: "font-cali"
 }
 
+.alt-font {
+	font-family: "font-alt";
+}
+
 .zigzag-bot {
   position: relative;
   margin-top: 4px;
@@ -51,11 +55,8 @@ h1, h2, h3, h4, h5, .nav-brand {
 }
 
 @media (max-width: 992px) {
-	.display-1 {
+	h1 {
 		font-size: 3rem;
-	}
-	.display-2 {
-		font-size: 2.8rem;
 	}
 	h2 {
 		font-size: 2.4rem;
@@ -75,11 +76,8 @@ h1, h2, h3, h4, h5, .nav-brand {
 }
 
 @media (max-width: 768px) {
-	.display-1 {
+	h1 {
 		font-size: 2.1rem;
-	}
-	.display-2 {
-		font-size: 2rem;
 	}
 	h2 {
 		font-size: 1.8rem;
@@ -311,12 +309,18 @@ footer {
 	}
 }
 
+#concept-detail {
+	p {
+		font-size: 1.2rem;
+	}
+}
+
 #activites {
 	p {
 		font-size: 2.2rem;
 	}
 	&>div {
-		width: 65%;
+		width: 72%;
 		margin: 40px auto;
 		padding: 40px;
 		background: $white;
@@ -343,7 +347,7 @@ footer {
 }
 
 #tarifs {
-	width: 65%;
+	width: 72%;
 	margin: 15px auto;
 	padding: 40px;
 	background: $white;
