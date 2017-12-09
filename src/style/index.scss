@@ -420,8 +420,9 @@ footer {
 			max-width: 70%;
 			max-height: 100%;
 			position: relative;
+			left: 50%;
 			top: 8vmin;
-			transform: translateY(-50%);
+			transform: translateY(-50%) translateX(-50%);
 		}
 	}
 	@media (max-width: 992px) {
