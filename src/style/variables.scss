@@ -6,7 +6,7 @@ $primaire:#ffd44b;
 $secondaire: $primaire;
 $alerte:#0026ff;
 $fond-claire:#ffeaa5;
-$fond-sombre: #fffa88;
+$fond-sombre: $primaire;
 $fond-alerte: #001bb2;
 
 
@@ -37,7 +37,7 @@ $navbar-light-toggler-border-color: rgba($black,.1);
 
 //font
 $font-family-base: "font-text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-size-base: 1.5rem !default;
+$font-size-base: 1.8rem !default;
 
 //carousel
 $carousel-control-width: 8%; //default 15%

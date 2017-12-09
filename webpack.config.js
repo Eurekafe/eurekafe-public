@@ -14,7 +14,7 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
       loader: "file-loader",
       options: {name: "font/[name].[ext]"}
     },

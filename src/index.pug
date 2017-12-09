@@ -18,16 +18,30 @@ block body
       li(data-target="#carouselExampleIndicators" data-slide-to="1")
       li(data-target="#carouselExampleIndicators" data-slide-to="2")
       li(data-target="#carouselExampleIndicators" data-slide-to="3")
+      li(data-target="#carouselExampleIndicators" data-slide-to="4")
+      li(data-target="#carouselExampleIndicators" data-slide-to="5")
     div.carousel-inner
-      div.carousel-item.active
+      div.carousel-item.active.dark(style="background-image:url(" + require('./img/rocket.webp') + ");")
+        div.row
+          div.col
+            h2.text-center.mb-4: span En construction
+            button.btn Bouton boutonnant
+      div.carousel-item(style="background-image:url(" + require('./img/nasa/37729733334_86a747017a_o.jpg') + ");")
         button.btn.btn-primary.carousel-button(type="button") Klikendish-kliken
-        img.vertical-align.darker(src=require("./img/nasa/37729733334_86a747017a_o.jpg"))
-      div.carousel-item
-        img.vertical-align.darkest(src=require("./img/nasa/assasn-14li_banner_0.jpg"))
-      div.carousel-item
-        img.vertical-align(src=require("./img/nasa/potw1742a.jpg"))
-      div.carousel-item
-        img.vertical-align(src=require("./img/nasa/potw1748a.jpeg"))
+      div.carousel-item(style="background-image:url(" + require('./img/ballet.webp') + ");")
+        div.row
+          div.offset-4.col
+            h2.text-center Il y a du concept ...
+            h3.text-center.mb-4 Tu vois le lien avec l'Eurêkafé ?
+            button.btn Contactez nous !
+      div.carousel-item(style="background-image: url(" + require('./img/nasa/assasn-14li_banner_0.jpg') + ");")
+      div.carousel-item.container-fluid(style="background-image:url(" + require('./img/swim.webp') + ");")
+        div.row
+          div.offset-4.col
+            h2.text-center Image qui ne sert à rien...
+            h3.text-center.mb-4 Pour le moment !
+            button.btn bouton qui pète
+      div.carousel-item(style="background-image:url(" + require('./img/nasa/potw1742a.jpg') + ");")
     a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
       span.carousel-control-prev-icon(aria-hidden="true")
       span.sr-only Previous
@@ -35,116 +49,198 @@ block body
       span.carousel-control-next-icon(aria-hidden="true")
       span.sr-only Next
 
-  section.row.no-gutters#concept
-    h1.col-12.mb-0.p-2.p-md-4.text-center.bg-dark Un café pas comme les autres
-    article.col-12.col-lg-6.bg-dark
-      h3.px-5.my-md-3.text-center Servi avec une bonne dose de science
-      p.px-4.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    article.col-12.col-lg-6.bg-dark#pres-video
-      div.padding
-      iframe(src="https://www.youtube.com/embed/FavUpD_IjVY?rel=0" frameborder="0")
-      div.padding
-  section.row.pt-4.pb-4.text-center.bg-light#activite: h3.col-12 Tout ce que vous pouvez faire chez nous
-  section.row.pb-3.text-center.bg-light#acti
-    article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2.offset-lg-2
-      i.fa.fa-coffee
-      p bla
-    article.col-6.col-sm-4.col-md-3.col-lg-2
-      i.fa.fa-cutlery
-      p bla
-    article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2
-      i.fa.fa-wifi
-      p blou
-    article.col-6.col-sm-4.col-md-3.col-lg-2
-      i.fa.fa-users
-      p bla
-    article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2.offset-lg-2
-      i.fa.fa-ticket
-      p bli
-    article.col-6.col-sm-4.col-md-3.col-lg-2
-      i.fa.fa-paint-brush
-      p bla
-    article.col-6.col-sm-4.offset-sm-2.col-md-3.offset-md-0.col-lg-2
-      i.fa.fa-wheelchair
-      p bla
-    article.col-6.col-sm-4.col-md-3.col-lg-2
-      i.fa.fa-plus-square
-      p bla
+  section.row#concept
+    div.col.jumbotron.bg-dark
+      h1.display-1.text-center.my-4 Un lieu inconournable </br>d'éducation populaire.
 
-  section.row.pt-4.pb-3.text-center#evenements
-    div.col: h3 Les Evenements
-  section.row.pb-4#evt
-    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
-      div.img-wrap: img(src=require("./img/famelab-evt.jpg"))
-      div 3 dec
-      div Rencontre avec les finalistes du concours FameLab - #[b 14h30]
-    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
-      div.img-wrap: img(src=require("./img/chimie-evt.jpg"))
-      div 15 dev
-      div Animation petit chimiste - #[b 16h30]
-    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
-      div.img-wrap: img(src=require("./img/drone-evt.jpg"))
-      div 20 dec
-      div Conférence: l'agriculture de demain - #[b 18h30]
-    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
-      div.img-wrap: img(src=require("./img/biolu-evt.jpg"))
-      div 35 dec
-      div Ã la découverte de la bioluminéscence - #[b 20h00]
+  div.zigzag(style="background-image:url(" + require("./img/shapes/d-tri.svg") + ");")
+
+  section.row.pt-4
+    div.col-12.col-md-2.offset-md-3.text-center
+      p Pour faire des rencontres étonnantes
+      object(data=require("./img/icons/hands.svg") type="image/svg+xml" width="70px" height="70px") hands
+    div.col-12.col-md-2.text-center
+      div.container-fluid
+        div.row.order-md-2
+          p.col-12.order-md-2 Pour discuter entre amis
+          div.col-12.order-md-1: object(data=require("./img/icons/baloon.svg") type="image/svg+xml" width="70px" height="70px") hands
+    div.col-12.col-md-2.text-center
+      p Pour travailler dans un cadre stimulant
+      object(data=require("./img/icons/bulb.svg") type="image/svg+xml" width="70px" height="70px") hands
+  div.row.h-divider
+  section.row
+    div.col.jumbotron.bg-white
+      h2.display-2.text-center Le Café des </br>Curiosités
+      p.display-4.text-center Venez éveiller votre curiosité !
+  div.row.h-divider
+  section.row
+    div.col
+      h5.display-5.text-center.py-4 OUVERT 7/7 de 9h à 22h
+
+  div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
+
+  section.row.bg-light#activites
+    div
+      div.col.container
+        div.row
+          div.col-12.col-md-4
+            div.vert-center.pb-5.pb-md-0
+              p.h2.font-weight-bold.text-center faites comme chez vous...
+              img(src=require("./img/icons/shoes.png"))
+          div.col-12.col-md-8
+            div.container
+              div.row
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/wifi.png"))
+                  p.text-center WIFI </br>Haut-débit
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/blackboard.png"))
+                  p.text-center Tableau
+                div.col-12.col-lg-6
+                  div.d-flex.flex-row.justify-content-center
+                    img(src=require("./img/icons/biscuit-cake.png"))
+                    img(src=require("./img/icons/apple.png"))
+                  p.text-center Snack et biscuit
+              div.row
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/copy.png"))
+                  p.text-center Imprimante
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/projo.png"))
+                  p.text-center Projecteur
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/cup-glass.png"))
+                  p.text-center Boissons
+                div.col.col-md-6.col-lg-3
+                  img(src=require("./img/icons/dice.png"))
+                  p.text-center Jeux
+        div.row
+          div.col-12.col-md-6.col-lg-4
+            div.container
+              div.row
+                div.col.col-md-6
+                  img(src=require("./img/icons/presentation.png"))
+                  p.text-center Conférences </br>canapé
+                div.col.col-md-6
+                  img(src=require("./img/icons/newspaper.png"))
+                  p.text-center Actualités </br>scientifiques
+              div.row
+                div.col.col-md-6
+                  img(src=require("./img/icons/book.png"))
+                  p.text-center Magazines
+                div.col.col-md-6
+                  img(src=require("./img/icons/gear-house.png"))
+                  p.text-center Environnement </br>interactif
+          div.col-12.col-md-6.col-lg-8
+            p.h2.text-center.font-weight-bold.vert-center ... et étanchez votre soif de curiosité !
+  div.row.bg-light
+    div.col
+      div.h-divider
+  section.row.bg-light
+    div.col-12.col-md-5.offset-md-2: h3.text-center.my-3 Besoin d'en profiter à plusieurs ?
+    div.col-12.col-md-3.d-flex.align-items-center: button.btn.btn-primary.ml-3.mx-auto Réserver une salle
+  div.row.bg-light
+    div.col
+      div.h-divider
+  section.row.bg-light.pb-5
+    div.container-fluid#tarifs
+      article.col.text-center
+        h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
+        img(src=require("./img/Tarifs.png"))
+
+  section.row#parallax-quote
+    div.col 
+      div.parallax-container
+        div.d-block.text-body
+          p.h3.d-block "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !" </br> - Charles Darwin -
+        img.parallax(src=require("./img/blue-night.jpg"))
+    
+
+  div.row#evenements
+    div.col.jumbotron.bg-dark
+        h1.display-1.text-center.m-4 Événements 
+  section.row#evt
+    div.container-fluid
+      div.row
+        div.col.py-5
+          div.d-flex.flex-column.justify-content-center(style="height:100%;")
+            h4.text-center EXPÉRIENCES AMUSANTES
+            h5.cali.text-center tous les lundi
+            p.text-center I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.
+            button.btn.btn-primary.d-block.mx-auto Jouli bouton
+        div.col.bg-img(style="background-image:url(" + require("./img/science-stuff.webp") + ");")
+      div.row
+        div.col.bg-img(style="background-image:url(" + require("./img/dna.webp") + ");")
+        div.col.py-5
+          div.d-flex.flex-column.justify-content-center(style="height:100%;")
+            h4.text-center.cali Les mardi...
+            h5.text-center rencontre avec...
+            p.text-center I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.
+      div.row
+        div.col.py-5
+          div.d-flex.flex-column.justify-content-center(style="height:100%;")
+            h4.text-center atelier pour les enfants
+            h6.text-center tout les
+            h5.cali.text-center Week-end et mercredi
+            p.text-center I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.  
+        div.col.bg-img(style="background-image:url(" + require("./img/colors.webp") + ");")
+
+  div.row#partenaires
+    div.col.jumbotron.bg-dark
+        h1.display-1.text-center.m-4 Partenaires 
+  section.row.bg-dark.pb-5
+    div.container-fluid#part-list
+      div.row
+        h2.col.text-center Ils nous accompagnent
+      div.row.partenaires-img
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/big-bang-science.png"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/famelab.png"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/podcast-science.png"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/pint-of-science.png"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/british-council.png"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/café-des-sciences.jpg"))
+        div.col-6.col-sm-3: img.align-middle(src=require("./img/partenaires/science-animation.png"))
 
 
-  section.row.pt-4.text-center.bg-dark#partenaires: h2.col-12 Ils nous accompagnent
-  div.row.pb-3.text-center.bg-dark.partenaires-img
-    div.col-6.col-sm-4: img.align-middle(src=require("./img/partenaires/cite-de-espace.png"))
-    div.col-6.col-sm-4: img.align-middle(src=require("./img/partenaires/famelab.png"))
-    div.col-6.col-sm-4.sm-hide: img.align-middle(src=require("./img/partenaires/science-animation.png"))
-  div.row.pb-3.text-center.bg-dark.partenaires-img.md-hide
-    div.col-6.col-sm-4: img.align-middle(src=require("./img/partenaires/science-animation.png"))
   section.row.pt-4.text-center.bg-light.pb-4#citations
-    h3.col-12 Ce que nos clients disent de nous
-    div.col-12.col-sm-6.col-md-4.my-3.my-md-0
-      div.balloon
-        span Relativement interessant...
-        span.tip
-      div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein.jpg"))
-      div
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star-half-full
-        i.fa.fa-lg.fa-star-o
-    div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
-      div.balloon
-        span Un accueil radieux...
-        span.tip
-      div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg"))
-      div
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-    div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
-      div.balloon
-        span Des pommes de premier choix...
-        span.tip
-      div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg"))
-      div
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star
-        i.fa.fa-lg.fa-star-half-full
+    div.container-fluid
+      div.row: h3.col-12 Ce que nos clients disent de nous
+      div.row
+        div.col-12.col-sm-6.col-md-4.my-3.my-md-0
+          div.balloon
+            span Relativement interessant...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star-half-full
+            i.fa.fa-lg.fa-star-o
+        div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
+          div.balloon
+            span Un accueil radieux...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+        div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
+          div.balloon
+            span Des pommes de premier choix...
+            span.tip
+          div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg"))
+          div
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star
+            i.fa.fa-lg.fa-star-half-full
 
-  section.row#info
-    article.col.text-center.jumbotron#tarifs
-      h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
-      img(src=require("./img/Tarifs.png"))
-  section.row.bg-dark
-    article.col.text-center.jumbotron.bg-dark#horaires
-      h3.display-2.pb-4 Horaires d'ouverture:
-      p.display-4 Tous les jours de #[b 9h à 22h !]
-      p.display-5 Ouverture à #[b 11h pendant le weekend] (samedi et dimanche)
-  section.row.no-gutters
+  section.row.no-gutters#info
     div.col-12.col-xl-6.card
       div.card-body
         h3.card-title.text-center: b Infos pratiques
@@ -193,3 +289,40 @@ block body
                     div 165€
     div.col-12.col-xl-6#map
       iframe(frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&center=43.602968,1.442261&zoom=16" allowfullscreen)
+
+  section.row.no-gutters#concept-old
+    h1.col-12.mb-0.p-2.p-md-4.text-center.bg-dark Un café pas comme les autres
+    article.col-12.col-lg-6.bg-dark
+      h3.px-5.my-md-3.text-center.cali Servi avec une bonne dose de science
+      p.px-4.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    article.col-12.col-lg-6.bg-dark#pres-video
+      div.padding
+      iframe(src="https://www.youtube.com/embed/FavUpD_IjVY?rel=0" frameborder="0")
+      div.padding
+
+  section.row.pt-4.pb-3.text-center
+    div.col: h3 Les Evenements
+  section.row.pb-4#evt-old
+    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
+      div.img-wrap: img(src=require("./img/famelab-evt.jpg"))
+      div 3 dec
+      div Rencontre avec les finalistes du concours FameLab - #[b 14h30]
+    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
+      div.img-wrap: img(src=require("./img/chimie-evt.jpg"))
+      div 15 dev
+      div Animation petit chimiste - #[b 16h30]
+    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
+      div.img-wrap: img(src=require("./img/drone-evt.jpg"))
+      div 20 dec
+      div Conférence: l'agriculture de demain - #[b 18h30]
+    div.col-12.col-sm-6.col-lg-3.text-center.my-3.my-sm-0
+      div.img-wrap: img(src=require("./img/biolu-evt.jpg"))
+      div 35 dec
+      div Ã la découverte de la bioluminéscence - #[b 20h00]
+  
+  section.row.bg-dark
+    article.col.text-center.jumbotron.bg-dark#horaires
+      h3.display-2.pb-4 Horaires d'ouverture:
+      p.display-4 Tous les jours de #[b 9h à 22h !]
+      p.display-5 Ouverture à #[b 11h pendant le weekend] (samedi et dimanche)
+  

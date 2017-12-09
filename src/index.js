@@ -25,7 +25,7 @@ $(document).ready(function() {
     }
   });
 
-  /*
+  
   //parallax
   $(".parallax-container").each(function() {
     var pContainer = $(this);
@@ -56,14 +56,5 @@ $(document).ready(function() {
     dim.imageOffset = dim.a * (dim.scrollTop + dim.b);
 
     pContainer.children("img").offset({top: dim.containerTop + dim.imageOffset - dim.maxOffset});
-  }
-
-
-
-  $("#carousel").on("slide.bs.carousel", function(e) {
-    calcParallax($($("#carousel").find(".parallax-container")[e.to]));
-  });
-
-  */
-  
+  }  
 });
