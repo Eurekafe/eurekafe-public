@@ -3,13 +3,13 @@ block section
   li.navbar-item.mx-2: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-2: a.nav-link(href="#evenements") ÉVÉNEMENTS
   li.navbar-item.mx-2: a.nav-link(href="#partenaires") PARTENAIRES
-  li.navbar-item.mx-2: a.nav-link(href="#info") INFO PRATIQUES
+  li.navbar-item.mx-2: a.nav-link(href="#info") INFOS PRATIQUES
 
 block section-sm
   li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-3: a.nav-link(href="#evenements") ÉVÉNEMENTS
   li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
-  li.navbar-item.mx-3: a.nav-link(href="#info") INFO PRATIQUES
+  li.navbar-item.mx-3: a.nav-link(href="#info") INFOS PRATIQUES
 
 block body      
   section.container-fluid.px-0
@@ -22,16 +22,15 @@ block body
           li(data-target="#carousel" data-slide-to="3")
           li(data-target="#carousel" data-slide-to="4")
         div.carousel-inner
-          article.carousel-item.top.active(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
+          article.carousel-item.cover.container-fluid.active.bg-black(style="background-image:url(" + require('./img/shop.png') + ");")
+          article.carousel-item.bottom.croc(style="background-image:url(" + require('./img/draw-local-cave.jpg') + ");")
+          article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
             div.top-text
-              h1.display-1.text-center.mb-4: span.bg-text Lancement du crowdfunding
-              button.btn.dark: a.h2(href="https://www.gofundme.com/eurekafe") Jeter un œil
-          article.carousel-item.center(style="background-image:url(" + require('./img/saturn-v.png') + ");")
+              p.display-2.text-center.dark Lancement du crowdfunding
             div.mid-text
-              h1.display-1.text-center.mb-4: span.bg-text L'Eurêkafé est en construction
-          article.carousel-item.top(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
-          article.carousel-item.top(style="background-image: url(" + require('./img/draw-evt.jpg') + ");")
-          article.carousel-item.center.container-fluid(style="background-image:url(" + require('./img/shop.png') + ");")
+              button.btn.dark(onclick="window.location.href='https://www.gofundme.com/eurekafe'"): p.h2 Participez!
+          article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
+          article.carousel-item.center.croc(style="background-image: url(" + require('./img/draw-evt.jpg') + ");")
         a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
           span.carousel-control-prev-icon(aria-hidden="true")
           span.sr-only Previous
@@ -81,8 +80,8 @@ block body
                   p.middle Tableau
                 div.col-12.col-lg-6
                   div.d-flex.flex-row.justify-content-center
-                    img.pr-5(src=require("./img/icons/biscuit-cake.png"))
-                    img(src=require("./img/icons/apple.png"))
+                    img.pr-4(src=require("./img/icons/biscuit-cake.png"))
+                    img.pr-3(src=require("./img/icons/apple.png"))
                   p.middle Snack et biscuit
               div.row
                 div.col-12.col-md-6.col-lg-3
@@ -120,7 +119,7 @@ block body
     section.row.bg-light
       div.col-12.col-md-5.offset-md-2.text-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
       div.col-12.col-md-2.align-self-center
-        button.btn.btn-primary.ml-3(type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.") Réserver une salle
+        button.btn.btn-primary.ml-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.") Réserver une salle
     div.row.bg-light: div.col: div.h-divider
     div.row.bg-light.pb-5: div.col: div.container.bubble-container
       div.row: div.col
@@ -131,8 +130,8 @@ block body
       div.col 
         div.parallax-container
           div.d-block.text-body
-            p.h3.d-block #[span.font-italic "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
-          img.parallax(src=require("./img/blue-night.jpg"))
+            p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
+          img.parallax(src=require("./img/darwin-dealwithit.png"))
   
   section.text-center.container-fluid#evenements
     div.row
@@ -188,7 +187,7 @@ block body
             div.balloon
               span Relativement interessant...
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein.jpg"))
+            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein-sym.jpg"))
             div
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
@@ -197,7 +196,7 @@ block body
               i.fa.fa-lg.fa-star-o
           div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
             div.balloon
-              span Un accueil radieux !!!
+              span Un accueil radieux!
               span.tip
             div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg"))
             div
@@ -224,27 +223,27 @@ block body
         div.card-body.bg-light
           h3.card-title.text-center Infos pratiques
           ul.list-group.list-group-flush.pl-3
-            li.list-group-item.bg-light.d-flex.flex-row
-              div: b Adresse:&nbsp;
+            li.list-group-item.bg-light.d-flex.flex-row.justify-content-center
+              div: b Adresse :&nbsp;
               div
                 div.pr-1 En plein centre ville
                 div 31000
                 div Toulouse
-            li.list-group-item.bg-light.hide #[b Tel: ] 00.22.88.99.66 (prix d'un appel matinal)
-            li.list-group-item.bg-light #[b @: ] contact@eurekafe.fr
+            li.list-group-item.bg-light.hide #[b Tel : ] 00.22.88.99.66 (prix d'un appel matinal)
+            li.list-group-item.bg-light.text-center.pb-3 #[b Courriel : ] contact@eurekafe.fr
             li.list-group-item.bg-light.container.justify-content-around
               div.row
                 div.col-12.col-md-6.offset-md-1.mb-3.mb-md-0
                   div: b Horaires d'ouverture:
                   div.d-flex.flex-row
                     div
-                      div Lundi: 
-                      div Mardi:
-                      div mercredi:
-                      div Jeudi:
-                      div Vendredi:
-                      div Samedi:
-                      div Dimanche:&nbsp;
+                      div Lundi : 
+                      div Mardi :
+                      div mercredi :
+                      div Jeudi :
+                      div Vendredi :
+                      div Samedi :
+                      div Dimanche :&nbsp;
                     div
                       div 9h - 22h
                       div 9h - 22h
@@ -257,10 +256,10 @@ block body
                   div: b Tarifs:
                   div.d-flex.flex-row
                     div
-                      div Une heure:&nbsp;
-                      div Jour complet:&nbsp;
-                      div Semaine:
-                      div Mois:
+                      div Une heure :&nbsp;
+                      div Jour complet :&nbsp;
+                      div Semaine :
+                      div Mois :
                     div
                       div 4€
                       div 14€

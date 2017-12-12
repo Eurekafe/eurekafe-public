@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, .nav-brand {
 	background-color: $white;
 }
 
+.bg-black {
+	background-color: $black;
+}
+
 .cali {
 	font-family: "font-cali"
 }
@@ -61,12 +65,12 @@ span.bg-text {
 
 .bubble-container {
 	max-width: 100%;
-	width: 72%;
+	width: 78%;
 	margin: 40px auto;
 	padding: 40px;
 	background: $white;
 	border-radius: 40px;
-	@media (max-width: 992px) {
+	@media (max-width: 1338px) {
 		width: 95%;
 		margin: 20px auto;
 		padding: 20px;
@@ -290,7 +294,7 @@ footer {
 //index elmts
 #carousel {
 	color: $white;
-	background: black;
+	background: white;
 	height: 82vmin;
 	.carousel-inner {
 		height:100%;
@@ -298,18 +302,30 @@ footer {
 			height: 100%;
 			overflow: hidden;
 			background-repeat:no-repeat;
-			background-size: 109%;
-			&.top {
-				background-position: 50% 10%;
+			background-size: 100%;
+			background-position: center center;
+			&.cover {
+				background-size: cover;
 			}
 			&.center {
 				background-position: center center;
 			}
+			&.croc {
+				background-size: contain;
+			}
+			&.bottom {
+				background-position: center bottom;
+			}
+			.mid-text {
+				width: 100%;
+			}
 			&>.mid-text {
-				position: relative;
-				top: 50%;
+				position: absolute;
+				
+				top: 64%;
 				transform: translateY(-50%);
 				button {
+					margin: auto;
 					display: block;
 					float: none;
 					margin: 0 auto;
@@ -317,7 +333,7 @@ footer {
 			}
 			&>.top-text {
 				position: relative;
-				top: 20%;
+				top: 15%;
 				transform: translateY(-50%);
 				button {
 					display: block;
@@ -330,6 +346,10 @@ footer {
 			background: $black;
 			//background: rgba(0,0,0,0.5);
 		}
+		.dark {
+			color: $black;
+		}
+
 		button {
 			transition: .2s;
 			color: $primary;
@@ -340,7 +360,6 @@ footer {
 				color: $black;
 			}
 			&.dark {
-				color: $black;
 				background: $white;
 				&:hover {
 					background-color: $primary;
@@ -375,25 +394,31 @@ footer {
 }
 
 #tarif-img {
-	width: 80%;
+	width: 70%;
 	@media (min-width: 1200px) {
-		width: 70%;
+		width: 60%;
 	}
 	
 }
 
 #parallax-quote {
-	height: 30vh;
+	height: 40vh;
 	&>div {
 		padding: 0;
 		width: 100%;
 		height: 100%;
 	}
 	.text-body {
-		color: $white;
-		position: relative;
-		top: 15vh;
-		transform: translateY(-50%);
+		width: 100%;
+		background-color: rgba(255,255,255,0.5);
+		margin:auto;
+		float: center;
+		color: $black;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		//transform: translateY(-50%);
 		text-align: center;
 		z-index: 1000;
 		@media (max-width: 576px) {
