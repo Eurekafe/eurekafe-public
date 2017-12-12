@@ -130,7 +130,8 @@ block body
     div.row.bg-light: div.col: div.h-divider
     section.row.bg-light
       div.col-12.col-md-5.offset-md-2.text-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
-      div.col-12.col-md-2.align-self-center: button.btn.btn-primary.ml-3 Réserver une salle
+      div.col-12.col-md-2.align-self-center
+        button.btn.btn-primary.ml-3(type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.") Réserver une salle
     div.row.bg-light: div.col: div.h-divider
     div.row.bg-light.pb-5: div.col: div.container.bubble-container
       div.row: div.col
@@ -207,7 +208,7 @@ block body
               i.fa.fa-lg.fa-star-o
           div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
             div.balloon
-              span Un accueil radieux...
+              span Un accueil radieux !!!
               span.tip
             div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg"))
             div
@@ -218,7 +219,7 @@ block body
               i.fa.fa-lg.fa-star
           div.col-12.col-sm-6.col-md-4.my-3.my-sm-0
             div.balloon
-              span Des pommes de premier choix...
+              span Des pommes de premier choix !
               span.tip
             div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg"))
             div
@@ -244,7 +245,7 @@ block body
             li.list-group-item.bg-light #[b @: ] contact@eurekafe.fr
             li.list-group-item.bg-light.container.justify-content-around
               div.row
-                div.col-12.col-md-6.mb-3.mb-md-0
+                div.col-12.col-md-6.offset-md-1.mb-3.mb-md-0
                   div: b Horaires d'ouverture:
                   div.d-flex.flex-row
                     div
@@ -263,7 +264,7 @@ block body
                       div 9h - 22h
                       div 11h - 22h
                       div 11h - 22h
-                div.col-12.col-md-6
+                div.col-12.col-md-5
                   div: b Tarifs:
                   div.d-flex.flex-row
                     div

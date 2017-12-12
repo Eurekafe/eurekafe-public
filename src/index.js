@@ -3,6 +3,8 @@ import "bootstrap";
 
 $(document).ready(function() {
 
+  $("[data-toggle='popover']").popover({trigger: "hover"});
+
   //smoothscroll
   $("a[href^='#']").on("click",function (e) {
     e.preventDefault();
