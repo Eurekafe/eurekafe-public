@@ -131,6 +131,7 @@ span.bg-text {
 
 //Global layout style
 body {
+	color: $black;
 	min-height: 100vh;
 	padding-top: 56px;
 	display: flex;
@@ -146,7 +147,7 @@ body {
 			font-size: 1rem;
 		}
 		background: $white;
-		padding: 2px 16px 0 16px;
+		padding: 3px 16px;
 		border-bottom: 3px solid $fond-sombre;
 		box-shadow: 0px 0px 20px;
 		.navbar-toggler {
@@ -160,10 +161,11 @@ body {
 		}
 
 		.navbar-brand {
+			font-size: 2.2rem;
 			padding: 0;
 			img {
-				height: 45px;
-				width: 45px;
+				height: 55px;
+				width: 55px;
 			}
 			@media (max-width: 992px) {
 				margin: auto;
@@ -171,6 +173,7 @@ body {
 		}
 		.nav-link {
 			transition: .2s;
+			font-size: 1rem;
 			&:hover {
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 			}
@@ -330,17 +333,7 @@ footer {
 	}
 }
 
-#concept-detail {
-	p {
-		font-size: 1.2rem;
-	}
-}
-
 #activites {
-	p {
-		font-size: 2.2rem;
-	}
-	
 	img {
 		display: block;
 		margin: 0 auto;
@@ -398,7 +391,7 @@ footer {
 
 #part-list {
 	width: 65%;
-	margin: 15px auto;
+	margin: auto;
 	padding: 20px;
 	background: $white;
 	border-radius: 40px;

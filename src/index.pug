@@ -1,9 +1,9 @@
 extends templates/layout.pug
 block section
-  li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
-  li.navbar-item.mx-3: a.nav-link(href="#evenements") ÉVÉNEMENTS
-  li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
-  li.navbar-item.mx-3: a.nav-link(href="#info") INFO PRATIQUES
+  li.navbar-item.mx-2: a.nav-link(href="#concept") CONCEPT
+  li.navbar-item.mx-2: a.nav-link(href="#evenements") ÉVÉNEMENTS
+  li.navbar-item.mx-2: a.nav-link(href="#partenaires") PARTENAIRES
+  li.navbar-item.mx-2: a.nav-link(href="#info") INFO PRATIQUES
 
 block section-sm
   li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
@@ -52,7 +52,7 @@ block body
 
   section.text-center.container-fluid#concept
     div.row
-      h1.col.bg-dark.my-0.py-5 Un lieu inconournable <br/> d'Éducation Populaire
+      h3.col.bg-dark.my-0.py-5 Un lieu inconournable <br/> d'Éducation Populaire
     div.zigzag(style="background-image:url(" + require("./img/shapes/d-tri.svg") + ");")
     article.row.bg-white#concept-detail
       div.col-12.col-md-2.offset-md-3
@@ -79,7 +79,7 @@ block body
       div.col: div.container.bubble-container
         div.row
           div.col-12.col-md-4.align-self-center
-            p.h2.font-weight-bold faites comme chez vous...
+            p.h3 Faites comme chez vous...
             img(src=require("./img/icons/shoes.png"))
           div.col-12.col-md-8
             div.container
@@ -126,15 +126,15 @@ block body
                   img(src=require("./img/icons/gear-house.png"))
                   p Environnement </br>interactif
           div.col-12.col-md-6.col-lg-8.align-self-center
-            p.h2.font-weight-bold ... et étanchez votre soif de curiosité !
+            p.h3 ... et étanchez votre soif de curiosité !
     div.row.bg-light: div.col: div.h-divider
     section.row.bg-light
       div.col-12.col-md-5.offset-md-2: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
-      div.col-12.col-md-3.align-self-center: button.btn.btn-primary.ml-3.mx-auto Réserver une salle
+      div.col-12.col-md-3.align-self-center.text-left: button.btn.btn-primary.ml-3 Réserver une salle
     div.row.bg-light: div.col: div.h-divider
     div.row.bg-light.pb-5: div.col: div.container.bubble-container
       div.row: div.col
-        p.h3.pb-3.display-4 Vous ne payez que le temps passé chez nous !
+        p.h3.pb-3 Vous ne payez que le temps passé chez nous !
         img(src=require("./img/Tarifs.png"))
 
     article.row#parallax-quote
@@ -147,7 +147,7 @@ block body
   section.text-center.container-fluid#evenements
     div.row
       div.col.bg-dark
-          h1.m-4 Événements 
+          h3.m-4 Événements 
     div.row#evt
       div.container-fluid
         div.row
@@ -176,12 +176,10 @@ block body
 
   section.container-fluid.text-center#partenaires
     div.row
-      div.col.jumbotron.bg-dark
-          h1.text-center.m-4 Partenaires 
+      div.col.bg-dark
+          h3.text-center.m-4 Partenaires 
     div.row.bg-dark.pb-5
       article.container-fluid#part-list
-        div.row
-          h2.col.text-center Ils nous accompagnent
         div.row.partenaires-img
           div.col-6.col-sm-3: img(src=require("./img/partenaires/big-bang-science.png"))
           div.col-6.col-sm-3: img(src=require("./img/partenaires/famelab.png"))
@@ -234,7 +232,7 @@ block body
     div.row.no-gutters#info
       article.col-12.col-xl-6.card
         div.card-body
-          h3.card-title.text-center: b Infos pratiques
+          h3.card-title.text-center Infos pratiques
           ul.list-group.list-group-flush
             li.list-group-item.d-flex.flex-row
               div: b Adresse:&nbsp;
