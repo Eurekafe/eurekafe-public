@@ -145,6 +145,10 @@ body {
 	}
 }
 
+.flex-wrap {
+	flex: 1;
+}
+
 #spy-wrap {
 	#main-nav {
 		@media (max-width: 1355px) {
