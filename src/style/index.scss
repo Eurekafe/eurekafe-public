@@ -291,18 +291,33 @@ footer {
 #carousel {
 	color: $white;
 	background: black;
-	height: 65vmin;
+	height: 82vmin;
 	.carousel-inner {
 		height:100%;
 		.carousel-item {
 			height: 100%;
 			overflow: hidden;
 			background-repeat:no-repeat;
-			background-position: center center;
-			background-size: 100%;
-			&>div {
+			background-size: 109%;
+			&.top {
+				background-position: 50% 10%;
+			}
+			&.center {
+				background-position: center center;
+			}
+			&>.mid-text {
 				position: relative;
 				top: 50%;
+				transform: translateY(-50%);
+				button {
+					display: block;
+					float: none;
+					margin: 0 auto;
+				}
+			}
+			&>.top-text {
+				position: relative;
+				top: 20%;
 				transform: translateY(-50%);
 				button {
 					display: block;

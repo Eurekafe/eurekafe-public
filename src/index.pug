@@ -21,28 +21,17 @@ block body
           li(data-target="#carousel" data-slide-to="2")
           li(data-target="#carousel" data-slide-to="3")
           li(data-target="#carousel" data-slide-to="4")
-          li(data-target="#carousel" data-slide-to="5")
         div.carousel-inner
-          article.carousel-item.active(style="background-image:url(" + require('./img/rocket.webp') + ");")
-            div
-              h2.text-center.mb-4: span.bg-text En construction
-              button.btn.dark Bouton boutonnant
-          article.carousel-item(style="background-image:url(" + require('./img/nasa/37729733334_86a747017a_o.jpg') + ");")
-            button.btn.btn-primary.pos-abs-bl(type="button") Klikendish-kliken
-          article.carousel-item(style="background-image:url(" + require('./img/ballet.webp') + ");")
-            div.row
-              div.offset-4.col
-                h2.text-center Il y a du concept ...
-                p.h3.text-center.mb-4 Tu vois le lien avec l'Eurêkafé ?
-                button.btn Contactez nous !
-          article.carousel-item(style="background-image: url(" + require('./img/nasa/assasn-14li_banner_0.jpg') + ");")
-          article.carousel-item.container-fluid(style="background-image:url(" + require('./img/swim.webp') + ");")
-            div.row
-              div.offset-4.col
-                h2.text-center Image qui ne sert à rien...
-                h3.text-center.mb-4 Pour le moment !
-                button.btn bouton qui pète
-          article.carousel-item(style="background-image:url(" + require('./img/nasa/potw1742a.jpg') + ");")
+          article.carousel-item.top.active(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
+            div.top-text
+              h1.display-1.text-center.mb-4: span.bg-text Lancement du crowdfunding
+              button.btn.dark: a.h2(href="https://www.gofundme.com/eurekafe") Jeter un œil
+          article.carousel-item.center(style="background-image:url(" + require('./img/saturn-v.png') + ");")
+            div.mid-text
+              h1.display-1.text-center.mb-4: span.bg-text L'Eurêkafé est en construction
+          article.carousel-item.top(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
+          article.carousel-item.top(style="background-image: url(" + require('./img/draw-evt.jpg') + ");")
+          article.carousel-item.center.container-fluid(style="background-image:url(" + require('./img/shop.png') + ");")
         a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
           span.carousel-control-prev-icon(aria-hidden="true")
           span.sr-only Previous
