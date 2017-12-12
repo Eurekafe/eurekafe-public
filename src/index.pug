@@ -11,7 +11,11 @@ block section-sm
   li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
   li.navbar-item.mx-3: a.nav-link(href="#info") INFOS PRATIQUES
 
-block body      
+block body
+  aside
+    a(href="#carousel")
+      i.fa.fa-arrow-circle-down.fa-rotate-180.fa-2x
+
   section.container-fluid.px-0
     div.row.px-0.mx-0
       div.col.carousel.slide.px-0#carousel(data-ride="carousel")
@@ -63,61 +67,59 @@ block body
       div.col: p.alt-font OUVERT 7/7 de 9h à 22h
     div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
     
-    article.row.bg-light#activites
+    article.row.bg-light.no-gutters#activites
       div.col: div.container.bubble-container
         div.row.pb-4
           div.col-12.col-md-6.align-self-center
             p.h3 Faites comme chez vous...
             img#pantoufle(src=require("./img/icons/shoes.png"))
-          div.col-12.col-md-6
-            div.container
-              div.row
-                div.col-12.col-md-6.col-lg-3
+          div.col-12.col-md-6.pt-3.pt-lg-0.px-0.px-sm-3
+            div.container.px-0.px-sm-3
+              div.row.no-gutters
+                div.col-3.col-md-6.col-lg-3
                   img(src=require("./img/icons/wifi.png"))
                   p WIFI </br>Haut-débit
-                div.col-12.col-md-6.col-lg-3
+                div.col-3.col-md-6.col-lg-3
                   img(src=require("./img/icons/blackboard.png"))
                   p.middle Tableau
-                div.col-12.col-lg-6
+                div.col-6.col-md-12.col-lg-6
                   div.d-flex.flex-row.justify-content-center
                     img.pr-4(src=require("./img/icons/biscuit-cake.png"))
                     img.pr-3(src=require("./img/icons/apple.png"))
                   p.middle Snack et biscuit
-              div.row
-                div.col-12.col-md-6.col-lg-3
+                div.col-3.col-md-6.col-lg-3
                   img(src=require("./img/icons/copy.png"))
                   p.middle Imprimante
-                div.col-12.col-md-6.col-lg-3
+                div.col-3.col-md-6.col-lg-3
                   img(src=require("./img/icons/projo.png"))
                   p.middle Projecteur
-                div.col-12.col-md-6.col-lg-3.pr-0
+                div.col-3.col-md-6.col-lg-3.pr-0
                   img(src=require("./img/icons/cup-glass.png"))
                   p.middle Boissons
-                div.col-12.col-md-6.col-lg-3.pl-0
+                div.col-3.col-md-6.col-lg-3.pl-0
                   img(src=require("./img/icons/dice.png"))
                   p.middle Jeux
-        div.row
-          div.col-12.col-md-6.col-lg-4
-            div.container
-              div.row
-                div.col-12.col-md-6
+        div.row.pb-3.pb-lg-0
+          div.col-12.col-md-6.col-lg-4.px-0.px-sm-3
+            div.container.px-0.px-sm-3
+              div.row.no-gutters
+                div.col-3.col-md-6
                   img(src=require("./img/icons/presentation.png"))
                   p Conférences </br>canapé
-                div.col-12.col-md-6
+                div.col-3.col-md-6
                   img(src=require("./img/icons/newspaper.png"))
                   p Actualités </br>scientifiques
-              div.row
-                div.col-12.col-md-6
+                div.col-3.col-md-6
                   img(src=require("./img/icons/book.png"))
                   p.middle Magazines
-                div.col-12.col-md-6
+                div.col-3.col-md-6
                   img(src=require("./img/icons/gear-house.png"))
                   p Environnement </br>interactif
           div.col-12.col-md-6.col-lg-8.align-self-center
             p.h3 ... et étanchez votre soif de curiosité !
     div.row.bg-light: div.col: div.h-divider
     section.row.bg-light
-      div.col-12.col-md-5.offset-md-2.text-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
+      div.col-12.col-md-5.offset-md-2.text-center.text-xl-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
       div.col-12.col-md-2.align-self-center
         button.btn.btn-primary.ml-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.") Réserver une salle
     div.row.bg-light: div.col: div.h-divider
@@ -132,6 +134,8 @@ block body
           div.d-block.text-body
             p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
           img.parallax(src=require("./img/darwin-dealwithit.png"))
+
+    div.row.bg-light.py-5(style="height: 20px;")
   
   section.text-center.container-fluid#evenements
     div.row
@@ -178,7 +182,7 @@ block body
           div.col-6.col-sm-3: img(src=require("./img/partenaires/café-des-sciences.jpg"))
           div.col-6.col-sm-3: img(src=require("./img/partenaires/science-animation.png"))
           div.col-6.col-sm-3: img(src=require("./img/partenaires/quai-des-savoirs.jpg"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png"))
+          div.col-6.col-sm-3.hide: img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png"))
 
 
 
@@ -236,7 +240,7 @@ block body
             li.list-group-item.bg-light.text-center.pb-3 #[b Courriel : ] contact@eurekafe.fr
             li.list-group-item.bg-light.container.justify-content-around
               div.row
-                div.col-12.col-md-6.offset-md-1.mb-3.mb-md-0
+                div.col-12.col-md-6.col-lg-5.offset-lg-2.col-xl-6.offset-xl-1.mb-3.mb-md-0
                   div: b Horaires d'ouverture:
                   div.d-flex.flex-row
                     div
@@ -255,7 +259,7 @@ block body
                       div 9h - 22h
                       div 11h - 22h
                       div 11h - 22h
-                div.col-12.col-md-5
+                div.col-12.col-md-6.col-lg-4
                   div: b Tarifs:
                   div.d-flex.flex-row
                     div
