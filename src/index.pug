@@ -52,9 +52,9 @@ block body
 
   section.text-center.container-fluid#concept
     div.row
-      h3.col.bg-dark.my-0.py-5 Un lieu inconournable <br/> d'Éducation Populaire
+      h3.col.bg-dark.my-0.py-4 Un lieu incontournable <br/> d'Éducation Populaire
     div.zigzag(style="background-image:url(" + require("./img/shapes/d-tri.svg") + ");")
-    article.row.bg-white#concept-detail
+    article.row.bg-white#concept-detail.pt-5.pb-4
       div.col-12.col-md-2.offset-md-3
         p Pour faire des rencontres étonnantes
         object(data=require("./img/icons/hands.svg") type="image/svg+xml" width="70px" height="70px") hands
@@ -68,20 +68,20 @@ block body
     div.row.bg-white.h-divider
     article.row.bg-white
       div.col
-        h2.pt-3 Le Café des </br>Curiosités
+        h3.pt-3 Le Café des </br>Curiosités
         p Venez éveiller votre curiosité !
     div.row.bg-white.h-divider
-    article.row.bg-white
+    article.row.bg-white.py-3
       div.col: p.alt-font OUVERT 7/7 de 9h à 22h
     div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
     
     article.row.bg-light#activites
       div.col: div.container.bubble-container
-        div.row
-          div.col-12.col-md-4.align-self-center
+        div.row.pb-4
+          div.col-12.col-md-6.align-self-center
             p.h3 Faites comme chez vous...
-            img(src=require("./img/icons/shoes.png"))
-          div.col-12.col-md-8
+            img#pantoufle(src=require("./img/icons/shoes.png"))
+          div.col-12.col-md-6
             div.container
               div.row
                 div.col-12.col-md-6.col-lg-3
@@ -89,25 +89,25 @@ block body
                   p WIFI </br>Haut-débit
                 div.col-12.col-md-6.col-lg-3
                   img(src=require("./img/icons/blackboard.png"))
-                  p Tableau
+                  p.middle Tableau
                 div.col-12.col-lg-6
                   div.d-flex.flex-row.justify-content-center
-                    img(src=require("./img/icons/biscuit-cake.png"))
+                    img.pr-5(src=require("./img/icons/biscuit-cake.png"))
                     img(src=require("./img/icons/apple.png"))
-                  p Snack et biscuit
+                  p.middle Snack et biscuit
               div.row
                 div.col-12.col-md-6.col-lg-3
                   img(src=require("./img/icons/copy.png"))
-                  p Imprimante
+                  p.middle Imprimante
                 div.col-12.col-md-6.col-lg-3
                   img(src=require("./img/icons/projo.png"))
-                  p Projecteur
-                div.col-12.col-md-6.col-lg-3
+                  p.middle Projecteur
+                div.col-12.col-md-6.col-lg-3.pr-0
                   img(src=require("./img/icons/cup-glass.png"))
-                  p Boissons
-                div.col-12.col-md-6.col-lg-3
+                  p.middle Boissons
+                div.col-12.col-md-6.col-lg-3.pl-0
                   img(src=require("./img/icons/dice.png"))
-                  p Jeux
+                  p.middle Jeux
         div.row
           div.col-12.col-md-6.col-lg-4
             div.container
@@ -121,7 +121,7 @@ block body
               div.row
                 div.col-12.col-md-6
                   img(src=require("./img/icons/book.png"))
-                  p Magazines
+                  p.middle Magazines
                 div.col-12.col-md-6
                   img(src=require("./img/icons/gear-house.png"))
                   p Environnement </br>interactif
@@ -129,13 +129,13 @@ block body
             p.h3 ... et étanchez votre soif de curiosité !
     div.row.bg-light: div.col: div.h-divider
     section.row.bg-light
-      div.col-12.col-md-5.offset-md-2: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
-      div.col-12.col-md-3.align-self-center.text-left: button.btn.btn-primary.ml-3 Réserver une salle
+      div.col-12.col-md-5.offset-md-2.text-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
+      div.col-12.col-md-2.align-self-center: button.btn.btn-primary.ml-3 Réserver une salle
     div.row.bg-light: div.col: div.h-divider
     div.row.bg-light.pb-5: div.col: div.container.bubble-container
       div.row: div.col
         p.h3.pb-3 Vous ne payez que le temps passé chez nous !
-        img(src=require("./img/Tarifs.png"))
+        img.py-3#tarif-img(src=require("./img/Tarifs.png"))
 
     article.row#parallax-quote
       div.col 
@@ -190,7 +190,7 @@ block body
           div.col-6.col-sm-3: img(src=require("./img/partenaires/science-animation.png"))
 
 
-    section.row.pt-4.bg-light.pb-4#citations
+    section.row.pt-4.bg-white.pb-4#citations
       div.container-fluid
         div.row: h3.col-12 Ce que nos clients disent de nous
         article.row
@@ -229,20 +229,20 @@ block body
               i.fa.fa-lg.fa-star-half-full
 
   section.container-fluid
-    div.row.no-gutters#info
+    div.row.bg-light.no-gutters#info
       article.col-12.col-xl-6.card
-        div.card-body
+        div.card-body.bg-light
           h3.card-title.text-center Infos pratiques
-          ul.list-group.list-group-flush
-            li.list-group-item.d-flex.flex-row
+          ul.list-group.list-group-flush.pl-3
+            li.list-group-item.bg-light.d-flex.flex-row
               div: b Adresse:&nbsp;
               div
-                div.pr-1 8 rue de la Lala
-                div 361000
-                div Lalaland
-            li.list-group-item #[b Tel: ] 00.22.88.99.66 (prix d'un appel matinal)
-            li.list-group-item #[b @: ] Zouglouglou@yopmail.com
-            li.list-group-item.container.justify-content-around
+                div.pr-1 En plein centre ville
+                div 31000
+                div Toulouse
+            li.list-group-item.bg-light.hide #[b Tel: ] 00.22.88.99.66 (prix d'un appel matinal)
+            li.list-group-item.bg-light #[b @: ] contact@eurekafe.fr
+            li.list-group-item.bg-light.container.justify-content-around
               div.row
                 div.col-12.col-md-6.mb-3.mb-md-0
                   div: b Horaires d'ouverture:

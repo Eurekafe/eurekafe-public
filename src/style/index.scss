@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, .nav-brand {
 	font-family: "font-alt";
 }
 
+p.alt-font {
+	font-size: 1.2rem;
+}
+
 .zigzag {
 	margin: -1px -15px;
 	height: 10px;
@@ -63,8 +67,8 @@ span.bg-text {
 	background: $white;
 	border-radius: 40px;
 	@media (max-width: 992px) {
-		width: 98%;
-		margin: 30px;
+		width: 95%;
+		margin: 20px auto;
 		padding: 20px;
 		border-radius: 20px;
 	}
@@ -133,7 +137,7 @@ span.bg-text {
 body {
 	color: $black;
 	min-height: 100vh;
-	padding-top: 56px;
+	padding-top: 64px;
 	display: flex;
 	flex-direction: column;
 	@media (max-width: 1355px) {
@@ -233,19 +237,19 @@ body {
 
 footer {
 	width: 100vw;
-	padding: 1vh 0 5vh 0;
+	padding: 1vh 0 3vh 0;
 	border-top: 3px solid $fond-sombre;
 	box-shadow: 0px 0px 10px;
 	z-index: 1001;
-	#footer-text-link a{
-		text-decoration: underline;
+	.nav-link {
+		padding: 0.2rem 0.3rem;
 	}
 	a {
 		color: $black;
 		transition: .2s;
 	}
 	a:hover {
-		color: $fond-alerte;
+		color: $primary;
 		text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	}
 	#news-form {
@@ -334,12 +338,27 @@ footer {
 }
 
 #activites {
+	#pantoufle {
+		padding-top: 8px;
+		max-width: 180px;
+		height: auto;
+	}
+	.middle {
+		padding-top: 0.8rem;
+	}
 	img {
 		display: block;
 		margin: 0 auto;
 	}
 	.d-flex>img{
 		margin: 0;
+	}
+}
+
+#tarif-img {
+	width: 80%;
+	@media (min-width: 1200px) {
+		width: 70%;
 	}
 	
 }
@@ -448,7 +467,7 @@ footer {
 		padding: 20px;
 	    width: 250px;
 	    height: 150px;
-	    background: #fff;
+	    background: $fond-claire;
 	    border-radius: 20px;
 	    position: relative;
 	    text-align: center;
@@ -464,11 +483,13 @@ footer {
 	    right: 120px;
 	    bottom: -20px;
 	    border: solid 10px;
-	    border-color: #fff transparent transparent transparent;
+	    border-color: $fond-claire transparent transparent transparent;
 	}
 }
 
 
+
+//old
 #concept-old {
 	@media (max-width: 576px) {
 		h1 {

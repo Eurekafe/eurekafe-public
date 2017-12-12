@@ -14,7 +14,7 @@ html
       gtag('js', new Date());
       gtag('config', 'UA-110964291-1');
 
-  body(data-spy="scroll" data-target="#spy-wrap" data-offset="60")
+  body(data-spy="scroll" data-target="#spy-wrap" data-offset="64")
     div#spy-wrap
       nav.navbar.navbar-expand-lg.navbar-light.d-flex.flex-row.justify-content-between.fixed-top#main-nav
         button.navbar-toggler#navtog(type="button"): span.navbar-toggler-icon
@@ -39,29 +39,33 @@ html
     block body
       
 
-    footer.container-fluid.bg-light
+    footer.container-fluid.bg-white
       div.row
-        div.col-12.col-lg-6.container
-          nav.col-12.p-2.nav.align-items-center.justify-content-center#footer-text-link
-            a.nav-item.nav-link(href="/about.html") À propos
-            a.nav-item.nav-link(href="/faq.html") F.A.Q.
-            a.nav-item.nav-link(href="/press.html") Presse
-            a.nav-item.nav-link(href="/legal.html") Mention légales
-          nav.col-12.p-2.nav.align-items-center.justify-content-center
-            a.nav-item.mx-2(href="https://www.facebook.com/EurekafeTLS/"): i.fa.fa-2x.fa-facebook-official(aria-hidden="true")
-            a.nav-item.mx-2(href="https://twitter.com/EurekafeTLS"): i.fa.fa-2x.fa-twitter-square(aria-hidden="true")
-            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
-            a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
-        div.col-12.col-lg-6
+        div.col-12.col-lg-4.offset-lg-2
+          div.container
+            nav.col-12.nav.align-items-center.justify-content-center
+              a.nav-item.nav-link(href="/about.html") À propos
+              span.nav-item.nav-link |
+              a.nav-item.nav-link(href="/faq.html") F.A.Q.
+              span.nav-item.nav-link |
+              a.nav-item.nav-link(href="/press.html") Presse
+              span.nav-item.nav-link |
+              a.nav-item.nav-link(href="/legal.html") Mention légales
+            nav.col-12.nav.align-items-center.justify-content-center.py-2
+              a.nav-item.mx-2(href="https://www.facebook.com/EurekafeTLS/"): i.fa.fa-2x.fa-facebook-official(aria-hidden="true")
+              a.nav-item.mx-2(href="https://twitter.com/EurekafeTLS"): i.fa.fa-2x.fa-twitter-square(aria-hidden="true")
+              a.nav-item.mx-2.hide(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
+              a.nav-item.mx-2.hide(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
+        div.col-12.col-lg-4
           form.container#news-form
             div.row.text-center
-              h3.col.pt-3 S'abonner à la newsletter ?
+              p.h4.col.pt-1 S'abonner à la newsletter ?
             div.row.col-10.offset-1.col-lg-8.offset-lg-2
               div.input-group
-                input.form-control(type="text" placeholder="mon email")
+                input.form-control(type="text" placeholder="Mon courriel")
                 span.input-group-btn
-                  input.btn.btn-success(type="submit" value="Oui, avec plaisir")
-              input.col-12.form-control.mb-3.no-group(type="text" placeholder="mon email")
+                  input.btn.btn-primary(type="submit" value="Oui, avec plaisir")
+              input.col-12.form-control.mb-3.no-group(type="text" placeholder="Mon courriel")
               div.col-12.input-group.no-group
                 input.btn.btn-sm.btn-success(type="submit" value="Oui, avec plaisir")
 
