@@ -121,21 +121,12 @@ block body
     section.row.bg-light
       div.col-12.col-md-5.offset-md-2.text-center.text-xl-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
       div.col-12.col-md-2.align-self-center
-        button.btn.btn-primary.ml-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Il sera possible de réserver une salle, un espace ou encore la totalité de l’Eurêkafé pour réaliser vos événements !") Réserver une salle
+        button.btn.btn-primary.ml-md-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Il sera possible de réserver une salle, un espace ou encore la totalité de l’Eurêkafé pour réaliser vos événements !") Réserver une salle
     div.row.bg-light: div.col: div.h-divider
     div.row.bg-light.pb-5: div.col: div.container.bubble-container
       div.row: div.col
         p.h3.pb-3 Vous ne payez que le temps passé chez nous !
         img.py-3#tarif-img(src=require("./img/Tarifs.png"))
-
-    article.row#parallax-quote
-      div.col 
-        div.parallax-container
-          div.d-block.text-body
-            p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
-          img.parallax(src=require("./img/darwin-dealwithit.png"))
-
-    div.row.bg-light.py-5(style="height: 20px;")
   
   section.text-center.container-fluid#evenements
     div.row
@@ -182,7 +173,12 @@ block body
           div.col-6.col-sm-3: img(src=require("./img/partenaires/café-des-sciences.jpg"))
           div.col-6.col-sm-3: img(src=require("./img/partenaires/science-animation.png"))
           div.col-6.col-sm-3: img(src=require("./img/partenaires/quai-des-savoirs.jpg"))
-
+    article.row#parallax-quote
+      div.col 
+        div.parallax-container
+          div.d-block.text-body
+            p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
+          img.parallax(src=require("./img/darwin-dealwithit.png"))
     section.row.pt-4.bg-white.pb-4#citations
       div.container-fluid
         div.row: h3.col-12 Ce que nos clients disent de nous :
