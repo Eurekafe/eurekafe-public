@@ -23,18 +23,15 @@ block body
           li(data-target="#carousel" data-slide-to="0" class="active")
           li(data-target="#carousel" data-slide-to="1")
           li(data-target="#carousel" data-slide-to="2")
-          li(data-target="#carousel" data-slide-to="3")
-          li(data-target="#carousel" data-slide-to="4")
         div.carousel-inner
-          article.carousel-item.cover.container-fluid.active.bg-black(style="background-image:url(" + require('./img/shop.png') + ");")
-          article.carousel-item.bottom.croc(style="background-image:url(" + require('./img/draw-local-cave.jpg') + ");")
+          article.carousel-item.center.croc.active(style="background-image: url(" + require('./img/draw-evt-new.png') + ");")
           article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
             div.top-text
               p.display-2.text-center.dark Lancement du crowdfunding
             div.mid-text
               button.btn.dark(onclick="window.location.href='https://www.gofundme.com/eurekafe'"): p.h2 Participez!
           article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
-          article.carousel-item.center.croc(style="background-image: url(" + require('./img/draw-evt-new.png') + ");")
+          
         a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
           span.carousel-control-prev-icon(aria-hidden="true")
           span.sr-only Previous
