@@ -271,28 +271,61 @@ body {
 }
 
 footer {
-	width: 100vw;
-	padding: 1vh 0 3vh 0;
+	background-color: #bbb;
+	padding: 5vh 0 0 0;
 	border-top: 3px solid $fond-sombre;
 	box-shadow: 0px 0px 10px;
 	z-index: 1001;
-	.nav-link {
-		padding: 0.2rem 0.3rem;
+	ul {
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	}
+	.separator {
+		border-bottom: 2px solid $black;
 	}
 	a {
 		color: $black;
 		transition: .2s;
+		&:hover {
+			color: $primary;
+			text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+		}
 	}
-	a:hover {
-		color: $primary;
-		text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	.gofundme {
+		p {
+			margin:auto;
+			line-height: 45px;
+		}
+		img {
+			margin:auto;
+			border-radius: 5px;
+			width: auto;
+			height: 45px;
+			&:hover {
+				box-shadow: 2px 2px 5px $black;
+			}		
+		}
+	}
+	.gutters {
+		padding: 0 15px !important;
 	}
 	#news-form {
+		background: $white;
+		padding: 20px;
+		border-radius: 10px;
+		border: 2px solid $primaire;
+		.row {
+			margin: 0;
+		}
 		.no-group {
 			display: none;
 		}
+		input {
+			font-size: 1.2rem;
+		}
 
-		@media (max-width: 1200px) {
+		@media (max-width: 10px) {
 			.input-group {
 				display: none;
 			}
@@ -307,11 +340,6 @@ footer {
 						transform: translateX(-50%);
 					}
 				}
-			}
-		}
-		@media (max-width: 768px) {
-			h3 {
-				font-size: 1.8rem;
 			}
 		}
 	}
