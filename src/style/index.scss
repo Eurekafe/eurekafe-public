@@ -158,6 +158,10 @@ span.bg-text {
 	.display-2 {
 		font-size: 1.8rem;
 	}
+
+	h4, .h4 {
+		font-size: 1.8rem;
+	}
 }
 
 //Global layout style
@@ -478,25 +482,41 @@ aside {
 }
 
 #evt {
-	p {
-		font-size: 1.2rem;
-	}
 	div.container-fluid {
 		width: 68%;
 		@media (max-width:992px) {
-			width: 75%;
+			width: 88%;
 		}
 		@media (max-width:768px) {
-			width: 100%;
+			width: 400px;
+		}
+		@media (max-width:405px) {
+			width: 300px;
 		}
 		&>.row {
 			min-height: 40vmin;
 		}
 	}
 	div.bg-img {
+		min-height: 30vmin;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: cover;
+		background-size: contain;
+		@media (max-width:768px) {
+			min-height: 200px;
+		}
+
+	}
+	.round-bg {
+		border-radius: 10px 10px 0 0;
+		padding: 0;
+		background-size: cover !important;
+		@media (max-width:768px) {
+			min-height: 350px !important;
+		}
+		@media (max-width:400px) {
+			min-height: 280px !important;
+		}
 	}
 }
 
