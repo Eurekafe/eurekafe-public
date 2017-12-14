@@ -271,7 +271,8 @@ body {
 }
 
 footer {
-	background-color: #bbb;
+	background-color: $black;
+	color: $white;
 	padding: 5vh 0 0 0;
 	border-top: 3px solid $fond-sombre;
 	box-shadow: 0px 0px 10px;
@@ -282,14 +283,14 @@ footer {
 	    padding: 0;
 	}
 	.separator {
-		border-bottom: 2px solid $black;
+		border-bottom: 2px solid $white;
 	}
 	a {
-		color: $black;
+		color: $white;
 		transition: .2s;
 		&:hover {
 			color: $primary;
-			text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+			text-shadow: 2px 2px 2px rgba(255,255,255,0.4);
 		}
 	}
 	.gofundme {
@@ -298,6 +299,7 @@ footer {
 			line-height: 45px;
 		}
 		img {
+			border: 1px solid $black;
 			margin:auto;
 			border-radius: 5px;
 			width: auto;
@@ -311,6 +313,7 @@ footer {
 		padding: 0 15px !important;
 	}
 	#news-form {
+		color: $black;
 		background: $white;
 		padding: 20px;
 		border-radius: 10px;
