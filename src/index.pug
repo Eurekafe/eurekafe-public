@@ -20,23 +20,24 @@ block body
     div.row.px-0.mx-0
       div.col.carousel.slide.px-0#carousel(data-ride="carousel")
         ol.carousel-indicators
-          li(data-target="#carousel" data-slide-to="0" class="active")
-          li(data-target="#carousel" data-slide-to="1")
-          li(data-target="#carousel" data-slide-to="2")
+          li.ts(data-target="#carousel" data-slide-to="0" class="active")
+          li.ts(data-target="#carousel" data-slide-to="1")
+          li.ts(data-target="#carousel" data-slide-to="2")
         div.carousel-inner
           article.carousel-item.center.croc.active(style="background-image: url(" + require('./img/draw-evt-new.png') + ");")
+            div.bottom-text: p.h2.font-weight-bold Bienvenue à l'Eurêkafé !
           article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
             div.top-text
               p.display-2.text-center.dark Lancement du crowdfunding
             div.mid-text
-              button.btn.dark(onclick="window.location.href='https://www.gofundme.com/eurekafe'"): p.h2 Participez!
+              button.btn.dark(onclick="window.location.href='https://www.gofundme.com/eurekafe'"): p.h2.m-0 Participez!
           article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
           
-        a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
-          span.carousel-control-prev-icon(aria-hidden="true")
+        a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
+          i.fa.fa-2x.fa-chevron-left(aria-hidden="true")
           span.sr-only Previous
-        a.carousel-control-next(href="#carousel" role="button" data-slide="next")
-          span.carousel-control-next-icon(aria-hidden="true")
+        a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
+          i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
           span.sr-only Next
 
   section.text-center.container-fluid#concept
@@ -170,7 +171,7 @@ block body
     article.row#parallax-quote
       div.col 
         div.parallax-container
-          div.d-block.text-body
+          div.text-body
             p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
           img.parallax(src=require("./img/darwin-dealwithit.jpg"))
     section.row.pt-4.bg-white.pb-4#citations

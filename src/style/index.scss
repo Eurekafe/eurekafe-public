@@ -351,9 +351,21 @@ aside {
 
 
 #carousel {
-	color: $white;
 	background: white;
 	height: 68vmin;
+	.carousel-indicators .ts.active {
+		background-color: rgba(0,0,0,0.8);
+	}
+	.carousel-indicators .ts {
+		background-color: rgba(0,0,0,0.5);
+		//box-shadow: 0px 0px 3px $black;
+	}
+	.carousel-control-color {
+		color: rgba(0,0,0,0.5) !important;
+		&:hover {
+			color: rgba(0,0,0,0.8) !important;
+		}
+	}
 	.carousel-inner {
 		height:100%;
 		.carousel-item {
@@ -389,21 +401,8 @@ aside {
 					margin: 0 auto;
 				}
 			}
-			&>.top-text {
-				position: relative;
-				top: 15%;
-				transform: translateY(-50%);
-				button {
-					display: block;
-					float: none;
-					margin: 0 auto;
-				}
-			}
 		}
-		.carousel-control-prev, .carousel-control-next {
-			background: $black;
-			//background: rgba(0,0,0,0.5);
-		}
+		
 		.dark {
 			color: $black;
 		}
@@ -429,6 +428,30 @@ aside {
 			position: absolute;
 			left: 16%;
 			bottom: 10%;
+		}
+		.top-text {
+			color: $black;
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			padding: 1vh 0;
+			left: 50%;
+			transform: translateX(-50%);
+			text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+			background-color: rgba(255,255,255,0.3);
+		}
+		.bottom-text {
+			color: $black;
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			bottom: 0;
+			padding: 3vh 0;
+			left: 50%;
+			transform: translateX(-50%);
+			text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+			background-color: rgba(255,255,255,0.5);
 		}
 	}
 }
@@ -477,7 +500,6 @@ aside {
 		width: 100%;
 		background-color: rgba(255,255,255,0.5);
 		margin:auto;
-		float: center;
 		color: $black;
 		position: absolute;
 		bottom: 0;
