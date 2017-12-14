@@ -47,9 +47,10 @@ html
                 p.col.pt-1.mb-1 S'abonner à la #[b newsletter] ?
               div.row
                 div.input-group
-                  input.form-control(type="text" name="mail" placeholder="Mon courriel")
+                  input.form-control(type="text" name="mail" placeholder="Mon courriel" data-container="body" data-toggle="popover-mail" data-placement="top" data-content="Le format de votre courriel est invalide")
                   span.input-group-btn
                     input.btn.btn-primary(type="submit" value="Oui, avec plaisir")
+                div.loader.pt-2: i.fa.fa-spinner.fa-spin.fa-fw
 
           div.col-6.order-md-1.col-md-3.pt-3.pt-md-0
             ul.pl-3.pl-md-5
@@ -65,6 +66,7 @@ html
               li: a(href="https://www.facebook.com/EurekafeTLS/") Facebook
               li: a(href="https://twitter.com/EurekafeTLS") Twitter
         div.row: div.col.text-center ©Eurêkafé 2017
+        div#mail-popover
 
 
           

@@ -36,25 +36,32 @@ app.post("/newsletter", function(req, res) {
   } else if(req.body.mail2) {
     newmail = req.body.mail2;
   }
-  var mailOptions = {
-    from: process.env.MAIL,
-    to: process.env.MAIL_TARGET,
-    subject: "inscription newsletter",
-    text: newmail
-  };
+  let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (regex.test(newmail)) {
+    var mailOptions = {
+      from: process.env.MAIL,
+      to: process.env.MAIL_TARGET,
+      subject: "inscription newsletter",
+      text: newmail
+    };
 
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-      res.redirect("/newsletterSuccess");
-    }
-  });
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        res.redirect("/error");
+      } else {
+        console.log("Email sent: " + info.response);
+        res.redirect("/newsletterSuccess");
+      }
+    });
+  } else {
+    res.redirect("/error");
+  }
+  
 });
 
 app.get("/newsletterSuccess", function(req, res) {
-  res.status(404).sendFile(path.resolve(__dirname, "dist/newsletter.html"));
+  res.sendFile(path.resolve(__dirname, "dist/newsletter.html"));
 });
 
 app.use(function(req, res) {

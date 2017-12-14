@@ -327,9 +327,21 @@ footer {
 		input {
 			font-size: 1.2rem;
 		}
+		.loader {
+			display: none;
+			margin: auto;
+		}
 	}
 }
 
+#mail-popover {
+	.popover-body,  {
+		border: 5px solid red;
+	}
+	.arrow:after {
+		border-top-color: red;
+	}
+}
 
 //index elmts
 aside {

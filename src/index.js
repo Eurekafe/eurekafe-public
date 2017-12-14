@@ -1,10 +1,32 @@
+/* eslint no-console: "off" */
 import "./style/index.scss";
 import "bootstrap";
 
 $(document).ready(function() {
 
-  $("[data-toggle='popover']").popover({trigger: "hover"});
+  $("#news-form").on("submit", function(e) {
+    $("[data-toggle='popover-mail']").popover("hide");
+    let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let data = $(this).serializeArray();
+    let mail = data.find(function(data) {
+      return data.name === "mail";
+    });
+    mail = mail.value;
+    if (regex.test(mail)) {
+      $($(this).find(".input-group")[0]).hide();
+      $($(this).find(".loader")[0]).show();
+      return 0;
+    }
+    console.log("mail invalide");
+    $("[data-toggle='popover-mail']").popover("show");
+    setTimeout(function() {
+      $("[data-toggle='popover-mail']").popover("hide");
+    }, 5000);
+    e.preventDefault();
+  });
 
+  $("[data-toggle='popover']").popover({trigger: "hover"});
+  $("[data-toggle='popover-mail']").popover({trigger: "manual", container: "#mail-popover"});
   //smoothscroll
   $("a[href^='#']").on("click",function (e) {
     e.preventDefault();
