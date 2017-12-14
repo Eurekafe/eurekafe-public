@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="icon" type="image/x-icon" href=require("./img/favicon.ico"))
+    link(rel="icon" type="image/x-icon" href="/" + require("./img/favicon.ico"))
     block title
       title Eurêkafé
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,7 +19,7 @@ html
       nav.navbar.navbar-expand-lg.navbar-light.d-flex.flex-row.justify-content-between.fixed-top#main-nav
         button.navbar-toggler#navtog(type="button"): span.navbar-toggler-icon
         a.navbar-brand(href="/")
-          img.d-inline-block.align-top.mr-3.ml-lg-3(src=require("./img/logo.png"))
+          img.d-inline-block.align-top.mr-3.ml-lg-3(src="/" + require("./img/logo.png"))
           | L'Eurêkafé
         
 
@@ -34,14 +34,12 @@ html
         ul.nav.nav-pills.flex-column#side-nav-content(style="flex:1;")
           block section-sm
 
-    block body
-      
-
+    block body      
     footer
       div.container
         div.row.pb-5.no-gutters
           div.col-12.order-md-3.col-md-6.gutters
-            form.container#news-form
+            form.container#news-form(action="/newsletter" method="post")
               div.row.gofundme.pb-3
                 p Soutenez nous sur &nbsp;
                   a(href="https://www.gofundme.com/eurekafe"): img(src=require("./img/icons/gofundme.jpg"))
@@ -49,12 +47,9 @@ html
                 p.col.pt-1.mb-1 S'abonner à la #[b newsletter] ?
               div.row
                 div.input-group
-                  input.form-control(type="text" placeholder="Mon courriel")
+                  input.form-control(type="text" name="mail" placeholder="Mon courriel")
                   span.input-group-btn
                     input.btn.btn-primary(type="submit" value="Oui, avec plaisir")
-                input.col-12.form-control.mb-3.no-group(type="text" placeholder="Mon courriel")
-                div.col-12.input-group.no-group
-                  input.btn.btn-sm.btn-success(type="submit" value="Oui, avec plaisir")
 
           div.col-6.order-md-1.col-md-3.pt-3.pt-md-0
             ul.pl-3.pl-md-5
@@ -71,6 +66,33 @@ html
               li: a(href="https://twitter.com/EurekafeTLS") Twitter
         div.row: div.col.text-center ©Eurêkafé 2017
 
-          
+//         
+  =======
+      footer.container-fluid.bg-light
+        div.row
+          div.col-12.col-lg-6.container
+            nav.col-12.p-2.nav.align-items-center.justify-content-center#footer-text-link
+              a.nav-item.nav-link(href="/about.html") À propos
+              a.nav-item.nav-link(href="/faq.html") F.A.Q.
+              a.nav-item.nav-link(href="/press.html") Presse
+              a.nav-item.nav-link(href="/legal.html") Mention légales
+            nav.col-12.p-2.nav.align-items-center.justify-content-center
+              a.nav-item.mx-2(href="https://www.facebook.com/EurekafeTLS/"): i.fa.fa-2x.fa-facebook-official(aria-hidden="true")
+              a.nav-item.mx-2(href="https://twitter.com/EurekafeTLS"): i.fa.fa-2x.fa-twitter-square(aria-hidden="true")
+              a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-instagram(aria-hidden="true")
+              a.nav-item.mx-2(href=""): i.fa.fa-2x.fa-youtube(aria-hidden="true")
+          div.col-12.col-lg-6
+            form.container(action="/newsletter" method="post")#news-form
+              div.row.text-center
+                h3.col.pt-3 S'abonner à la newsletter ?
+              div.row.col-10.offset-1.col-lg-8.offset-lg-2
+                div.input-group
+                  input.form-control(type="text" name="mail" placeholder="mon email")
+                  span.input-group-btn
+                    input.btn.btn-success(type="submit" value="Oui, avec plaisir")
+                input.col-12.form-control.mb-3.no-group(type="text" placeholder="mon email")
+                div.col-12.input-group.no-group
+                  input.btn.btn-sm.btn-success(type="submit" value="Oui, avec plaisir")
+  >>>>>>> mail
 
           

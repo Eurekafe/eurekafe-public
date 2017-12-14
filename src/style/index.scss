@@ -327,24 +327,6 @@ footer {
 		input {
 			font-size: 1.2rem;
 		}
-
-		@media (max-width: 10px) {
-			.input-group {
-				display: none;
-			}
-			.no-group {
-				display: block;
-				&.input-group {
-					position: relative;
-					height: 10vh;
-					.btn {
-						position: absolute;
-						left: 50%;
-						transform: translateX(-50%);
-					}
-				}
-			}
-		}
 	}
 }
 
