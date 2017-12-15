@@ -47,14 +47,14 @@ block body
     article.row.bg-white#concept-detail.pt-5.pb-4
       div.col-12.col-md-2.offset-md-3
         p Pour faire des rencontres étonnantes
-        object(data=require("./img/icons/hands.svg") type="image/svg+xml" width="70px" height="70px") hands
+        object(data=require("./img/icons/hands.svg") alt="poignée de main" type="image/svg+xml" width="70px" height="70px") hands
       div.col-12.col-md-2
         div.container-fluid: div.row
           p.col-12.order-md-2 Pour discuter entre amis
-          div.col-12.order-md-1: object(data=require("./img/icons/baloon.svg") type="image/svg+xml" width="70px" height="70px") hands
+          div.col-12.order-md-1: object(data=require("./img/icons/baloon.svg") alt="bulle de conversation" type="image/svg+xml" width="70px" height="70px") hands
       div.col-12.col-md-2
         p Pour travailler dans un cadre stimulant
-        object(data=require("./img/icons/bulb.svg") type="image/svg+xml" width="70px" height="70px") hands
+        object(data=require("./img/icons/bulb.svg") alt="idée" type="image/svg+xml" width="70px" height="70px") hands
     div.row.bg-white.h-divider
     article.row.bg-white
       div.col
@@ -70,48 +70,48 @@ block body
         div.row.pb-4
           div.col-12.col-md-6.align-self-center
             p.h3 Faites comme chez vous...
-            img#pantoufle(src=require("./img/icons/shoes.png"))
+            img#pantoufle(src=require("./img/icons/shoes.png") alt="pantoufle")
           div.col-12.col-md-6.pt-3.pt-lg-0.px-0.px-sm-3
             div.container.px-0.px-sm-3
               div.row.no-gutters
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/wifi.png"))
+                  img(src=require("./img/icons/wifi.png") alt="wifi")
                   p WIFI </br>Haut-débit
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/blackboard.png"))
+                  img(src=require("./img/icons/blackboard.png") alt="tableau noir")
                   p.middle Tableau
                 div.col-6.col-md-12.col-lg-6
                   div.d-flex.flex-row.justify-content-center
-                    img.pr-4(src=require("./img/icons/biscuit-cake.png"))
-                    img.pr-3(src=require("./img/icons/apple.png"))
+                    img.pr-4(src=require("./img/icons/biscuit-cake.png") alt="biscuit et gateau")
+                    img.pr-3(src=require("./img/icons/apple.png") alt="pomme")
                   p.middle Snacks et biscuits
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/copy.png"))
+                  img(src=require("./img/icons/copy.png") alt="imprimante")
                   p.middle Imprimante
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/projo.png"))
+                  img(src=require("./img/icons/projo.png") alt="video-projecteur")
                   p.middle Projecteur
                 div.col-3.col-md-6.col-lg-3.pr-0
-                  img(src=require("./img/icons/cup-glass.png"))
+                  img(src=require("./img/icons/cup-glass.png") alt="tasse et verre")
                   p.middle Boissons
                 div.col-3.col-md-6.col-lg-3.pl-0
-                  img(src=require("./img/icons/dice.png"))
+                  img(src=require("./img/icons/dice.png") alt="dé")
                   p.middle Jeux
         div.row.pb-3.pb-lg-0
           div.col-12.col-md-6.col-lg-4.px-0.px-sm-3
             div.container.px-0.px-sm-3
               div.row.no-gutters
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/presentation.png"))
+                  img(src=require("./img/icons/presentation.png") alt="presentation")
                   p Conférences </br>canapé
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/newspaper.png"))
+                  img(src=require("./img/icons/newspaper.png") alt="journal")
                   p Actualités </br>scientifiques
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/book.png"))
+                  img(src=require("./img/icons/book.png") alt="livre ouvert")
                   p.middle Magazines
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/gear-house.png"))
+                  img(src=require("./img/icons/gear-house.png") alt="maison des idées")
                   p Environnement </br>interactif
           div.col-12.col-md-6.col-lg-8.align-self-center
             p.h3 ... et étanchez votre soif de curiosité !
@@ -124,7 +124,7 @@ block body
     div.row.bg-light: div.col: div.container.bubble-container
       div.row: div.col
         p.h3.pb-3 Vous ne payez que le temps passé chez nous !
-        img.py-3#tarif-img(src=require("./img/Tarifs.png"))
+        img.py-3#tarif-img(src=require("./img/Tarifs.png") alt="tableau des tarifs")
   
   section.text-center.container-fluid#evenements
     div.row
@@ -161,27 +161,27 @@ block body
       article.container-fluid#part-list
         div.row.partenaires-img
           div.col-6.col-sm-3: a(href="https://bigbangscience.fr" target="_blank")
-            img(src=require("./img/partenaires/big-bang-science.png"))
+            img(src=require("./img/partenaires/big-bang-science.png") alt="Big Bang Science")
           div.col-6.col-sm-3: a(href="https://www.britishcouncil.fr/famelab" target="_blank")
-            img(src=require("./img/partenaires/famelab-france.png"))
+            img(src=require("./img/partenaires/famelab-france.png") alt="Famelab France")
           div.col-6.col-sm-3: a(href="https://www.podcastscience.fm" target="_blank")
-            img(src=require("./img/partenaires/podcast-science.png"))
+            img(src=require("./img/partenaires/podcast-science.png") alt="Podcast Science")
           div.col-6.col-sm-3: a(href="https://pintofscience.fr/" target="_blank")
-            img(src=require("./img/partenaires/pint-of-science.png"))
+            img(src=require("./img/partenaires/pint-of-science.png") alt="Pint of Science")
           div.col-6.col-sm-3: a(href="http://www.cafe-sciences.org/" target="_blank")
-            img(src=require("./img/partenaires/café-des-sciences.jpg"))
+            img(src=require("./img/partenaires/café-des-sciences.jpg") alt="Café des Sciences")
           div.col-6.col-sm-3: a(href="http://www.science-animation.org/" target="_blank")
-            img(src=require("./img/partenaires/science-animation.png"))
+            img(src=require("./img/partenaires/science-animation.png") alt="Science Animation")
           div.col-6.col-sm-3: a(href="http://www.quaidessavoirs.fr/" target="_blank")
-            img(src=require("./img/partenaires/quai-des-savoirs.jpg"))
+            img(src=require("./img/partenaires/quai-des-savoirs.jpg") alt="Quai des Savoirs")
           div.col-6.col-sm-3: a(href="https://www.accelerateurdelamobilisation.org/" target="_blank")
-            img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png"))
+            img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png") alt="Accelerateur de la Mobilisation")
     article.row#parallax-quote
       div.col 
         div.parallax-container
           div.text-body
             p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
-          img.parallax(src=require("./img/darwin-dealwithit.jpg"))
+          img.parallax(src=require("./img/darwin-dealwithit.jpg") alt="Darwin rebel")
     section.row.pt-4.bg-white.pb-4#citations
       div.container-fluid
         div.row.pb-4: h3.col-12 Ce que nos clients disent de nous :
@@ -190,7 +190,7 @@ block body
             div.balloon
               span Relativement interessant...
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein-sym.jpg"))
+            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein-sym.jpg") alt="Alfred Einstein")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
@@ -201,7 +201,7 @@ block body
             div.balloon
               span Un accueil radieux!
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg"))
+            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg")  alt="Marie Curie")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
@@ -212,7 +212,7 @@ block body
             div.balloon
               span Des pommes de premier choix !
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg"))
+            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg") alt="Isaac Newton")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
