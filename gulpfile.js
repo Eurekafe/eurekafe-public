@@ -48,7 +48,7 @@ var prodCompilerPublic = new Promise(function(resolve, reject) {
       if(regex.test(filename)) {
         let template = "./src/" + filename;
         let outputname = filename.slice(0, filename.length - 4) + ".html";
-        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template});
+        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template, showErrors: false});
         publicConfig.plugins.push(htmlWebpackPlugin);
       }
     });
