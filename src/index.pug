@@ -30,7 +30,7 @@ block body
             div.top-text
               p.display-2.text-center.dark Lancement du crowdfunding
             div.mid-text
-              button.btn.dark(onclick="window.location.href='https://www.gofundme.com/eurekafe'"): p.h2.m-0 Participez!
+              button.btn.dark(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Participez!
           article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
           
         a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
@@ -160,14 +160,22 @@ block body
     div.row.bg-dark.pb-5
       article.container-fluid#part-list
         div.row.partenaires-img
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/big-bang-science.png"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/famelab-france.png"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/podcast-science.png"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/pint-of-science.png"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/café-des-sciences.jpg"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/science-animation.png"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/quai-des-savoirs.jpg"))
-          div.col-6.col-sm-3: img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png"))
+          div.col-6.col-sm-3: a(href="https://bigbangscience.fr" target="_blank")
+            img(src=require("./img/partenaires/big-bang-science.png"))
+          div.col-6.col-sm-3: a(href="https://www.britishcouncil.fr/famelab" target="_blank")
+            img(src=require("./img/partenaires/famelab-france.png"))
+          div.col-6.col-sm-3: a(href="https://www.podcastscience.fm" target="_blank")
+            img(src=require("./img/partenaires/podcast-science.png"))
+          div.col-6.col-sm-3: a(href="https://pintofscience.fr/" target="_blank")
+            img(src=require("./img/partenaires/pint-of-science.png"))
+          div.col-6.col-sm-3: a(href="http://www.cafe-sciences.org/" target="_blank")
+            img(src=require("./img/partenaires/café-des-sciences.jpg"))
+          div.col-6.col-sm-3: a(href="http://www.science-animation.org/" target="_blank")
+            img(src=require("./img/partenaires/science-animation.png"))
+          div.col-6.col-sm-3: a(href="http://www.quaidessavoirs.fr/" target="_blank")
+            img(src=require("./img/partenaires/quai-des-savoirs.jpg"))
+          div.col-6.col-sm-3: a(href="https://www.accelerateurdelamobilisation.org/" target="_blank")
+            img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png"))
     article.row#parallax-quote
       div.col 
         div.parallax-container
