@@ -14,7 +14,7 @@ $fa-font-path: "~font-awesome/fonts";
 	margin: 0 -15px;
 }
 
-h1, h2, h3, h4, h5, .nav-brand {
+h1, h2, h3, h4, h5, .nav-brand, .title {
 	font-family: "font-title";
 }
 
@@ -132,7 +132,7 @@ span.bg-text {
 	h2, .h2 {
 		font-size: 1.8rem;
 	}
-	h3 {
+	h3,.h3 {
 		font-size: 1.7rem;
 	}
 	.display-2 {
@@ -616,7 +616,7 @@ aside {
 		height: 12rem;
 	}
 	@media (max-width: 576px) {
-		h3 {
+		h3, .h3 {
 			font-size: 1.8rem;
 		}
 	}
