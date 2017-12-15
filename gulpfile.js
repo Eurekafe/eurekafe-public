@@ -2,14 +2,59 @@
 /* eslint no-console: "off" */
 
 "use strict";
-
+const fs = require("fs");
 var gulp = require("gulp");
 var gutil = require("gulp-util");
 var nodemon = require("nodemon");
 var webpack = require("webpack");
 var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const HtmlWebpackPlugin = require ("html-webpack-plugin");
 
 var webpackConfig = require("./webpack.config.js");
+
+var devCompilerPublic = new Promise(function(resolve, reject) {
+  var publicConfig = Object.create(webpackConfig);
+  publicConfig.devtool = "inline-source-map";
+  
+  fs.readdir("./src", function(err, files) {
+    if(err) reject(err);
+    var regex = /.pug$/;
+    files.forEach(function(filename) {
+      if(regex.test(filename)) {
+        let template = "./src/" + filename;
+        let outputname = filename.slice(0, filename.length - 4) + ".html";
+        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template});
+        publicConfig.plugins.push(htmlWebpackPlugin);
+      }
+    });
+    resolve(webpack(publicConfig));
+  });
+});
+
+var prodCompilerPublic = new Promise(function(resolve, reject) {
+  var publicConfig = Object.create(webpackConfig);
+  publicConfig.plugins.push(new UglifyJSPlugin());
+  publicConfig.plugins.push(new OptimizeCssAssetsPlugin({
+    cssProcessor: require("cssnano"),
+    cssProcessorOptions: { discardComments: { removeAll: true } },
+    canPrint: true
+  }));
+  
+  fs.readdir("./src", function(err, files) {
+    if(err) reject(err);
+    var regex = /.pug$/;
+    files.forEach(function(filename) {
+      if(regex.test(filename)) {
+        let template = "./src/" + filename;
+        let outputname = filename.slice(0, filename.length - 4) + ".html";
+        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template, showErrors: false});
+        publicConfig.plugins.push(htmlWebpackPlugin);
+      }
+    });
+    resolve(webpack(publicConfig));
+  });
+});
 
 gulp.task("default", ["server-dev"]);
 
@@ -21,39 +66,40 @@ gulp.task("build-dev", ["webpack:build"], function() {
   gulp.watch(["src/**/*"], ["webpack:build"]);
 });
 
-
+/*
 var publicConfig = Object.create(webpackConfig);
 publicConfig.devtool = "inline-source-map";
 
 // create a single instance of the compiler to allow caching
 var devCompilerPublic = webpack(publicConfig);
-
+*/
 gulp.task("webpack:build", function(callback) {
   // run webpack
-  devCompilerPublic.run(function(err, stats) {
-    if(err) throw new gutil.PluginError("webpack:build", err);
-    gutil.log("[webpack:build]", stats.toString({
-      colors: true
-    }));
-    callback();
+  devCompilerPublic.then(function(compiler) {
+    compiler.run(function(err, stats) {
+      if(err) throw new gutil.PluginError("webpack:build", err);
+      gutil.log("[webpack:build]", stats.toString({
+        colors: true
+      }));
+      callback();
+    });
+  }).catch(function(err) {
+    throw err;
   });
 });
 
-
-var publicConfigProd = Object.create(webpackConfig);
-publicConfigProd.plugins.push(new UglifyJSPlugin());
-
-// create a single instance of the compiler to allow caching
-var prodCompilerPublic = webpack(publicConfig);
-
 gulp.task("webpack:build-prod", function(callback) {
   // run webpack
-  prodCompilerPublic.run(function(err, stats) {
-    if(err) throw new gutil.PluginError("webpack:build-prod", err);
-    gutil.log("[webpack:build-prod]", stats.toString({
-      colors: true
-    }));
-    callback();
+  prodCompilerPublic.then(function(compiler) {
+    compiler.run(function(err, stats) {
+      if(err) throw new gutil.PluginError("webpack:build", err);
+      gutil.log("[webpack:build]", stats.toString({
+        colors: true
+      }));
+      callback();
+    });
+  }).catch(function(err) {
+    throw err;
   });
 });
 
