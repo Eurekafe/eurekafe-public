@@ -53,9 +53,9 @@ $(document).ready(function() {
   //parallax
   $(".parallax-container").each(function() {
     var pContainer = $(this);
-    $(document).scroll(function() {
+    document.addEventListener("scroll", function() {
       calcParallax(pContainer);
-    });
+    }, {capture: true, passive: true});
   });
 
   function calcParallax(pContainer) {
