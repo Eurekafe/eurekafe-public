@@ -8,6 +8,7 @@ var gutil = require("gulp-util");
 var nodemon = require("nodemon");
 var webpack = require("webpack");
 var UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 var webpackConfig = require("./webpack.config.js");
 
@@ -42,6 +43,13 @@ gulp.task("webpack:build", function(callback) {
 
 var publicConfigProd = Object.create(webpackConfig);
 publicConfigProd.plugins.push(new UglifyJSPlugin());
+publicConfigProd.plugins.push(new OptimizeCssAssetsPlugin({
+  cssProcessor: require("cssnano"),
+  cssProcessorOptions: { discardComments: { removeAll: true } },
+  canPrint: true
+}));
+
+
 
 // create a single instance of the compiler to allow caching
 var prodCompilerPublic = webpack(publicConfig);
