@@ -12,6 +12,22 @@ var nodemailer = require("nodemailer");
 
 const path = require("path");
 
+const url = process.env.MONGO_CRED;
+var MongoClient = require("mongodb").MongoClient;
+var dbclient = new Promise(function(resolve, reject) {
+  MongoClient.connect(url, function(err, client) {
+    if (err) {
+      console.log("err");
+      reject(err);
+    }
+    else {
+      const db = client.db("eurekafe");
+      console.log("success");
+      resolve(db);
+    }
+  });
+});
+
 var transporter = nodemailer.createTransport({
   service: process.env.MAIL_SERV,
   auth: {
@@ -44,14 +60,21 @@ app.post("/newsletter", function(req, res) {
       subject: "inscription newsletter",
       text: newmail
     };
-
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
         res.redirect("/error");
       } else {
         console.log("Email sent: " + info.response);
-        res.redirect("/newsletterSuccess");
+        dbclient.then(function(dbs) {
+          var collection = dbs.collection("newsletter");
+          collection.insertOne({email: newmail}, function(err, data) {
+            if(err) res.redirect("/error");
+            console.log(data);
+            res.redirect("/newsletterSuccess");
+          });
+        });
+        
       }
     });
   } else {
