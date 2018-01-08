@@ -66,12 +66,12 @@ app.post("/newsletter", function(req, res) {
         res.redirect("/error");
       } else {
         console.log("Email sent: " + info.response);
+        res.redirect("/newsletterSuccess");
         dbclient.then(function(dbs) {
           var collection = dbs.collection("newsletter");
           collection.insertOne({email: newmail}, function(err, data) {
             if(err) res.redirect("/error");
             console.log(data);
-            res.redirect("/newsletterSuccess");
           });
         });
         
