@@ -574,14 +574,14 @@ aside {
 	}
 }
 
-#part-list {
+#part-list, #press-list {
 	width: 65%;
 	margin: auto;
 	padding: 20px;
 	background: $white;
 	border-radius: 40px;
 
-	.partenaires-img {
+	.partenaires-img, .press-img {
 		&>div{
 			height: 16vmin;
 		}
