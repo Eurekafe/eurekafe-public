@@ -29,9 +29,10 @@ block body
             div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
           article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
             div.top-text
-              p.display-2.text-center.dark Lancement du crowdfunding
+              p.display-2.text-center.dark Crowdfunding
             div.mid-text
-              button.btn.dark(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Participez!
+              p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petit ou grand !&nbsp;
+              button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
           article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
           
         a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
@@ -254,7 +255,7 @@ block body
             li.list-group-item.bg-light.d-flex.flex-row.justify-content-center
               div: b Adresse :&nbsp;
               div
-                div.pr-1 En plein centre ville
+                div.pr-1 24 rue Léon Gambetta
                 div 31000
                 div Toulouse
             li.list-group-item.bg-light.text-center.pb-3 #[b Courriel : ] contact@eurekafe.fr
