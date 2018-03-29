@@ -25,11 +25,11 @@ block body
           li.ts(data-target="#carousel" data-slide-to="1")
           li.ts(data-target="#carousel" data-slide-to="2")
         div.carousel-inner
-          article.carousel-item.center.croc.active(style="background-image: url(" + require('./img/draw-evt-white.png') + ");")
+          article.carousel-item.croc.active(style="background-image: url(" + require('./img/draw-evt-white.png') + ");")
             div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
           article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
             div.top-text
-              p.display-2.text-center.dark Crowdfunding
+              p.display-2.text-center Crowdfunding
             div.mid-text
               p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petit ou grand !&nbsp;
               button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
@@ -132,7 +132,7 @@ block body
     div.row
       div.col.bg-dark
           h2.h3.title.m-4 Événements 
-    div.row.py-5#evt
+    div.row.py-5#evenements-content
       div.container-fluid
         div.row
           div.col-md-4.order-md-4.col-lg-6.order-lg-1.py-md-5.mb-lg-5
@@ -160,7 +160,7 @@ block body
       div.col.bg-dark
           h2.h3.title.text-center.m-4 Partenaires 
     div.row.bg-dark.pb-5
-      article.container-fluid#part-list
+      article.container-fluid#partenaires-list
         div.row.partenaires-img
           div.col-6.col-sm-3: a(href="https://bigbangscience.fr" target="_blank"  rel="noopener")
             img(src=require("./img/partenaires/big-bang-science.png") alt="Big Bang Science")
@@ -294,4 +294,4 @@ block body
                       div 60€
                       div 165€
       article.col-12.col-xl-6#map
-        iframe(title="carte google" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&center=43.602968,1.442261&zoom=16" allowfullscreen)
+        iframe(title="carte google" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&q=Eurêkafé,Toulouse&zoom=17" allowfullscreen)

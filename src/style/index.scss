@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, .nav-brand, .title {
 	font-family: "font-button";
 }
 
+.alt-font {
+	font-family: "font-alt";
+}
+
 .h-divider {
 	display: block;
 	border-bottom: 2px solid $black;
@@ -35,14 +39,6 @@ h1, h2, h3, h4, h5, .nav-brand, .title {
 
 .bg-black {
 	background-color: $black;
-}
-
-.cali {
-	font-family: "font-cali"
-}
-
-.alt-font {
-	font-family: "font-alt";
 }
 
 p.alt-font {
@@ -363,21 +359,25 @@ aside {
 
 
 #carousel {
+
 	background: white;
 	height: 68vmin;
-	.carousel-indicators .ts.active {
-		background-color: rgba(0,0,0,0.8);
-	}
-	.carousel-indicators .ts {
-		background-color: rgba(0,0,0,0.5);
-		//box-shadow: 0px 0px 3px $black;
-	}
-	.carousel-control-color {
-		color: rgba(0,0,0,0.5) !important;
-		&:hover {
-			color: rgba(0,0,0,0.8) !important;
+
+	.carousel-indicators {
+		.ts.active {
+			background-color: rgba(0,0,0,0.8);
+		}
+		.ts {
+			background-color: rgba(0,0,0,0.5);
 		}
 	}
+	.carousel-control-color {
+		color: rgba(0,0,0,0.6) !important;
+		&:hover {
+			color: rgba(0,0,0,0.9) !important;
+		}
+	}
+
 	.carousel-inner {
 		height:100%;
 		.carousel-item {
@@ -388,9 +388,6 @@ aside {
 			background-position: center center;
 			&.cover {
 				background-size: cover;
-			}
-			&.center {
-				background-position: center center;
 			}
 			&.croc {
 				background-size: contain;
@@ -403,67 +400,52 @@ aside {
 			}
 			&>.mid-text {
 				position: absolute;
-				
 				top: 64%;
 				transform: translateY(-50%);
 				button {
-					margin: auto;
 					display: block;
+					margin: auto;
 					float: none;
 					margin: 0 auto;
 				}
 			}
-		}
-		
-		.dark {
-			color: $black;
+
+			.top-text {
+				color: $black;
+				width: 100%;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				padding: 1vh 0;
+				left: 50%;
+				transform: translateX(-50%);
+				text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+				background-color: rgba(255,255,255,0.3);
+			}
+
+			.bottom-text {
+				color: $black;
+				width: 100%;
+				position: absolute;
+				text-align: center;
+				bottom: 0;
+				padding: 3vh 0;
+				left: 50%;
+				transform: translateX(-50%);
+				text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
+				background-color: rgba(255,255,255,0.5);
+			}
 		}
 
 		button {
 			transition: .2s;
-			color: $primary;
-			background-color: transparent;
+			color: $black;
+			background: $white;
 			border: 4px solid $primary;
 			&:hover {
 				background-color: $primary;
 				color: $black;
 			}
-			&.dark {
-				background: $white;
-				&:hover {
-					background-color: $primary;
-					color: $black;
-				}
-			}
-		}
-		.pos-abs-bl {
-			position: absolute;
-			left: 16%;
-			bottom: 10%;
-		}
-		.top-text {
-			color: $black;
-			width: 100%;
-			position: absolute;
-			text-align: center;
-			top: 0;
-			padding: 1vh 0;
-			left: 50%;
-			transform: translateX(-50%);
-			text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
-			background-color: rgba(255,255,255,0.3);
-		}
-		.bottom-text {
-			color: $black;
-			width: 100%;
-			position: absolute;
-			text-align: center;
-			bottom: 0;
-			padding: 3vh 0;
-			left: 50%;
-			transform: translateX(-50%);
-			text-shadow: -1px 0 white, 0 -1px white, 1px 0 white, 0 1px white;
-			background-color: rgba(255,255,255,0.5);
 		}
 	}
 }
@@ -501,34 +483,7 @@ aside {
 	
 }
 
-#parallax-quote {
-	height: 40vh;
-	&>div {
-		padding: 0;
-		width: 100%;
-		height: 100%;
-	}
-	.text-body {
-		width: 100%;
-		background-color: rgba(255,255,255,0.5);
-		margin:auto;
-		color: $black;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		//transform: translateY(-50%);
-		text-align: center;
-		z-index: 1000;
-		@media (max-width: 576px) {
-			p {
-				font-size: 1rem;
-			}
-		}
-	}
-}
-
-#evt {
+#evenements-content {
 	div.container-fluid {
 		width: 68%;
 		@media (max-width:992px) {
@@ -574,7 +529,7 @@ aside {
 	}
 }
 
-#part-list, #press-list {
+#partenaires-list, #press-list {
 	width: 65%;
 	margin: auto;
 	padding: 20px;
@@ -603,6 +558,33 @@ aside {
 			max-width: 100%;
 		}
 	}	
+}
+
+#parallax-quote {
+	height: 40vh;
+	&>div {
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.text-body {
+		width: 100%;
+		background-color: rgba(255,255,255,0.5);
+		margin:auto;
+		color: $black;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		//transform: translateY(-50%);
+		text-align: center;
+		z-index: 1000;
+		@media (max-width: 576px) {
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
 }
 
 #citations {
