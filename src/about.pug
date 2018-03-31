@@ -3,7 +3,7 @@ extends templates/layout.pug
 block body
 	div.container-fluid.flex-wrap
 		section.row.bg-light
-			div.col
+			div.col.pt-4
 				h1.display-3.text-center À propos
 		section.row
 			div.col.jumbotron
@@ -14,13 +14,13 @@ block body
 			div.col
 				h2.text-center Mais qui à eu cette idée tordue ?
 		section.row.py-4
-			div.col
+			div.col.col-lg-8.offset-lg-2
 				h3 Arnold
 				div
 					img.float-right.m-2(src=require("./img/arnold.jpg") alt="Arnold" style="max-height: 40vh;max-width: 30vw;")
 				p (contenu à venir)
 		section.row.bg-light.py-4
-			div.col
+			div.col.col-lg-8.offset-lg-2
 				h3 Sam
 				div
 					img.float-left.m-2(src=require("./img/sam.jpg") alt="Sam" style="max-height: 40vh;max-width: 30vw;")
