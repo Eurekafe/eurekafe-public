@@ -14,15 +14,17 @@ block body
 			div.col
 				h2.text-center Mais qui à eu cette idée tordue ?
 		section.row.py-4
-			div.col-7
+			div.col
 				h3 Arnold
+				div
+					img.float-right.m-2(src=require("./img/arnold.jpg") alt="Arnold" style="max-height: 40vh;max-width: 30vw;")
 				p (contenu à venir)
-			div.col-5(style="background-image:url(" + require("./img/arnold.jpg") + ");background-size: contain;background-repeat: no-repeat;background-position: center;")
 		section.row.bg-light.py-4
-			div.col-5(style="background-image:url(" + require("./img/sam.jpg") + ");background-size: contain;background-repeat: no-repeat; background-position: center;")
-			div.col-7
+			div.col
 				h3 Sam
-				p (contenu à venir)
+				div
+					img.float-left.m-2(src=require("./img/sam.jpg") alt="Sam" style="max-height: 40vh;max-width: 30vw;")
+					p (contenu à venir)
 		section.row
 			div.col.text-center.jumbotron.py-4
 				a(href="/").btn.btn-primary Retour à la Page d'accueil
