@@ -64,9 +64,59 @@ block body
         p Venez éveiller votre curiosité !
     div.row.bg-white.h-divider
     article.row.bg-white.py-3
-      div.col: p.alt-font OUVERT 7/7 de 9h à 22h
+      div.col: p.alt-font OUVERT 7/7
     div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
-    
+  
+  section.container-fluid.pt-4.bg-dark
+    div.row.no-gutters#info
+      article.col-12.col-xl-6.card
+        div.card-body.bg-dark
+          h2.h3.title.card-title.text-center Infos pratiques
+          ul.list-group.list-group-flush.pl-3
+            li.list-group-item.bg-dark.d-flex.flex-row.justify-content-center
+              div: b Adresse :&nbsp;
+              div
+                div.pr-1 24 rue Léon Gambetta
+                div 31000 Toulouse
+            li.list-group-item.bg-dark.text-center.pb-3 #[b Courriel : ] contact@eurekafe.fr
+            li.list-group-item.bg-dark.container.justify-content-around
+              div.row
+                div.col-12.col-md-6.col-lg-5.offset-lg-2.col-xl-6.offset-xl-1.mb-3.mb-md-0
+                  div.py-3: b Horaires d'ouverture :
+                  div.d-flex.flex-row
+                    div
+                      div Lundi : 
+                      div Mardi :
+                      div Mercredi :
+                      div Jeudi :
+                      div Vendredi :
+                      div Samedi :
+                      div Dimanche :&nbsp;
+                    div
+                      div 9h - 22h
+                      div 9h - 22h
+                      div 9h - 22h
+                      div 9h - 22h
+                      div 9h - 22h
+                      div 11h - 22h
+                      div 11h - 22h
+                div.col-12.col-md-6.col-lg-4
+                  div.py-3: b Tarifs :
+                  div.d-flex.flex-row
+                    div
+                      div Heure :&nbsp;
+                      div Journée :&nbsp;
+                      div Semaine :&nbsp;
+                      div Mois :
+                    div
+                      div 4€
+                      div 14€
+                      div 60€
+                      div 165€
+      article.col-12.col-xl-6#map
+        iframe(title="carte google" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&q=Eurêkafé,Toulouse&zoom=17" allowfullscreen)
+
+  section.text-center.container-fluid
     article.row.bg-light.no-gutters#activites
       div.col: div.container.bubble-container
         div.row.pb-4
@@ -127,7 +177,7 @@ block body
       div.row: div.col
         p.h3.pb-3 Vous ne payez que le temps passé chez nous !
         img.py-3#tarif-img(src=require("./img/Tarifs.png") alt="tableau des tarifs")
-  
+
   section.text-center.container-fluid#evenements
     div.row
       div.col.bg-dark
@@ -246,52 +296,3 @@ block body
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star-half-full
 
-  section.container-fluid
-    div.row.bg-light.no-gutters#info
-      article.col-12.col-xl-6.card
-        div.card-body.bg-light
-          h2.h3.title.card-title.text-center Infos pratiques
-          ul.list-group.list-group-flush.pl-3
-            li.list-group-item.bg-light.d-flex.flex-row.justify-content-center
-              div: b Adresse :&nbsp;
-              div
-                div.pr-1 24 rue Léon Gambetta
-                div 31000
-                div Toulouse
-            li.list-group-item.bg-light.text-center.pb-3 #[b Courriel : ] contact@eurekafe.fr
-            li.list-group-item.bg-light.container.justify-content-around
-              div.row
-                div.col-12.col-md-6.col-lg-5.offset-lg-2.col-xl-6.offset-xl-1.mb-3.mb-md-0
-                  div.py-3: b Horaires d'ouverture :
-                  div.d-flex.flex-row
-                    div
-                      div Lundi : 
-                      div Mardi :
-                      div Mercredi :
-                      div Jeudi :
-                      div Vendredi :
-                      div Samedi :
-                      div Dimanche :&nbsp;
-                    div
-                      div 9h - 22h
-                      div 9h - 22h
-                      div 9h - 22h
-                      div 9h - 22h
-                      div 9h - 22h
-                      div 11h - 22h
-                      div 11h - 22h
-                div.col-12.col-md-6.col-lg-4
-                  div.py-3: b Tarifs :
-                  div.d-flex.flex-row
-                    div
-                      div Heure :&nbsp;
-                      div Journée :&nbsp;
-                      div Semaine :&nbsp;
-                      div Mois :
-                    div
-                      div 4€
-                      div 14€
-                      div 60€
-                      div 165€
-      article.col-12.col-xl-6#map
-        iframe(title="carte google" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&q=Eurêkafé,Toulouse&zoom=17" allowfullscreen)
