@@ -1,10 +1,29 @@
 extends templates/layout.pug
 
 block body
-	div.container-fluid.flex-wrap
+	div.container
 		section.row
-			div.col.text-center.jumbotron.bg-light
-				h1.display-2 En construction
-				h3.pb-3.display-4 Cette page n'existe pas... ou pas encore
-				p.display-5 Notre site est toujours en construction, certains liens ne sont pas encore actifs.
-				a(href="/").btn.btn-primary Retour à la Page d'accueil
+			div.col.bg-light.p-4
+				h1.text-center.p-4 FAQ :
+				h2.h5: strong  #[i.fa.fa-arrow-right] Un Café à l’heure ? je n’ai pas bien saisi !
+				p A l’Eurêkafé, le but est de pouvoir faire comme chez soi ! Vous pouvez donc vous servir et profiter du lieu sans vous soucier des détails, car vous ne paierez que le temps passé dedans.
+				h2.h5: strong  #[i.fa.fa-arrow-right] On paye à l’heure ? Mais alors si je reste 1h10, que se passe-t- il?
+				p Nos tarifs sont de 5€ la 1 ère heure puis 3€/h ensuite ! Nous fonctionnons par quart d’heure entamé. Pour 1h10, on paye donc 1h15. Dans cet exemple cela revient à 5,75€.
+				h2.h5: strong  #[i.fa.fa-arrow-right] Je travaille pas loin, si je passe plusieurs fois dans la journée, je repaye la 1 ère heure à chaque fois ?
+				p Ola non ! Chaque personne a un compteur par jour, peu importe si vous allez et venez pendant la journée.
+				h2.h5: strong  #[i.fa.fa-arrow-right] J’ai bien envie de me poser pour travailler chez vous, mais ça va faire cher ! On peut s’arranger ?
+				p Au-delà de 14€ par jour (c.a.d 4h), les heures sont gratuites.
+				p Il est aussi possible de prendre des forfaits semaines (7 jours pour 60€) et un mois (30 jours pour 165€).
+				p Si jamais vous souhaitez travailler en groupe, on a construit deux salles prévues pour ça avec écran et prise ethernet !
+				h2.h5: strong  #[i.fa.fa-arrow-right] Je peux prendre quelque chose et aller en bord de Garonne ?
+				p Nop, on ne fait pas de vente à emporter.
+				h2.h5: strong  #[i.fa.fa-arrow-right] J’adore vos gâteaux mais il m’en faudra plus pendant que je boss les exams ! Je peux ramener à manger ?
+				p On a un micro-ondes et un frigo que vous pouvez utiliser 
+				p A savoir : chaque soir, le frigo est vidé. N’oubliez rien en partant !
+				p En ce qui concerne les repas que chacun apporte, on accepte tout ce qui ne sent pas trop fort et ne tâche pas le lieu, par courtoisie pour les autres usagers.
+				h2.h5: strong  #[i.fa.fa-arrow-right] Je fais parti d’une asso/structure qui aimerait utiliser votre lieu, c’est possible ?
+				p Carrément ! On a plusieurs solutions en fonction du nombre de personnes.
+				p Si vous êtes un petit groupe (moins de 8), nous avons des salles appropriées avec écran et prise ethernet.
+				p Si vous faires un meetup, un évènement, ou que vous êtes beaucoup, contactez-nous pour s’arranger à
+				
+				h3.text-center.pt-4: a(href="mailto:contact@eurekafe.fr") contact@eurekafe.fr
