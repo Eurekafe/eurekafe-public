@@ -43,7 +43,7 @@ app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static("dist", {maxAge: 3600000}));
+app.use(express.static("public", {maxAge: 3600000}));
 
 app.post("/newsletter", function(req, res) {
   let newmail = undefined;
@@ -83,13 +83,32 @@ app.post("/newsletter", function(req, res) {
   
 });
 
+app.get("/", function(req,res) {
+  res.render("index");
+});
+
+app.get("/about", function(req,res) {
+  res.render("about");
+});
+
+app.get("/faq", function(req,res) {
+  res.render("faq");
+});
+
+app.get("/legal", function(req,res) {
+  res.render("legal");
+});
+
+app.get("/press", function(req,res) {
+  res.render("press");
+});
+
 app.get("/newsletterSuccess", function(req, res) {
   res.sendFile(path.resolve(__dirname, "dist/newsletter.html"));
 });
 
 app.use(function(req, res) {
-  res.status(404).sendFile(path.resolve(__dirname, "dist/404.html"));
-  
+  res.status(404).render("404");
 });
 
 const port = process.env.PORT||3000;

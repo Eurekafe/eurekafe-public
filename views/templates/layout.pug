@@ -4,7 +4,8 @@ html(lang="fr")
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="description" content="L'Eurêkafé, le 1er Café Scientifique de France à Toulouse. Un café des curiosités pour s'émerveiller/s'informer/se détendre/travailler de manière conviviale !")
-    link(rel="icon" type="image/x-icon" href="/" + require("./img/favicon.ico"))
+    link(rel="stylesheet" type="text/css" href="/css/index.style.css")
+    link(rel="icon" type="image/x-icon" href="/img/favicon.ico")
     block title
       title Eurêkafé
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,7 +21,7 @@ html(lang="fr")
       nav.navbar.navbar-expand-lg.navbar-light.d-flex.flex-row.justify-content-between.fixed-top#main-nav
         button.navbar-toggler#navtog(type="button" aria-label="Toggle navigation"): span.navbar-toggler-icon
         a.navbar-brand(href="http://www.eurekafe.fr/")
-          img.d-inline-block.align-top.mr-3.ml-lg-3(src="/" + require("./img/logo.png") alt="logo eurekafe")
+          img.d-inline-block.align-top.mr-3.ml-lg-3(src="/img/logo.png" alt="logo eurekafe")
           | L'Eurêkafé
         
 
@@ -44,7 +45,7 @@ html(lang="fr")
             form.container#news-form(action="/newsletter" method="post")
               div.row.gofundme.pb-3
                 p.text-center Merci à tous de nous avoir soutenu ! &nbsp;
-                  a(href="https://www.gofundme.com/eurekafe" target="_blank" rel="noopener"): img(src=require("./img/icons/gofundme.jpg") alt="campagne GoFundMe")
+                  a(href="https://www.gofundme.com/eurekafe" target="_blank" rel="noopener"): img(src="./img/icons/gofundme.jpg" alt="campagne GoFundMe")
               div.row.text-center
                 p.col.pt-1.mb-1 S'abonner à la #[b newsletter] ?
               div.row
@@ -57,10 +58,10 @@ html(lang="fr")
           div.col-6.order-md-1.col-md-3.pt-3.pt-md-0
             ul.pl-3.pl-md-5
               li.pb-2: span.separator Des questions ?
-              li: a(href="/about.html") À propos
-              li: a(href="/faq.html") F.A.Q.
-              li: a(href="/press.html") Presse
-              li: a(href="/legal.html") Mention légales
+              li: a(href="/about") À propos
+              li: a(href="/faq") F.A.Q.
+              li: a(href="/press") Presse
+              li: a(href="/legal") Mention légales
               
           div.col-6.order-md-3.col-md-3.pt-3.pt-md-0
             ul.pl-md-5

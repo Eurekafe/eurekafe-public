@@ -17,19 +17,19 @@ var devCompilerPublic = new Promise(function(resolve, reject) {
   var publicConfig = Object.create(webpackConfig);
   publicConfig.devtool = "inline-source-map";
   
-  fs.readdir("./src", function(err, files) {
-    if(err) reject(err);
-    var regex = /.pug$/;
-    files.forEach(function(filename) {
-      if(regex.test(filename)) {
-        let template = "./src/" + filename;
-        let outputname = filename.slice(0, filename.length - 4) + ".html";
-        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template});
-        publicConfig.plugins.push(htmlWebpackPlugin);
-      }
-    });
-    resolve(webpack(publicConfig));
-  });
+  // fs.readdir("./src", function(err, files) {
+  //   if(err) reject(err);
+  //   var regex = /.pug$/;
+  //   files.forEach(function(filename) {
+  //     if(regex.test(filename)) {
+  //       let template = "./src/" + filename;
+  //       let outputname = filename.slice(0, filename.length - 4) + ".html";
+  //       let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template});
+  //       publicConfig.plugins.push(htmlWebpackPlugin);
+  //     }
+  //   });
+  resolve(webpack(publicConfig));
+  //});
 });
 
 var prodCompilerPublic = new Promise(function(resolve, reject) {
@@ -41,19 +41,19 @@ var prodCompilerPublic = new Promise(function(resolve, reject) {
     canPrint: true
   }));
   
-  fs.readdir("./src", function(err, files) {
-    if(err) reject(err);
-    var regex = /.pug$/;
-    files.forEach(function(filename) {
-      if(regex.test(filename)) {
-        let template = "./src/" + filename;
-        let outputname = filename.slice(0, filename.length - 4) + ".html";
-        let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template, showErrors: false});
-        publicConfig.plugins.push(htmlWebpackPlugin);
-      }
-    });
-    resolve(webpack(publicConfig));
-  });
+  // fs.readdir("./src", function(err, files) {
+  //   if(err) reject(err);
+  //   var regex = /.pug$/;
+  //   files.forEach(function(filename) {
+  //     if(regex.test(filename)) {
+  //       let template = "./src/" + filename;
+  //       let outputname = filename.slice(0, filename.length - 4) + ".html";
+  //       let htmlWebpackPlugin = new HtmlWebpackPlugin({filename: outputname, template, showErrors: false});
+  //       publicConfig.plugins.push(htmlWebpackPlugin);
+  //     }
+  //   });
+  resolve(webpack(publicConfig));
+  //});
 });
 
 gulp.task("default", ["server-dev"]);

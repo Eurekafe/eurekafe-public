@@ -8,27 +8,18 @@ const CleanWebpackPlugin = require ("clean-webpack-plugin");
 module.exports = {
   entry: {index: "./src/index.js"},
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist/")
+    filename: "js/[name].js",
+    path: path.resolve(__dirname, "public")
   },
   module: {
     rules: [{
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
       loader: "file-loader",
-      options: {name: "font/[name].[ext]"}
-    },
-    {
-      test: /\.(png|svg|jpg|gif|ico|jpeg|webp)$/,
-      loader: "file-loader",
-      options: {name: "img/[name].[ext]"}
+      options: {name: "/font/[name].[ext]"}
     },
     {
       test: /\.html$/,
       loader: "html-loader"
-    },
-    {
-      test: /\.pug$/,
-      loader: "pug-loader"
     },
     {
       test: /\.scss$/,
@@ -39,8 +30,8 @@ module.exports = {
     }]
   },
   plugins: [
-    new ExtractTextPlugin("/[name].style.css"),
-    new CleanWebpackPlugin(["dist"]),
+    new ExtractTextPlugin("/css/[name].style.css"),
+    new CleanWebpackPlugin(["public/js", "public/css", "public/font", "dist"]),
     new webpack.ProvidePlugin({
       $: "jquery",
       jquery: "jquery",

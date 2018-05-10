@@ -25,17 +25,17 @@ block body
           li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="1")
           li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="2")
         div.carousel-inner
-          article.carousel-item.croc.active(style="background-image: url(" + require('./img/draw-evt-white.png') + ");")
+          article.carousel-item.croc.active(style="background-image: url('/img/draw-evt-white.png');")
             div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
-          article.carousel-item(style="background-image: url(" + require('./img/front.jpg') + ");")
+          article.carousel-item(style="background-image: url('/img/front.jpg'));")
             div.bottom-text: h1.h2.font-weight-bold Ouverture le 16 Avril !
-          article.carousel-item.cover(style="background-image:url(" + require('./img/lancement-sv.jpg') + ");")
+          article.carousel-item.cover(style="background-image:url('/img/lancement-sv.jpg');")
             div.top-text
               p.display-2.text-center Crowdfunding
             div.mid-text
               p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petit ou grand !&nbsp;
               button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
-          article.carousel-item.center.croc(style="background-image:url(" + require('./img/draw-atelier.jpg') + ");")
+          article.carousel-item.center.croc(style="background-image:url('/img/draw-atelier.jpg');")
           
         a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
           i.fa.fa-2x.fa-chevron-left(aria-hidden="true")
@@ -47,18 +47,18 @@ block body
   section.text-center.container-fluid#concept
     div.row
       h2.h3.title.col.bg-dark.my-0.py-4 Un lieu incontournable <br/> d'Éducation Populaire
-    div.zigzag(style="background-image:url(" + require("./img/shapes/d-tri.svg") + ");")
+    div.zigzag(style="background-image:url(" + "/img/shapes/d-tri.svg" + ");")
     article.row.bg-white#concept-detail.pt-5.pb-4
       div.col-12.col-md-2.offset-md-3
         p Pour faire des rencontres étonnantes
-        object(data=require("./img/icons/hands.svg") alt="poignée de main" type="image/svg+xml" width="70px" height="70px") hands
+        object(data="/img/icons/hands.svg" alt="poignée de main" type="image/svg+xml" width="70px" height="70px") hands
       div.col-12.col-md-2
         div.container-fluid: div.row
           p.col-12.order-md-2 Pour discuter entre amis
-          div.col-12.order-md-1: object(data=require("./img/icons/baloon.svg") alt="bulle de conversation" type="image/svg+xml" width="70px" height="70px") hands
+          div.col-12.order-md-1: object(data="/img/icons/baloon.svg" alt="bulle de conversation" type="image/svg+xml" width="70px" height="70px") hands
       div.col-12.col-md-2
         p Pour travailler dans un cadre stimulant
-        object(data=require("./img/icons/bulb.svg") alt="idée" type="image/svg+xml" width="70px" height="70px") hands
+        object(data="/img/icons/bulb.svg" alt="idée" type="image/svg+xml" width="70px" height="70px") hands
     div.row.bg-white.h-divider
     article.row.bg-white
       div.col
@@ -67,7 +67,7 @@ block body
     div.row.bg-white.h-divider
     article.row.bg-white.py-3
       div.col: p.alt-font OUVERT 7/7
-    div.zigzag(style="background-image:url(" + require("./img/shapes/u-tri.svg") + ");")
+    div.zigzag(style="background-image:url(" + "/img/shapes/u-tri.svg" + ");")
   
   section.container-fluid.pt-4.bg-dark
     div.row.no-gutters#info
@@ -126,48 +126,48 @@ block body
         div.row.pb-4
           div.col-12.col-md-6.align-self-center
             p.h3 Faites comme chez vous...
-            img#pantoufle(src=require("./img/icons/shoes.png") alt="pantoufle")
+            img#pantoufle(src="/img/icons/shoes.png" alt="pantoufle")
           div.col-12.col-md-6.pt-3.pt-lg-0.px-0.px-sm-3
             div.container.px-0.px-sm-3
               div.row.no-gutters
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/wifi.png") alt="wifi")
+                  img(src="/img/icons/wifi.png" alt="wifi")
                   p WIFI </br>Haut-débit
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/blackboard.png") alt="tableau noir")
+                  img(src="/img/icons/blackboard.png" alt="tableau noir")
                   p.middle Tableau
                 div.col-6.col-md-12.col-lg-6
                   div.d-flex.flex-row.justify-content-center
-                    img.pr-4(src=require("./img/icons/biscuit-cake.png") alt="biscuit et gateau")
-                    img.pr-3(src=require("./img/icons/apple.png") alt="pomme")
+                    img.pr-4(src="/img/icons/biscuit-cake.png" alt="biscuit et gateau")
+                    img.pr-3(src="/img/icons/apple.png" alt="pomme")
                   p.middle Snacks et biscuits
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/copy.png") alt="imprimante")
+                  img(src="/img/icons/copy.png" alt="imprimante")
                   p.middle Imprimante
                 div.col-3.col-md-6.col-lg-3
-                  img(src=require("./img/icons/projo.png") alt="video-projecteur")
+                  img(src="/img/icons/projo.png" alt="video-projecteur")
                   p.middle Projecteur
                 div.col-3.col-md-6.col-lg-3.pr-0
-                  img(src=require("./img/icons/cup-glass.png") alt="tasse et verre")
+                  img(src="/img/icons/cup-glass.png" alt="tasse et verre")
                   p.middle Boissons
                 div.col-3.col-md-6.col-lg-3.pl-0
-                  img(src=require("./img/icons/dice.png") alt="dé")
+                  img(src="/img/icons/dice.png" alt="dé")
                   p.middle Jeux
         div.row.pb-3.pb-lg-0
           div.col-12.col-md-6.col-lg-4.px-0.px-sm-3
             div.container.px-0.px-sm-3
               div.row.no-gutters
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/presentation.png") alt="presentation")
+                  img(src="/img/icons/presentation.png" alt="presentation")
                   p Conférences </br>canapé
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/newspaper.png") alt="journal")
+                  img(src="/img/icons/newspaper.png" alt="journal")
                   p Actualités </br>scientifiques
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/book.png") alt="livre ouvert")
+                  img(src="/img/icons/book.png" alt="livre ouvert")
                   p.middle Magazines
                 div.col-3.col-md-6
-                  img(src=require("./img/icons/gear-house.png") alt="maison des idées")
+                  img(src="/img/icons/gear-house.png" alt="maison des idées")
                   p Environnement </br>interactif
           div.col-12.col-md-6.col-lg-8.align-self-center
             p.h3 ... et étanchez votre soif de curiosité !
@@ -180,7 +180,7 @@ block body
     div.row.bg-light: div.col: div.container.bubble-container
       div.row: div.col
         p.h3.pb-3 Vous ne payez que le temps passé chez nous !
-        img.py-3#tarif-img(src=require("./img/Tarifs.png") alt="tableau des tarifs")
+        img.py-3#tarif-img(src="/img/Tarifs.png" alt="tableau des tarifs")
 
   section.text-center.container-fluid#evenements
     div.row
@@ -194,20 +194,20 @@ block body
               p.h4 Ateliers pour enfants
               p.alt-font mercredi/WE
               p Des ateliers seront proposés pour les plus jeunes : construction de fusées à eau, extraction d'ADN de banane, découverte des propriétés de la lumière ...
-          div.col-md-4.order-md-1.col-lg-6.order-lg-2.mb-3.mb-md-0.mb-lg-5.bg-img(style="background-image:url(" + require("./img/atelier-science-animation.jpg") + ");")
+          div.col-md-4.order-md-1.col-lg-6.order-lg-2.mb-3.mb-md-0.mb-lg-5.bg-img(style="background-image:url(" + "/img/atelier-science-animation.jpg" + ");")
           div.col-md-4.order-md-5.col-lg-6.order-lg-4.py-md-5.mb-lg-5
             article.d-flex.flex-column.justify-content-center(style="height:100%;")
               p.h4 Conférences-Canapé
               p.alt-font Tous les Samedis
               p Venez rencontrer un chercheur, une ingénieure, un auteur, des personnalités. #[b Vous pourrez voter pour choisir nos invités !]
-          div.col-md-4.order-md-2.col-lg-6.order-lg-3.mb-3.mb-md-0.mb-lg-5.bg-img(style="background-image:url(" + require("./img/draw-evt-white.png") + ");")
+          div.col-md-4.order-md-2.col-lg-6.order-lg-3.mb-3.mb-md-0.mb-lg-5.bg-img(style="background-image:url(" + "/img/draw-evt-white.png" + ");")
           div.col-md-4.order-md-6.col-lg-6.order-lg-5.py-md-5
             article.d-flex.flex-column.justify-content-center(style="height:100%;")
               p.h4 Expériences étonnantes
               p.alt-font A TOUS MOMENTS !
               p Quelle que soit l'heure ou le jour, vous pourriez tomber sur des démonstrations de phénomènes étranges et impressionnants !
           div.col-md-4.order-md-3.col-lg-6.order-lg-6.bg-img
-            div.round-bg(style="background-image:url(" + require("./img/experience.gif") + ");")
+            div.round-bg(style="background-image:url(" + "/img/experience.gif" + ");")
 
   section.container-fluid.text-center#partenaires
     div.row
@@ -217,21 +217,21 @@ block body
       article.container-fluid#partenaires-list
         div.row.partenaires-img
           div.col-6.col-sm-3: a(href="https://bigbangscience.fr" target="_blank"  rel="noopener")
-            img(src=require("./img/partenaires/big-bang-science.png") alt="Big Bang Science")
+            img(src="/img/partenaires/big-bang-science.png" alt="Big Bang Science")
           div.col-6.col-sm-3: a(href="https://www.britishcouncil.fr/famelab" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/famelab-france.png") alt="Famelab France")
+            img(src="/img/partenaires/famelab-france.png" alt="Famelab France")
           div.col-6.col-sm-3: a(href="https://www.podcastscience.fm" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/podcast-science.png") alt="Podcast Science")
+            img(src="/img/partenaires/podcast-science.png" alt="Podcast Science")
           div.col-6.col-sm-3: a(href="https://pintofscience.fr/" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/pint-of-science.png") alt="Pint of Science")
+            img(src="/img/partenaires/pint-of-science.png" alt="Pint of Science")
           div.col-6.col-sm-3: a(href="http://www.cafe-sciences.org/" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/café-des-sciences.jpg") alt="Café des Sciences")
+            img(src="/img/partenaires/café-des-sciences.jpg" alt="Café des Sciences")
           div.col-6.col-sm-3: a(href="http://www.science-animation.org/" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/science-animation.png") alt="Science Animation")
+            img(src="/img/partenaires/science-animation.png" alt="Science Animation")
           div.col-6.col-sm-3: a(href="http://www.quaidessavoirs.fr/" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/quai-des-savoirs.jpg") alt="Quai des Savoirs")
+            img(src="/img/partenaires/quai-des-savoirs.jpg" alt="Quai des Savoirs")
           div.col-6.col-sm-3: a(href="https://www.accelerateurdelamobilisation.org/" target="_blank" rel="noopener")
-            img(src=require("./img/partenaires/accelerateur-de-la-mobilisation.png") alt="Accelerateur de la Mobilisation")
+            img(src="/img/partenaires/accelerateur-de-la-mobilisation.png" alt="Accelerateur de la Mobilisation")
     div.row
       div.col.bg-dark
         h2.h3.title.text-center.m-4 Ils parlent de nous :
@@ -239,29 +239,29 @@ block body
       article.container-fluid#press-list
         div.row.partenaires-img
           div.col-6.col-sm-4: a(href="https://www.francebleu.fr" target="_blank"  rel="noopener")
-            img(src=require("./img/press/france-bleu.png") alt="France Bleu")
+            img(src="/img/press/france-bleu.png" alt="France Bleu")
           div.col-6.col-sm-4: a(href="http://www.actifsradio.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/actifs-radio.png") alt="actifs radio")
+            img(src="/img/press/actifs-radio.png" alt="actifs radio")
           div.col-6.col-sm-4: a(href="http://www.funradio.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/fun-radio.png") alt="fun radio")
+            img(src="/img/press/fun-radio.png" alt="fun radio")
           div.col-6.col-sm-4: a(href="https://www.latribune.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/la-tribune-toulouse.png") alt="la tribune toulouse")
+            img(src="/img/press/la-tribune-toulouse.png" alt="la tribune toulouse")
           div.col-6.col-sm-4: a(href="https://www.20minutes.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/20-minutes.png") alt="20 minutes")
+            img(src="/img/press/20-minutes.png" alt="20 minutes")
           div.col-6.col-sm-4: a(href="https://www.ladepeche.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/la-depeche.jpg") alt="la depeche")
+            img(src="/img/press/la-depeche.jpg" alt="la depeche")
           div.col-6.col-sm-4: a(href="http://www.rtlgroup.com" target="_blank" rel="noopener")
-            img(src=require("./img/press/rtl.jpg") alt="rtl")
+            img(src="/img/press/rtl.jpg" alt="rtl")
           div.col-6.col-sm-4: a(href="http://www.toulouse.fm" target="_blank" rel="noopener")
-            img(src=require("./img/press/toulouse-fm.png") alt="Toulouse FM")
+            img(src="/img/press/toulouse-fm.png" alt="Toulouse FM")
           div.col-6.col-sm-4: a(href="https://actu.fr" target="_blank" rel="noopener")
-            img(src=require("./img/press/actu-toulouse.png") alt="actu Toulouse")
+            img(src="/img/press/actu-toulouse.png" alt="actu Toulouse")
     article.row#parallax-quote
       div.col 
         div.parallax-container
           div.text-body
             p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
-          img.parallax(src=require("./img/darwin-dealwithit.jpg") alt="Darwin rebel")
+          img.parallax(src="/img/darwin-dealwithit.jpg" alt="Darwin rebel")
     section.row.pt-4.bg-white.pb-4#citations
       div.container-fluid
         div.row.pb-4: h3.col-12 Ce que nos clients disent de nous :
@@ -270,7 +270,7 @@ block body
             div.balloon
               span Relativement interessant...
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/einstein-sym.jpg") alt="Alfred Einstein")
+            div.pt-3: img.rounded-circle(src="/img/profil_pics/einstein-sym.jpg" alt="Alfred Einstein")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
@@ -281,7 +281,7 @@ block body
             div.balloon
               span Un accueil radieux!
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/marie-curie.jpg")  alt="Marie Curie")
+            div.pt-3: img.rounded-circle(src="/img/profil_pics/marie-curie.jpg"  alt="Marie Curie")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
@@ -292,7 +292,7 @@ block body
             div.balloon
               span Des pommes de premier choix !
               span.tip
-            div.pt-3: img.rounded-circle(src=require("./img/profil_pics/newton.jpg") alt="Isaac Newton")
+            div.pt-3: img.rounded-circle(src="/img/profil_pics/newton.jpg" alt="Isaac Newton")
             div.py-2
               i.fa.fa-lg.fa-star
               i.fa.fa-lg.fa-star
