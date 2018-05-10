@@ -1,18 +1,26 @@
 extends templates/layout.pug
 
 block body
-	div.container
+	div.container.text-justify
 		section.row
-			div.col.bg-light.p-4
+			div.col-12.bg-light.pt-4
 				h1.text-center.p-4 À propos:
-				h2.h5: strong  #[i.fa.fa-arrow-right] L’Eurêkafé, qu’es aco?
+				h2.h5.py-3: strong  #[i.fa.fa-arrow-right] L’Eurêkafé, qu’es aco?
 				p L’Eurêkafé, c’est le café des curiosités ! Nous avons créé ce lieu convivial dans un esprit « comme à la maison ». Chacun peut se servir de thés, cafés, biscuits, gâteaux comme bon lui semble. On ne paye pas la consommation mais simplement le temps passé. #[br]L’Eurêkafé c’est aussi une nouvelle manière de parler de science entre citoyens. Nous avons créé cet endroit dans le but de fournir un lieu de rencontre entre le grand public et les acteurs de la culture scientifique et technique. Que cela soit dans la décoration, les objets disponibles ou nos évènements, nous mettons tout en œuvre pour vous intriguer sur le monde qui nous entoure !
-				h2.h5: strong  #[i.fa.fa-arrow-right] Qui sommes-nous ?
+				h2.h5.py-3: strong  #[i.fa.fa-arrow-right] Qui sommes-nous ?
 				p Nous sommes deux amis d’enfances toulousains. Après s’être baladé dans différents pays au cours de nos études, nous nous sommes retrouvés pour faire sortir l’Eurêkafé de terre !
-				p.pl-3 #[strong Samuel Juillot] #[br]
-					| (à venir)
-				p.pl-3 #[strong Arnold Oswald] #[br]
-					| Ingénieur dans l’âme ! J’ai un diplôme d’ingénieur Arts &amp; Métiers et ai mis un pied dans le monde de la recherche en menant un projet de fabrication de matériaux composites à l’École Polytechnique de Montréal durant deux ans. J’ai remporté en 2017 la finale française de FameLab, un concours international de vulgarisation scientifique sur scène. Je voue aussi un amour inconditionnel pour l’astrophysique et tout ce qui touche à l’espace.
 
-				h2.h5: strong  #[i.fa.fa-arrow-right] Un peu d’histoire
+			div.col-12.bg-light.pb-2
+				p.m-0.px-3: strong Samuel Juillot
+				div.px-3
+					img.float-left.m-2(src=require("./img/sam.jpg") alt="Sam" style="max-height: 20vh;max-width: 15vw;")
+					p (contenu à venir)
+
+			div.col-12.bg-light.pb-2
+				p.m-0.px-3: strong Arnold Oswald
+				div.px-3
+					img.float-left.m-2(src=require("./img/arnold.jpg") alt="Sam" style="max-height: 20vh;max-width: 15vw;")
+					p Ingénieur dans l’âme ! J’ai un diplôme d’ingénieur Arts &amp; Métiers et ai mis un pied dans le monde de la recherche en menant un projet de fabrication de matériaux composites à l’École Polytechnique de Montréal durant deux ans. J’ai remporté en 2017 la finale française de FameLab, un concours international de vulgarisation scientifique sur scène. Je voue aussi un amour inconditionnel pour l’astrophysique et tout ce qui touche à l’espace.
+			div.col-12.bg-light.pb-4
+				h2.h5.py-3: strong  #[i.fa.fa-arrow-right] Un peu d’histoire
 				p L’idée de l’Eurêkafé a germé en 2016 lorsqu’Arnold animait avec des amis des soirées de culture générale dans un café montréalais. Il nous a fallu attendre septembre 2017 pour se mettre à plein temps sur le projet. #[br] Début 2018, nous avons clôturé un financement participatif qui nous a permis de réunir un peu plus de 18000€, tout en prenant contact avec de nombreux acteurs locaux de la diffusion des sciences. Après deux mois de travaux à deux pour refaire et décorer le local (merci aux copains et copines pour le coup de main !), nous avons inauguré l’Eurêkafé le 14 avril 2018 au 24 rue Gambetta à Toulouse !
