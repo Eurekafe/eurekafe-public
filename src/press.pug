@@ -2,9 +2,39 @@ extends templates/layout.pug
 
 block body
 	div.container-fluid.flex-wrap
-		section.row
-			div.col.text-center.jumbotron.bg-light
-				h1.display-2 En construction
-				h3.pb-3.display-4 Cette page n'existe pas... ou pas encore
-				p.display-5 Notre site est toujours en construction, certains liens ne sont pas encore actifs.
-				a(href="/").btn.btn-primary Retour à la Page d'accueil
+		section.row.py-4
+			div.col.text-center.bg-dark.py-3
+				h1 Vous avez des questions ?
+				h4.pb-3 Vous souhaitez nous rencontrer pour parler de l’Eurêkafé ?
+				p.h4 Écrivez-nous à #[a(href="mailto:contact@eurekafe.fr") contact@eurekafe.fr]
+				
+		div.row
+			div.col.bg-light
+				h2.h3.title.text-center.m-4 Ils parlent de nous :
+		div.row.bg-light.text-center.pb-5
+			article.container-fluid#press-list
+				div.row.partenaires-img
+					div.col-6.col-sm-4: a(href="https://www.francebleu.fr" target="_blank"  rel="noopener")
+						img(src=require("./img/press/france-bleu.png") alt="France Bleu")
+					div.col-6.col-sm-4: a(href="http://www.actifsradio.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/actifs-radio.png") alt="actifs radio")
+					div.col-6.col-sm-4: a(href="http://www.funradio.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/fun-radio.png") alt="fun radio")
+					div.col-6.col-sm-4: a(href="https://www.latribune.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/la-tribune-toulouse.png") alt="la tribune toulouse")
+					div.col-6.col-sm-4: a(href="https://www.20minutes.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/20-minutes.png") alt="20 minutes")
+					div.col-6.col-sm-4: a(href="https://www.ladepeche.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/la-depeche.jpg") alt="la depeche")
+					div.col-6.col-sm-4: a(href="http://www.rtlgroup.com" target="_blank" rel="noopener")
+						img(src=require("./img/press/rtl.jpg") alt="rtl")
+					div.col-6.col-sm-4: a(href="http://www.toulouse.fm" target="_blank" rel="noopener")
+						img(src=require("./img/press/toulouse-fm.png") alt="Toulouse FM")
+					div.col-6.col-sm-4: a(href="https://actu.fr" target="_blank" rel="noopener")
+						img(src=require("./img/press/actu-toulouse.png") alt="actu Toulouse")
+		div.row.py-4
+			div.col.text-center: a(href="/").btn.btn-primary Retour à la Page d'accueil
+
+
+
+
