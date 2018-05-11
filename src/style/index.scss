@@ -54,6 +54,15 @@ p.alt-font {
 	display: none !important;
 }
 
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 span.bg-text {
 	background: $primary;
 	color: $black;

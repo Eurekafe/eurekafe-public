@@ -81,4 +81,19 @@ $(document).ready(function() {
 
     pContainer.children("img").offset({top: dim.containerTop + dim.imageOffset - dim.maxOffset});
   }  
+
+  //lazy loading
+  Array.prototype.forEach.call(document.querySelectorAll("img[data-src]"), function(img) {
+    img.setAttribute("src", img.getAttribute("data-src"));
+    img.onload = function() {
+      img.removeAttribute("data-src");
+    };
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("div[bg-src]"), function(img) {
+    console.log(img.getAttribute("bg-src"));
+    img.setAttribute("style", "background-image:url(" + img.getAttribute("bg-src")) + ");";
+    img.removeAttribute("bg-src");
+  });
+
 });
