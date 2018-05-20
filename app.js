@@ -104,7 +104,7 @@ app.get("/press", function(req,res) {
 });
 
 app.get("/newsletterSuccess", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "dist/newsletter.html"));
+  res.render("newsletter");
 });
 
 app.use(function(req, res) {
