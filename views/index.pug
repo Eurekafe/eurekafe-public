@@ -45,7 +45,25 @@ block body
         a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
           i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
           span.sr-only Next
-
+  if !error && events.length > 0
+    section.container-fluid.px-3#evt-list
+      div.row.text-center
+        h2.h3.title.col.bg-dark.my-0.py-4 Événements à venir
+    
+      each val in events
+        div.row.bg-white.p-2
+          div.col.col-lg-8.offset-lg-2
+            div(style="max-width: 150px;").mx-auto.float-md-left
+              div.card.text-center.m-2.mr-md-3
+                div.card-header.p-2.bg-dark: p.h5.my-0 #{val.day}
+                div.card-body.p-2
+                  h3.font-weight-bold.px-4.pt-1 #{val.dateOfMonth}
+                  p.my-0.h4 #{val.month}
+            div.pt-3
+              h6.m-0: b  À #{val.time} - #{val.fromNow}:
+              h4.m-0: a(href="https://www.facebook.com/events/" + val.link target="_blank"  rel="noopener") #{val.title}
+                button.btn.btn-primary.py-0.px-2.ml-2.mb-2 plus de détails
+              p #{val.desc}
   section.text-center.container-fluid#concept
     div.row
       h2.h3.title.col.bg-dark.my-0.py-4 Un lieu incontournable <br/> d'Éducation Populaire
@@ -73,7 +91,7 @@ block body
   
   section.container-fluid.pt-4.bg-dark
     div.row.no-gutters#info
-      article.col-12.col-xl-6.card
+      article.col-12.col-xl-6.card.info-card
         div.card-body.bg-dark
           h2.h3.title.card-title.text-center Infos pratiques
           ul.list-group.list-group-flush.pl-3

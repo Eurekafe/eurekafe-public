@@ -169,7 +169,7 @@ span.bg-text {
 	}
 }
 
-.card {
+.info-card {
 	border: none;
 }
 
@@ -460,6 +460,26 @@ aside {
 				color: $black;
 			}
 		}
+	}
+}
+
+#evt-list {
+	p, h2, .h2, h3, .h3, h4, .h4 {
+		line-height: 1;
+	}
+	h2, h3 {
+		margin-bottom:-7px;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	.card {
+		border: solid $black 2px;
+		box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+	}
+	.card-header {
+		border-width: 2px;
+		border-color: $black;
 	}
 }
 

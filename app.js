@@ -8,6 +8,8 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const app = express();
+var momentjs = require('moment');
+momentjs.locale("fr");
 var nodemailer = require("nodemailer");
 
 const path = require("path");
@@ -84,7 +86,24 @@ app.post("/newsletter", function(req, res) {
 });
 
 app.get("/", function(req,res) {
-  res.render("index");
+  dbclient.then(function(dbs) {
+    var collection = dbs.collection("event");
+    collection.find({date: {$gte: new Date()} }).sort({date: 1}).toArray(function(err, result) {
+      var data = result.map(function(event) {
+        var moment = momentjs(event.date);
+        event.month = moment.format("MMMM");
+        event.dateOfMonth = moment.date();
+        event.day = moment.format("dddd");
+        event.time = moment.format("HH:mm");
+        event.fromNow = moment.fromNow();
+        return event;
+      });
+      if(err) res.render("index", {error: "error"});
+      res.render("index", {events: data});
+    });
+  }).catch(function() {
+    res.render("index", {error: "error"});
+  });
 });
 
 app.get("/about", function(req,res) {
