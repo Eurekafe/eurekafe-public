@@ -15,36 +15,47 @@ block section-sm
 
 block body
   aside
-    a(href="#carousel")
+    a(href="#top")
       i.fa.fa-arrow-circle-down.fa-rotate-180.fa-2x
       span.sr-only Retourner en haut de la page
 
-  header.container-fluid.px-0
+  div.bg-dark.text-center.py-2: h1.my-0 Bienvenue à l'Eurêkafé
+  header.container-fluid.px-0.py-4.bg-white
     div.row.px-0.mx-0
-      div.col.carousel.slide.px-0#carousel(data-ride="carousel")
-        ol.carousel-indicators
-          li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="0" class="active")
-          li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="1")
-          li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="2")
-        div.carousel-inner
-          article.carousel-item.croc.active(style="background-image: url('/img/draw-evt-white.png');")
-            div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
-          article.carousel-item(style="background-image: url('/img/front.jpg');")
-            div.bottom-text: h1.h2.font-weight-bold Ouverture le 16 Avril !
-          article.carousel-item.cover(style="background-image:url('/img/lancement-sv.jpg');")
-            div.top-text
-              p.display-2.text-center Crowdfunding
-            div.mid-text
-              p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petits ou grands !&nbsp;
-              button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
-          article.carousel-item.center.croc(style="background-image:url('/img/draw-atelier.jpg');")
+      div.col-12.col-lg-6.text-center
+        p.h5.mb-0: b L'Eurêkafé, c'est le Café des Curiosités ! 
+        p 140 m² d'étonnement en plein centre de Toulouse, où chacun peut s'émerveiller, s'informer autour des sciences, se détendre ou encore travailler dans un cadre convivial.
+        img(src="/img/draw-evt-white.png" width="80%" height="auto")
+        p.h5: b Venez éveiller votre curiosité !
+      div.col-12.col-lg-6
+        div.yt-container
+          iframe.yt-video(src="https://www.youtube.com/embed/OI-R3M-lhN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+      
+      //- div.col.carousel.slide.px-0#carousel(data-ride="carousel")
+      //-   ol.carousel-indicators
+      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="0" class="active")
+      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="1")
+      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="2")
+      //-   div.carousel-inner
+      //-     article.carousel-item.croc.active(style="background-image: url('/img/draw-evt-white.png');")
+      //-       div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
+      //-     article.carousel-item(style="background-image: url('/img/front.jpg');")
+      //-       div.bottom-text: h1.h2.font-weight-bold Ouverture le 16 Avril !
+      //-     article.carousel-item.cover(style="background-image:url('/img/lancement-sv.jpg');")
+      //-       div.top-text
+      //-         p.display-2.text-center Crowdfunding
+      //-       div.mid-text
+      //-         p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petits ou grands !&nbsp;
+      //-         button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
+      //-     article.carousel-item.center.croc(style="background-image:url('/img/draw-atelier.jpg');")
           
-        a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
-          i.fa.fa-2x.fa-chevron-left(aria-hidden="true")
-          span.sr-only Previous
-        a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
-          i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
-          span.sr-only Next
+      //-   a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
+      //-     i.fa.fa-2x.fa-chevron-left(aria-hidden="true")
+      //-     span.sr-only Previous
+      //-   a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
+      //-     i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
+      //-     span.sr-only Next
+
   if !error && events.length > 0
     section.container-fluid.px-3#evt-list
       div.row.text-center
