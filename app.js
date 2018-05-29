@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const app = express();
 var momentjs = require('moment');
 momentjs.locale("fr");
+
 var nodemailer = require("nodemailer");
 
 const path = require("path");
@@ -91,9 +92,9 @@ app.get("/", function(req,res) {
     collection.find({date: {$gte: new Date()} }).sort({date: 1}).toArray(function(err, result) {
       var data = result.map(function(event) {
         var moment = momentjs(event.date);
-        event.month = moment.format("MMMM");
+        event.month = momentjs.monthsShort(moment.month());
         event.dateOfMonth = moment.date();
-        event.day = moment.format("dddd");
+        event.day = momentjs.weekdaysShort(moment.weekday());
         event.time = moment.format("HH:mm");
         event.fromNow = moment.fromNow();
         return event;

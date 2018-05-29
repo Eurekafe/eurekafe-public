@@ -492,6 +492,7 @@ aside {
 		text-decoration: underline;
 	}
 	.card {
+		min-width: 115px;
 		border: solid $black 2px;
 		box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
 	}
