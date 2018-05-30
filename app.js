@@ -94,7 +94,7 @@ app.get("/", function(req,res) {
         var moment = momentjs(event.date);
         event.month = momentjs.monthsShort(moment.month());
         event.dateOfMonth = moment.date();
-        event.day = momentjs.weekdaysShort(moment.weekday());
+        event.day = momentjs.weekdaysShort(moment.weekday()+1);
         event.time = moment.format("HH:mm");
         event.fromNow = moment.fromNow();
         return event;
