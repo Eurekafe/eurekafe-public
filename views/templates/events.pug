@@ -1,0 +1,14 @@
+each val in events
+  div.row.bg-white.p-2.more-evt(style="display: none;")
+    div.col.col-lg-8.offset-lg-2
+      div(style="max-width: 150px;").mx-auto.float-md-left
+        div.card.text-center.m-2.mr-md-3
+          div.card-header.p-2.bg-dark: p.h5.my-0 #{val.day}
+          div.card-body.p-2
+            h3.font-weight-bold.px-4.pt-1 #{val.dateOfMonth}
+            p.my-0.h4 #{val.month}
+      div.pt-3
+        h6.m-0: b  À #{val.time} - #{val.fromNow}:
+        h4.m-0: a(href="https://www.facebook.com/events/" + val.link target="_blank"  rel="noopener") #{val.title}
+          button.btn.btn-primary.py-0.px-2.ml-2.mb-2 plus de détails
+        p #{val.desc}

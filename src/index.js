@@ -96,4 +96,15 @@ $(document).ready(function() {
     img.removeAttribute("bg-src");
   });
 
+  let eventCursor = 4;
+  $("#moreEvents").click(function() {
+    $.get("/events?cur=" + eventCursor, function(response) {
+      console.log(response);
+      $("#evt-button").hide();
+      $("#evt-button").before(response);
+      $(".more-evt").slideDown("slow");
+    });
+    console.log("whoohoo !!");
+  });
+
 });

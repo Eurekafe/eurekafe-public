@@ -89,7 +89,7 @@ app.post("/newsletter", function(req, res) {
 app.get("/", function(req,res) {
   dbclient.then(function(dbs) {
     var collection = dbs.collection("event");
-    collection.find({date: {$gte: new Date()} }).sort({date: 1}).toArray(function(err, result) {
+    collection.find({date: {$gte: new Date()} }).sort({date: 1}).limit(4).toArray(function(err, result) {
       var data = result.map(function(event) {
         var moment = momentjs(event.date);
         event.month = momentjs.monthsShort(moment.month());
@@ -125,6 +125,31 @@ app.get("/press", function(req,res) {
 
 app.get("/newsletterSuccess", function(req, res) {
   res.render("newsletter");
+});
+
+app.get("/events", function (req, res) {
+  dbclient.then(function(dbs) {
+    var collection = dbs.collection("event");
+    collection.find({date: {$gte: new Date()} }).sort({date: 1}).skip(req.query.cur - 0).toArray(function(err, result) {
+      var data = result.map(function(event) {
+        var moment = momentjs(event.date);
+        event.month = momentjs.monthsShort(moment.month());
+        event.dateOfMonth = moment.date();
+        event.day = momentjs.weekdaysShort(moment.weekday()+1);
+        event.time = moment.format("HH:mm");
+        event.fromNow = moment.fromNow();
+        return event;
+      });
+      if(err) {
+        res.send({error: "error"});
+        console.log(err);
+      }
+      res.render("templates/events", {events: data});
+    });
+  }).catch(function(err) {
+    console.log(err);
+    res.send({error: "error"});
+  });
 });
 
 app.use(function(req, res) {
