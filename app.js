@@ -19,7 +19,7 @@ const mongoUrl = process.env.MONGO_CRED;
 
 app.get("*", function(req,res,next) {
   if ( !req.headers.host.match(/localhost/) 
-    || req.headers["xforward-proto"] != "https") {
+    || req.headers["x-forward-proto"] != "https") {
     res.redirect("https://" + req.headers.host);
   } else { next(); }
 });
