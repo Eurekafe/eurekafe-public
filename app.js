@@ -20,10 +20,16 @@ const mongoUrl = process.env.MONGO_CRED;
 app.get("*", function(req,res,next) {
   console.log(req.headers);
   console.log(req.headers["x-forwarded-proto"]);
+  if ( req.headers["x-forwarded-proto"] === "https" ) {
+    console.log("no redirect");
+  }
   if ( !req.headers.host.match(/localhost/) 
     || req.headers["x-forwarded-proto"] !== "https") {
     res.redirect(301, "https://" + req.headers.host);
-  } else { next(); }
+  } else { 
+    console.log("next");
+    next(); 
+  }
 });
 
 momentjs.locale("fr");
