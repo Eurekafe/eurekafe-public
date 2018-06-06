@@ -20,7 +20,7 @@ const mongoUrl = process.env.MONGO_CRED;
 app.get("*", function(req,res,next) {
   if ( !req.headers.host.match(/localhost/) 
     && req.headers["xforward-proto"] != "https") {
-    res.redirect("https://www.eurekafe.fr");
+    res.redirect("https://" + req.headers.host);
   } else { next(); }
 });
 
