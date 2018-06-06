@@ -23,8 +23,8 @@ app.get("*", function(req,res,next) {
   if ( req.headers["x-forwarded-proto"] === "https" ) {
     console.log("no redirect");
   }
-  if ( !req.headers.host.match(/localhost/) 
-    || req.headers["x-forwarded-proto"] !== "https") {
+  if ( !(req.headers.host.match(/localhost/) )
+    || ( req.headers["x-forwarded-proto"] !== "https" ) ) {
     res.redirect(301, "https://" + req.headers.host);
   } else { 
     console.log("next");
