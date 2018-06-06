@@ -18,16 +18,10 @@ const port = process.env.PORT||3000;
 const mongoUrl = process.env.MONGO_CRED;
 
 app.get("*", function(req,res,next) {
-  console.log(req.headers);
-  console.log(req.headers["x-forwarded-proto"]);
-  if ( req.headers["x-forwarded-proto"] === "https" ) {
-    console.log("no redirect");
-  }
-  if ( !(req.headers.host.match(/localhost/) )
-    || ( req.headers["x-forwarded-proto"] !== "https" ) ) {
+  if ( !req.headers.host.match(/localhost/)
+    && req.headers["x-forwarded-proto"] !== "https" ) {
     res.redirect(301, "https://" + req.headers.host);
   } else { 
-    console.log("next");
     next(); 
   }
 });
