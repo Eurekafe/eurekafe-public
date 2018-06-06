@@ -17,6 +17,13 @@ const app = express();
 const port = process.env.PORT||3000;
 const mongoUrl = process.env.MONGO_CRED;
 
+app.get("*", function(req,res,next) {
+  if ( !req.headers.host.match(/localhost/) 
+    && req.headers["xforward-proto"] != "https") {
+    res.redirect("https://www.eurekafe.fr");
+  } else { next(); }
+});
+
 momentjs.locale("fr");
 
 var dbclient = new Promise(function(resolve, reject) {
