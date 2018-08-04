@@ -295,11 +295,21 @@ footer {
 		border-bottom: 2px solid $white;
 	}
 	a {
-		color: $white;
-		transition: .2s;
+		span {
+			position: relative;
+			top:0;
+			left: 0;
+			color: $white;
+		}
 		&:hover {
-			color: $primary;
-			text-shadow: 2px 2px 2px rgba(255,255,255,0.4);
+			text-decoration: underline;
+			span {
+				transition: .5s cubic-bezier(0.5, 0.25, 0.65, 3);
+				top: -1px;
+				left: -1px;
+				color: $primary;
+				text-shadow: 2px 2px 2px rgba(255,255,255,0.4);
+			}
 		}
 	}
 	.gofundme {
@@ -363,6 +373,7 @@ aside {
   .fa {
     opacity: 0.9;
     color: $primaire;
+    transition: 0.5s;
     &:hover {
       opacity: 1;
       text-shadow: -1px 0 black, 0 -1px black, 1px 0 black, 0 1px black, -5px -5px 10px rgba(0 ,0 ,0 , 0.5);
