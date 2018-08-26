@@ -61,20 +61,38 @@ app.use(express.static("public", {maxAge: 3600000}));
 
 app.get("/", function(req,res) {
   dbclient.then(function(dbs) {
-    var collection = dbs.collection("event");
-    collection.find({date: {$gte: new Date()} }).sort({date: 1}).limit(4).toArray(function(err, result) {
-      var data = result.map(function(event) {
-        var moment = momentjs(event.date);
-        event.month = momentjs.monthsShort(moment.month());
-        event.dateOfMonth = moment.date();
-        event.day = momentjs.weekdaysShort(moment.weekday()+1);
-        event.time = moment.format("HH:mm");
-        event.fromNow = moment.fromNow();
-        return event;
+    
+    var eventPromise = new Promise( function(resolve, reject) {
+      var collection = dbs.collection("event");
+      collection.find({date: {$gte: new Date()} }).sort({date: 1}).limit(4).toArray(function(err, result) {
+        var data = result.map(function(event) {
+          var moment = momentjs(event.date);
+          event.month = momentjs.monthsShort(moment.month());
+          event.dateOfMonth = moment.date();
+          event.day = momentjs.weekdaysShort(moment.weekday()+1);
+          event.time = moment.format("HH:mm");
+          event.fromNow = moment.fromNow();
+          return event;
+        });
+        if (err) reject(err);
+        resolve(data);
       });
-      if(err) res.render("index", {error: "error"});
-      res.render("index", {events: data});
     });
+    var annoncePromise = new Promise( function(resolve, reject) {
+      var collection = dbs.collection("annonce");
+      collection.findOne({current: true}, function(err, result) {
+        if (err) reject(err);
+        resolve(result);
+      });
+      
+    });
+
+    Promise.all([eventPromise, annoncePromise]).then(function(list) {
+      res.render("index", {events: list[0], annonce: list[1]});
+    }, function() {
+      res.render("index", {error: "error"});
+    });
+
   }).catch(function() {
     res.render("index", {error: "error"});
   });

@@ -20,14 +20,21 @@ block body
       span.sr-only Retourner en haut de la page
 
   div.bg-dark.text-center.pt-3.pb-2: h1.my-0 Bienvenue à l'Eurêkafé
-  div.container-fluid.py-5.bg-light.text-center.text-danger
-    div.row
-      div.col-2.d-lg-block.d-none: i.fa.fa-5x.fa-exclamation-triangle
-      div.col-xs-12.col-lg-8
-        h2 Nous sommes fermés du 9 au 21 Août inclus.
-        p.h3 On se retrouve à la rentrée ! Bon été !
-      div.col-2.d-lg-block.d-none: i.fa.fa-5x.fa-exclamation-triangle
-  header.container-fluid.px-0.py-4.bg-white
+  if annonce
+    div.container-fluid.py-5.bg-light.text-center(style="color:" + annonce.color+ ";")
+      div.row
+        div.col-2.d-lg-block.d-none
+          if annonce.icone
+            i.fa.fa-5x(class="fa-" + annonce.icone)
+        div.col-xs-12.col-lg-8
+          h2 #{annonce.titre}
+          if annonce.sousTitre
+            p.h3 #{annonce.sousTitre}
+        if annonce.icone
+          div.col-2.d-lg-block.d-none
+            if annonce.icone
+              i.fa.fa-5x(class="fa-" + annonce.icone)
+    header.container-fluid.px-0.py-4.bg-white
     div.row.px-0.mx-0
       div.col-12.col-lg-6.text-center.py-2
         p.h5.mb-0: b L'Eurêkafé, c'est le Café des Curiosités ! 
