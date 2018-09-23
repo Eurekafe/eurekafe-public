@@ -383,6 +383,7 @@ aside {
 
 .yt-reducer {
 	height: 75%;
+	min-height: 26vw;
 	@media (max-width: 992px) {
 		min-height: 52vw;
 	}
