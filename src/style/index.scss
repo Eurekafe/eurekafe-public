@@ -381,11 +381,16 @@ aside {
   }
 }
 
+.yt-reducer {
+	height: 75%;
+	@media (max-width: 992px) {
+		min-height: 52vw;
+	}
+}
 
 .yt-container {
     position: relative;
     left: 5%;
-
     width: 90%;
     height: 0;
     padding-bottom: 50.625%;
