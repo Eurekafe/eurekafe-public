@@ -45,9 +45,9 @@ block body
         div.yt-reducer
           div.yt-container
             iframe.yt-video(src="https://www.youtube.com/embed/OI-R3M-lhN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-        div.container-fluid.text-center: button.btn.btn-primary.text-center.h4.m-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
-          i(class="fa fa-file")
-          |&nbsp;afficher le catalogue des animations
+        //- div.container-fluid.text-center: button.btn.btn-primary.text-center.h4.m-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
+        //-   i(class="fa fa-file")
+        //-   |&nbsp;afficher le catalogue des animations
       
       //- div.col.carousel.slide.px-0#carousel(data-ride="carousel")
       //-   ol.carousel-indicators
@@ -73,6 +73,18 @@ block body
       //-   a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
       //-     i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
       //-     span.sr-only Next
+  
+  section.container-fluid.px-3#evt-list
+    div.row.text-center
+      h2.h3.title.col.bg-dark.my-0.py-4 Ateliers
+    div.row.bg-white.p-2.text-center
+      div.col-12.col-md-6.col-lg-5.offset-lg-1
+        p.pt-3 Soucieux de rendre la science accessible à tous et àtoutes, l'Eurêkafé propose de noumbreuses activités destinées à des publics variés: quiz hebdomadaire, conférences plus ou moins informelles, expositions,projections, discussions, rencontres et ateliers pédagogiques !
+      div.col-12.col-md-6.col-lg-5
+        p.pt-4: b Nos ateliers à destination de toute personne âgée de 6 à 106 ans !
+          button.btn.btn-primary.text-center.h4.m-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
+            i(class="fa fa-file")
+            |&nbsp;afficher le catalogue des animations
 
   if !error && events.length > 0
     section.container-fluid.px-3#evt-list
