@@ -1,5 +1,6 @@
 extends templates/layout.pug
 block section
+  li.navbar-item.mx-2: a.nav-link(href="#ateliers") ATELIERS
   li.navbar-item.mx-2: a.nav-link(href="#evt-list") ÉVÉNEMENTS
   li.navbar-item.mx-2: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-2: a.nav-link(href="#info") INFOS PRATIQUES
@@ -7,6 +8,7 @@ block section
   
 
 block section-sm
+  li.navbar-item.mx-2: a.nav-link(href="#ateliers") ATELIERS
   li.navbar-item.mx-3: a.nav-link(href="#evt-list") ÉVÉNEMENTS
   li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-3: a.nav-link(href="#info") INFOS PRATIQUES
@@ -74,7 +76,7 @@ block body
       //-     i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
       //-     span.sr-only Next
   
-  section.container-fluid.px-3#evt-list
+  section.container-fluid.px-3#ateliers
     div.row.text-center
       h2.h3.title.col.bg-dark.my-0.py-4 Ateliers
     div.row.bg-white.p-2.text-center
