@@ -12,10 +12,12 @@ const bodyParser = require("body-parser");
 const momentjs = require("moment");
 const nodemailer = require("nodemailer");
 const MongoClient = require("mongodb").MongoClient;
+const Mailchimp = require("mailchimp-api-v3");
 
 const app = express();
 const port = process.env.PORT||3000;
 const mongoUrl = process.env.MONGO_CRED;
+const mailchimpKey = process.env.MAILCHIMP_KEY;
 
 app.get("*", function(req,res,next) {
   if ( !req.headers.host.match(/localhost/)
@@ -41,6 +43,8 @@ var dbclient = new Promise(function(resolve, reject) {
     }
   });
 });
+
+var mailchimp = new Mailchimp(mailchimpKey);
 
 var transporter = nodemailer.createTransport({
   service: process.env.MAIL_SERV,
@@ -127,29 +131,55 @@ app.post("/newsletter", function(req, res) {
   }
   let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (regex.test(newmail)) {
+
     var mailOptions = {
       from: process.env.MAIL,
       to: process.env.MAIL_TARGET,
       subject: "inscription newsletter",
       text: newmail
     };
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-        res.redirect("/error");
-      } else {
-        console.log("Email sent: " + info.response);
-        res.redirect("/newsletterSuccess");
-        dbclient.then(function(dbs) {
-          var collection = dbs.collection("newsletter");
-          collection.insertOne({email: newmail}, function(err, data) {
-            if(err) res.redirect("/error");
-            console.log(data);
-          });
-        });
-        
-      }
+
+    /*var mailPromise = */new Promise(function (reject, resolve) {
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+          reject(error);
+          // res.redirect("/error");
+        } else {
+          console.log("Email sent: " + info.response);
+          resolve(info);          
+        }
+      });
     });
+
+    var chimpPromise = mailchimp.post({
+      path : "/lists/9a96b016db", // list newsletter
+      body: {
+        members: [
+          {email_address: newmail, status: "subscribed"}
+        ]
+      }
+    }).then(function (result) {
+      console.log(result);
+    }).catch(function (err) {
+      console.log(err);
+      res.redirect("/error");
+    });
+
+    /*var dbPromise = */dbclient.then(function(dbs) {
+      var collection = dbs.collection("newsletter");
+      collection.insertOne({email: newmail}, function(err, data) {
+        if(err) throw(err);
+        console.log(data);
+      });
+    });
+
+    chimpPromise.then(function() {
+      res.redirect("/newsletterSuccess");
+    }).catch(function() {
+      res.redirect("/error");
+    });
+
   } else {
     res.redirect("/error");
   }
