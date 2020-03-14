@@ -14,7 +14,7 @@ const HtmlWebpackPlugin = require ("html-webpack-plugin");
 var webpackConfig = require("./webpack.config.js");
 
 var devCompilerPublic = new Promise(function(resolve, reject) {
-  var publicConfig = Object.create(webpackConfig);
+  var publicConfig = webpackConfig;
   publicConfig.devtool = "inline-source-map";
   
   // fs.readdir("./src", function(err, files) {
@@ -56,38 +56,6 @@ var prodCompilerPublic = new Promise(function(resolve, reject) {
   //});
 });
 
-gulp.task("default", ["server-dev"]);
-
-gulp.task("build", ["webpack:build-prod"], function(done) {
-  done();
-});
-
-gulp.task("build-dev", ["webpack:build"], function() {
-  gulp.watch(["src/**/*"], ["webpack:build"]);
-});
-
-/*
-var publicConfig = Object.create(webpackConfig);
-publicConfig.devtool = "inline-source-map";
-
-// create a single instance of the compiler to allow caching
-var devCompilerPublic = webpack(publicConfig);
-*/
-gulp.task("webpack:build", function(callback) {
-  // run webpack
-  devCompilerPublic.then(function(compiler) {
-    compiler.run(function(err, stats) {
-      if(err) throw new gutil.PluginError("webpack:build", err);
-      gutil.log("[webpack:build]", stats.toString({
-        colors: true
-      }));
-      callback();
-    });
-  }).catch(function(err) {
-    throw err;
-  });
-});
-
 gulp.task("webpack:build-prod", function(callback) {
   // run webpack
   prodCompilerPublic.then(function(compiler) {
@@ -103,7 +71,26 @@ gulp.task("webpack:build-prod", function(callback) {
   });
 });
 
-gulp.task("server-dev", ["build-dev"], function() {
+gulp.task("webpack:build", function(callback) {
+  // run webpack
+  devCompilerPublic.then(function(compiler) {
+    compiler.run(function(err, stats) {
+      if(err) throw new gutil.PluginError("webpack:build", err);
+      gutil.log("[webpack:build]", stats.toString({
+        colors: true
+      }));
+      callback();
+    });
+  }).catch(function(err) {
+    throw err;
+  });
+});
+
+gulp.task("watch", gulp.series("webpack:build", function() {
+  gulp.watch("src/**/*", gulp.series("webpack:build"));
+}));
+
+gulp.task("server-dev", gulp.series("webpack:build", function() {
   // configure nodemon
   nodemon({
     // the script to run the app
@@ -115,5 +102,25 @@ gulp.task("server-dev", ["build-dev"], function() {
     console.log("Change detected... restarting server...");
     gulp.src("server.js");
   });
-});
+}));
+
+
+gulp.task("default", gulp.series("server-dev", gulp.parallel("watch")));
+gulp.task("build", gulp.series("webpack:build-prod", function(done) {
+  done();
+}));
+
+
+
+/*
+var publicConfig = Object.create(webpackConfig);
+publicConfig.devtool = "inline-source-map";
+
+// create a single instance of the compiler to allow caching
+var devCompilerPublic = webpack(publicConfig);
+*/
+
+
+
+
 

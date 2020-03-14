@@ -2,10 +2,11 @@
 "use strict";
 const path = require("path");
 const webpack = require("webpack");
-const ExtractTextPlugin = require ("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require ("clean-webpack-plugin");
+const MiniCssExtractPlugin = require ("mini-css-extract-plugin");
 
 module.exports = {
+  mode: "development",
   entry: {index: "./src/index.js"},
   output: {
     filename: "js/[name].js",
@@ -23,15 +24,21 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: ["css-loader", "resolve-url-loader", "sass-loader"]
-      })
+      use: [
+        MiniCssExtractPlugin.loader, "css-loader", "resolve-url-loader", "sass-loader"
+      ]
     }]
   },
   plugins: [
-    new ExtractTextPlugin("/css/[name].style.css"),
-    new CleanWebpackPlugin(["public/js", "public/css", "public/font", "dist"]),
+    new MiniCssExtractPlugin({
+      filename: "/css/[name].style.css",
+    }),
+    new CleanWebpackPlugin(
+      {
+        dry: true,
+        cleanOnceBeforeBuildPatterns: ["**/*", "!documents", "!image"]
+      }
+    ),
     new webpack.ProvidePlugin({
       $: "jquery",
       jquery: "jquery",
