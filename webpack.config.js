@@ -13,7 +13,14 @@ module.exports = {
     path: path.resolve(__dirname, "public")
   },
   module: {
-    rules: [{
+    rules: [
+    {
+      test: /\.scss$/,
+      use: [
+        'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+      ]
+    },
+    {
       test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
       loader: "file-loader",
       options: {name: "/font/[name].[ext]"}
@@ -21,12 +28,6 @@ module.exports = {
     {
       test: /\.html$/,
       loader: "html-loader"
-    },
-    {
-      test: /\.scss$/,
-      use: [
-        MiniCssExtractPlugin.loader, "css-loader", "resolve-url-loader", "sass-loader"
-      ]
     }]
   },
   plugins: [

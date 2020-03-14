@@ -15,7 +15,7 @@ var webpackConfig = require("./webpack.config.js");
 
 var devCompilerPublic = new Promise(function(resolve, reject) {
   var publicConfig = webpackConfig;
-  publicConfig.devtool = "inline-source-map";
+  //publicConfig.devtool = "inline-source-map";
   
   // fs.readdir("./src", function(err, files) {
   //   if(err) reject(err);
@@ -28,18 +28,19 @@ var devCompilerPublic = new Promise(function(resolve, reject) {
   //       publicConfig.plugins.push(htmlWebpackPlugin);
   //     }
   //   });
+  console.log(publicConfig);
   resolve(webpack(publicConfig));
   //});
 });
 
 var prodCompilerPublic = new Promise(function(resolve, reject) {
   var publicConfig = Object.create(webpackConfig);
-  publicConfig.plugins.push(new UglifyJSPlugin());
-  publicConfig.plugins.push(new OptimizeCssAssetsPlugin({
-    cssProcessor: require("cssnano"),
-    cssProcessorOptions: { discardComments: { removeAll: true } },
-    canPrint: true
-  }));
+  // publicConfig.plugins.push(new UglifyJSPlugin());
+  // publicConfig.plugins.push(new OptimizeCssAssetsPlugin({
+  //   cssProcessor: require("cssnano"),
+  //   cssProcessorOptions: { discardComments: { removeAll: true } },
+  //   canPrint: true
+  // }));
   
   // fs.readdir("./src", function(err, files) {
   //   if(err) reject(err);

@@ -29,9 +29,9 @@ block body
           if annonce.icone
             i.fa.fa-5x(class="fa-" + annonce.icone)
         div.col-xs-12.col-lg-8
-          h2 #{annonce.titre}
+          h2 !{annonce.titre}
           if annonce.sousTitre
-            p.h3 #{annonce.sousTitre}
+            p.h3 !{annonce.sousTitre}
         if annonce.icone
           div.col-2.d-lg-block.d-none
             if annonce.icone
