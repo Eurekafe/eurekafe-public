@@ -45,8 +45,8 @@ block body
         p.pt-1.h5: b Venez éveiller votre curiosité !
       div.col-12.col-lg-6
         div.yt-reducer
-          div.yt-container
-            iframe.yt-video(src="https://www.youtube.com/embed/OI-R3M-lhN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+          div.yt-container          
+            iframe.yt-video(src="https://www.youtube.com/embed/EiAw3bQHL3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
         //- div.container-fluid.text-center: button.btn.btn-primary.text-center.h4.m-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
         //-   i(class="fa fa-file")
         //-   |&nbsp;afficher le catalogue des animations
@@ -76,17 +76,17 @@ block body
       //-     i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
       //-     span.sr-only Next
   
-  section.container-fluid.px-3#ateliers
-    div.row.text-center
-      h2.h3.title.col.bg-dark.my-0.py-4 Ateliers
-    div.row.bg-white.p-2.text-center
-      div.col-12.col-md-6.col-lg-5.offset-lg-1
-        p.pt-3 Soucieux de rendre la science accessible à tous et à toutes, l'Eurêkafé propose de nombreuses activités destinées à des publics variés: quiz hebdomadaire, conférences plus ou moins informelles, expositions, projections, discussions, rencontres et ateliers pédagogiques !
-      div.col-12.col-md-6.col-lg-5.p-0.p-sm-1
-        p.pt-4: b Nos ateliers sont à destination de toutes personnes âgées de 6 à 106 ans !
-          button.btn.btn-primary.text-center.m-1.m-sm-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
-            i(class="fa fa-file")
-            |&nbsp;afficher le catalogue des animations
+  //- section.container-fluid.px-3#ateliers
+  //-   div.row.text-center
+  //-     h2.h3.title.col.bg-dark.my-0.py-4 Ateliers
+  //-   div.row.bg-white.p-2.text-center
+  //-     div.col-12.col-md-6.col-lg-5.offset-lg-1
+  //-       p.pt-3 Soucieux de rendre la science accessible à tous et à toutes, l'Eurêkafé propose de nombreuses activités destinées à des publics variés: quiz hebdomadaire, conférences plus ou moins informelles, expositions, projections, discussions, rencontres et ateliers pédagogiques !
+  //-     div.col-12.col-md-6.col-lg-5.p-0.p-sm-1
+  //-       p.pt-4: b Nos ateliers sont à destination de toutes personnes âgées de 6 à 106 ans !
+  //-         button.btn.btn-primary.text-center.m-1.m-sm-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
+  //-           i(class="fa fa-file")
+  //-           |&nbsp;afficher le catalogue des animations
 
   if !error && events.length > 0
     section.container-fluid.px-3#evt-list
@@ -171,9 +171,9 @@ block body
                   div.py-3: b Tarifs :
                   div Tarif au temps (découpé par 15min), revenant à: <br/>
                   ul
-                    li 5€ la première heure
-                    li 3€ par heure ensuite
-                    li Plafonné à 14€ par jour
+                    li 3€ les 1ères 30 min
+                    li 1€ par 15 min ensuite
+                    li 15€ par jour max (3h30 ou plus)
                   div.mt-3 30€ le carnet de 10h 
                   div: em soit 3€/heure tout le temps!
                     //- div
@@ -248,10 +248,10 @@ block body
       div.col-12.col-md-2.align-self-center
         button.btn.btn-primary.ml-md-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Deux salles de 6 et 8 places (avec écran et prises ethernet) sont disponibles. Elles sont à la disposition de tous. Néanmoins, vous pouvez les réserver en nous contactant à contact@eurekafe.fr (Un frais de réservation vous sera demandé le jour même).") Réserver une salle
     div.row.bg-light: div.col: div.h-divider
-    div.row.bg-light.no-gutters: div.col: div.container.bubble-container
-      div.row: div.col
-        p.h3.pb-3 Vous ne payez que le temps passé chez nous !
-        img.py-3#tarif-img(data-src="/img/Tarifs.png" alt="tableau des tarifs")
+    //- div.row.bg-light.no-gutters: div.col: div.container.bubble-container
+    //-   div.row: div.col
+    //-     p.h3.pb-3 Vous ne payez que le temps passé chez nous !
+    //-     img.py-3#tarif-img(data-src="/img/Tarifs.png" alt="tableau des tarifs")
 
   //- section.text-center.container-fluid#evenements
   //-   div.row
