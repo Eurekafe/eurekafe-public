@@ -5,7 +5,7 @@ block section
   li.navbar-item.mx-2: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-2: a.nav-link(href="#info") INFOS PRATIQUES
   li.navbar-item.mx-2: a.nav-link(href="#partenaires") PARTENAIRES
-  
+
 
 block section-sm
   li.navbar-item.mx-2: a.nav-link(href="#ateliers") ATELIERS
@@ -13,7 +13,7 @@ block section-sm
   li.navbar-item.mx-3: a.nav-link(href="#concept") CONCEPT
   li.navbar-item.mx-3: a.nav-link(href="#info") INFOS PRATIQUES
   li.navbar-item.mx-3: a.nav-link(href="#partenaires") PARTENAIRES
-  
+
 
 block body
   aside
@@ -39,60 +39,20 @@ block body
   header.container-fluid.px-0.py-4.bg-white
     div.row.px-0.mx-0
       div.col-12.col-lg-6.text-center.py-2
-        p.h5.mb-0: b L'Eurêkafé, c'est le Café des Curiosités ! 
+        p.h5.mb-0: b L'Eurêkafé, c'est le Café des Curiosités !
         p 140 m² d'étonnement en plein centre de Toulouse, où chacun peut s'émerveiller, s'informer autour des sciences, se détendre ou encore travailler dans un cadre convivial.
         img(src="/img/draw-evt-white.png" width="80%" height="auto")
         p.pt-1.h5: b Venez éveiller votre curiosité !
       div.col-12.col-lg-6
         div.yt-reducer
-          div.yt-container          
+          div.yt-container
             iframe.yt-video(src="https://www.youtube.com/embed/EiAw3bQHL3A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-        //- div.container-fluid.text-center: button.btn.btn-primary.text-center.h4.m-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
-        //-   i(class="fa fa-file")
-        //-   |&nbsp;afficher le catalogue des animations
-      
-      //- div.col.carousel.slide.px-0#carousel(data-ride="carousel")
-      //-   ol.carousel-indicators
-      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="0" class="active")
-      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="1")
-      //-     li.ts.d-none.d-lg-block(data-target="#carousel" data-slide-to="2")
-      //-   div.carousel-inner
-      //-     article.carousel-item.croc.active(style="background-image: url('/img/draw-evt-white.png');")
-      //-       div.bottom-text: h1.h2.font-weight-bold Bienvenue à l'Eurêkafé !
-      //-     article.carousel-item(style="background-image: url('/img/front.jpg');")
-      //-       div.bottom-text: h1.h2.font-weight-bold Ouverture le 16 Avril !
-      //-     article.carousel-item.cover(style="background-image:url('/img/lancement-sv.jpg');")
-      //-       div.top-text
-      //-         p.display-2.text-center Crowdfunding
-      //-       div.mid-text
-      //-         p.text-center.h2.my-2: span.bg-light &nbsp;Merci à tous pour vos dons, petits ou grands !&nbsp;
-      //-         button.btn.dark.my-4(onclick="window.open('https://www.gofundme.com/eurekafe', '_blank')"): p.h2.m-0 Résultats
-      //-     article.carousel-item.center.croc(style="background-image:url('/img/draw-atelier.jpg');")
-          
-      //-   a.carousel-control-prev.carousel-control-color(href="#carousel" role="button" data-slide="prev")
-      //-     i.fa.fa-2x.fa-chevron-left(aria-hidden="true")
-      //-     span.sr-only Previous
-      //-   a.carousel-control-next.carousel-control-color(href="#carousel" role="button" data-slide="next")
-      //-     i.fa.fa-2x.fa-chevron-right(aria-hidden="true")
-      //-     span.sr-only Next
-  
-  //- section.container-fluid.px-3#ateliers
-  //-   div.row.text-center
-  //-     h2.h3.title.col.bg-dark.my-0.py-4 Ateliers
-  //-   div.row.bg-white.p-2.text-center
-  //-     div.col-12.col-md-6.col-lg-5.offset-lg-1
-  //-       p.pt-3 Soucieux de rendre la science accessible à tous et à toutes, l'Eurêkafé propose de nombreuses activités destinées à des publics variés: quiz hebdomadaire, conférences plus ou moins informelles, expositions, projections, discussions, rencontres et ateliers pédagogiques !
-  //-     div.col-12.col-md-6.col-lg-5.p-0.p-sm-1
-  //-       p.pt-4: b Nos ateliers sont à destination de toutes personnes âgées de 6 à 106 ans !
-  //-         button.btn.btn-primary.text-center.m-1.m-sm-3(onclick="location.href='/documents/animations_eurekafe.pdf';")
-  //-           i(class="fa fa-file")
-  //-           |&nbsp;afficher le catalogue des animations
 
   if !error && events.length > 0
     section.container-fluid.px-3#evt-list
       div.row.text-center
         h2.h3.title.col.bg-dark.my-0.py-4 Événements à venir
-    
+
       each val in events
         div.row.bg-white.p-2
           div.col.col-lg-8.offset-lg-2
@@ -115,7 +75,7 @@ block body
     div.zigzag(style="background-image:url(" + "/img/shapes/d-tri.svg" + ");")
     article.row.bg-white#concept-detail.pt-5.pb-4
       div.col-12.col-md-2.offset-md-3
-        p Pour faire des rencontres étonnantes
+        p Pour faire des rencontres enrichissantes
         object(data="/img/icons/hands.svg" alt="poignée de main" type="image/svg+xml" width="70px" height="70px") hands
       div.col-12.col-md-2
         div.container-fluid: div.row
@@ -133,7 +93,7 @@ block body
     article.row.bg-white.py-3
       div.col: p.alt-font OUVERT 7/7
     div.zigzag(style="background-image:url(" + "/img/shapes/u-tri.svg" + ");")
-  
+
   section.container-fluid.pt-4.bg-dark
     div.row.no-gutters#info
       article.col-12.col-xl-6.card.info-card
@@ -152,7 +112,7 @@ block body
                   div.py-3: b Horaires d'ouverture :
                   div.d-flex.flex-row
                     div
-                      div Lundi : 
+                      div Lundi :
                       div Mardi :
                       div Mercredi :
                       div Jeudi :
@@ -165,29 +125,18 @@ block body
                       div 10h - 22h
                       div 10h - 22h
                       div 10h - 22h
-                      div 12h - 22h
-                      div 12h - 22h
+                      div 12h - 20h
+                      div 12h - 20h
                 div.col-12.col-md-6
                   div.py-3: b Tarifs :
                   div Tarif au temps (découpé par 15min), revenant à: <br/>
                   ul
-                    li 3€ les 1ères 30 min
+                    li 4€ les 1ères 30 min
                     li 1€ par 15 min ensuite
-                    li 15€ par jour max (3h30 ou plus)
-                  div.mt-3 30€ le carnet de 10h 
-                  div: em soit 3€/heure tout le temps!
-                    //- div
-                    //-   div 1<sup>ère</sup> heure :&nbsp;
-                    //-   div Ensuite :&nbsp;
-                    //-   div Journée :&nbsp;
-                    //-   div Semaine :&nbsp;
-                    //-   div Mois :
-                    //- div
-                    //-   div 5€
-                    //-   div 3€ / heure
-                    //-   div 14€
-                    //-   div 60€
-                    //-   div 165€
+                    li 16€ par jour max (3h30 ou plus)
+                  div.mt-3 35€ le carnet de 10h
+                  div (30€ pour les étudiants)
+                  div: em soit 3,5€/heure tout le temps!
       article.col-12.col-xl-6#map
         iframe(title="carte google" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbhvb5Yqyf3LW-hgp5YvNoYSlGFxehS3g&q=Eurêkafé,Toulouse&zoom=17" allowfullscreen)
 
@@ -246,44 +195,19 @@ block body
     section.row.bg-light
       div.col-12.col-md-5.offset-md-2.text-center.text-xl-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
       div.col-12.col-md-2.align-self-center
-        button.btn.btn-primary.ml-md-3(type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Deux salles de 6 et 8 places (avec écran et prises ethernet) sont disponibles. Elles sont à la disposition de tous. Néanmoins, vous pouvez les réserver en nous contactant à contact@eurekafe.fr (Un frais de réservation vous sera demandé le jour même).") Réserver une salle
+        button.btn.btn-primary.ml-md-3(
+          type="button"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="right"
+          data-content="Deux salles de 6 et 8 places (avec écran et prises ethernet) sont disponibles. Elles sont ouvertes à tous. Vous pouvez cependant les réserver en écrivant à contact@eurekafe.fr, ou par téléphone au 09 72 65 85 63. Créneau de 1 à 4h : 6€ par heure et par personne, plafonné à 70€. Créneau de 5h ou plus : 30€ par personne, plafonné à 120€ pour le groupe."
+        ) Réserver une salle
     div.row.bg-light: div.col: div.h-divider
-    //- div.row.bg-light.no-gutters: div.col: div.container.bubble-container
-    //-   div.row: div.col
-    //-     p.h3.pb-3 Vous ne payez que le temps passé chez nous !
-    //-     img.py-3#tarif-img(data-src="/img/Tarifs.png" alt="tableau des tarifs")
-
-  //- section.text-center.container-fluid#evenements
-  //-   div.row
-  //-     div.col.bg-dark
-  //-         h2.h3.title.m-4 Événements 
-  //-   div.row.py-5#evenements-content
-  //-     div.container-fluid
-  //-       div.row
-  //-         div.col-md-4.order-md-4.col-lg-6.order-lg-1.py-md-5.mb-lg-5
-  //-           article.d-flex.flex-column.justify-content-center(style="height:100%;")
-  //-             p.h4 Ateliers pour enfants
-  //-             p.alt-font mercredi/WE
-  //-             p Des ateliers seront proposés pour les plus jeunes : construction de fusées à eau, extraction d'ADN de banane, découverte des propriétés de la lumière ...
-  //-         div.col-md-4.order-md-1.col-lg-6.order-lg-2.mb-3.mb-md-0.mb-lg-5.bg-img(bg-src="/img/atelier-science-animation.jpg")
-  //-         div.col-md-4.order-md-5.col-lg-6.order-lg-4.py-md-5.mb-lg-5
-  //-           article.d-flex.flex-column.justify-content-center(style="height:100%;")
-  //-             p.h4 Conférences-Canapé
-  //-             p.alt-font Tous les Samedis
-  //-             p Venez rencontrer un chercheur, une ingénieure, un auteur, des personnalités. #[b Vous pourrez voter pour choisir nos invités !]
-  //-         div.col-md-4.order-md-2.col-lg-6.order-lg-3.mb-3.mb-md-0.mb-lg-5.bg-img(bg-src="/img/draw-evt-white.png")
-  //-         div.col-md-4.order-md-6.col-lg-6.order-lg-5.py-md-5
-  //-           article.d-flex.flex-column.justify-content-center(style="height:100%;")
-  //-             p.h4 Expériences étonnantes
-  //-             p.alt-font A TOUS MOMENTS !
-  //-             p Quelle que soit l'heure ou le jour, vous pourriez tomber sur des démonstrations de phénomènes étranges et impressionnants !
-  //-         div.col-md-4.order-md-3.col-lg-6.order-lg-6.bg-img
-  //-           div.round-bg(bg-src="/img/experience.gif")
 
   section.container-fluid.text-center#partenaires
     div.row
       div.col.bg-dark
-          h2.h3.title.text-center.m-4 Partenaires 
+          h2.h3.title.text-center.m-4 Partenaires
     div.row.bg-dark.pb-5
       article.container-fluid#partenaires-list
         div.row.partenaires-img
@@ -330,9 +254,9 @@ block body
           div.col-6.col-sm-3: a(href="http://www.toulouse.fm" target="_blank" rel="noopener")
             img(data-src="/img/press/toulouse-fm.png" alt="Toulouse FM")
           div.col-6.col-sm-3: a(href="https://actu.fr" target="_blank" rel="noopener")
-            img(data-src="/img/press/actu-toulouse.png" alt="actu Toulouse")       
+            img(data-src="/img/press/actu-toulouse.png" alt="actu Toulouse")
     article.row#parallax-quote
-      div.col 
+      div.col
         div.parallax-container
           div.text-body
             p.h3.d-block #[span.font-italic.font-weight-bold "L'Eurêkafé c'est super pour apprendre à vérifier ses sources !"] </br> - Charles Darwin -
