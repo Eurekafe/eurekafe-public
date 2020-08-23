@@ -196,12 +196,18 @@ block body
       div.col-12.col-md-5.offset-md-2.text-center.text-xl-right: p.alt-font.my-3 Besoin d'en profiter à plusieurs ?
       div.col-12.col-md-2.align-self-center
         button.btn.btn-primary.ml-md-3(
-          type="button"
+          role="button"
           data-container="body"
-          data-toggle="popover"
-          data-placement="right"
-          data-content="Deux salles de 6 et 8 places (avec écran et prises ethernet) sont disponibles. Elles sont ouvertes à tous. Vous pouvez cependant les réserver en écrivant à contact@eurekafe.fr, ou par téléphone au 09 72 65 85 63. Créneau de 1 à 4h : 6€ par heure et par personne, plafonné à 70€. Créneau de 5h ou plus : 30€ par personne, plafonné à 120€ pour le groupe."
-        ) Réserver une salle
+          data-toggle="collapse"
+          href="#reservation-info"
+          aria-expanded="false"
+          aria-controls="#reservation-info"
+          ) Réserver une salle
+      div.col-12.collapse#reservation-info
+        p Deux salles de 6 et 8 places (avec écran et prises ethernet) sont disponibles. Elles sont à la disposition de tous.
+        div Vous pouvez cependant les réserver en écrivant à contact@eurekafe.fr, ou par téléphone au 09 72 65 85 63.
+        div Créneau de 1 à 4h : 6€ par heure et par personne, plafonné à 70€.
+        div Créneau de 5h ou plus : 30€ par personne, plafonné à 120€ pour le groupe.
     div.row.bg-light: div.col: div.h-divider
 
   section.container-fluid.text-center#partenaires
